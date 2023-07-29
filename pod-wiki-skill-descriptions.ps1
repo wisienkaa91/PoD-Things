@@ -1,6 +1,6 @@
 <# 
 .NAME
-    Qord's little helper, skill intro/description edition
+    Qord's little helper, skill into edition
 .DESCRIPTION
     Utility to create copyable code for skill descriptions
     Code generated from this is meant to replace the three lines of existing skill 
@@ -19,6 +19,20 @@
     Copy it from the textbox on the right and paste it into the wiki for the relevant skill, 
         replacing the existing 3 lines mentioned above
 #>
+Add-Type -Name Window -Namespace Console -MemberDefinition '
+[DllImport("Kernel32.dll")]
+public static extern IntPtr GetConsoleWindow();
+
+[DllImport("user32.dll")]
+public static extern bool ShowWindow(IntPtr hWnd, Int32 nCmdShow);
+'
+function Hide-Console
+{
+    $consolePtr = [Console.Window]::GetConsoleWindow()
+    #0 hide
+    [Console.Window]::ShowWindow($consolePtr, 0)
+}
+
 function OnApplicationLoad {
 return $true 
 }
@@ -168,6 +182,7 @@ Add-Type -AssemblyName System.Windows.Forms
 
 if(OnApplicationLoad -eq $true)
 {
+Hide-Console
 GenerateForm | Out-Null
 OnApplicationExit
 }
