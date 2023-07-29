@@ -1,6 +1,6 @@
 <# 
 .NAME
-    Qord's little helper, skill into edition
+    Qord's little helper, skill intro/description edition
 .DESCRIPTION
     Utility to create copyable code for skill descriptions
     Code generated from this is meant to replace the three lines of existing skill 
