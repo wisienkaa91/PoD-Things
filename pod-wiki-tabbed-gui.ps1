@@ -1,4 +1,4 @@
-﻿<#
+<#
 # Tab layout and controls shamelessly stolen from:
 # MrNetTek
 # eddiejackson.net
@@ -9,6 +9,8 @@
 <# 
 .NAME
     Qord's little helper, tabbed edition
+.VERSION 
+    v2.1
 .DESCRIPTION
     Utility to create copyable code for skill descriptions and patch notes
     Code generated from this is meant to replace the three lines of existing skill 
@@ -21,7 +23,7 @@
     In this gui, paste the proper skill icon url unti the url box
         All icons can be found here: https://pathofdiablo.com/wiki/images
     Copy the original skill description and prerequisites into their textboxes
-        If no prereqs you can ignor this line
+        If no prereqs you can ignore this line
     Enter the level required
     Click the button to generate code
     Copy it from the textbox on the right and paste it into the wiki for the relevant skill, 
@@ -36,6 +38,10 @@
     Copy code from the textbox on the right and paste it into the wiki for the relevant skill, 
         replacing the existing patch notes entry
 #>
+Function RemoveExtras
+{
+$TextBoxp5Text = $TextBoxp5Text.trimend("|}")
+}
 Add-Type -Name Window -Namespace Console -MemberDefinition '
 [DllImport("Kernel32.dll")]
 public static extern IntPtr GetConsoleWindow();
@@ -66,7 +72,6 @@ $skillcode = @"
 |-
 |
 {| <!-- Description table -->
-
 |rowspan="3" style="vertical-align:top; padding:0.5em 0.5em 0.5em 0.5em; width:5%"|$url ||'''Description:''' $description'''
 |-
 |'''Required Level:''' $lvlreq
@@ -90,73 +95,118 @@ $TextBox3.text = ""
 }
 
 ## Tab 2 Functions
-$script:counter = 0
+
 $handler_button_Clickp1={
-$script:counter = 0
-#$script:counter ++
-$TextBoxp5.Text = ""
-
-$patch = $TextBoxp1.text
-
-$tbox2 = $TextBoxp2.lines
-
-foreach ($line in $tbox2)
-{
-$line2 = "* " + $line +"`r`n"
-$editedTextBox2 += $line2
-}
-
-$changes = $editedTextBox2
+    $global:state = "need"
+    $TextBoxp5.Text = ""
+    $patch = $TextBoxp1.text
+    $tbox2 = $TextBoxp2.lines
+    foreach ($line in $tbox2)
+        {
+            $line2 = "* " + $line +"`r`n"
+            $editedTextBox2 += $line2
+        }
+    $changes = $editedTextBox2
 $patchcode = @"
 {| class="wikitable"
-!Version Name!!Patch Notes
+! Version Name !!Patch Notes
 |-
 |$patch||
 $changes
 |}
 "@
 
-$TextBoxp5.Text += $patchcode
-$TextBoxp5.Select()
-$TextBoxp5.SelectionStart = $TextBox5.Text.Length
-$TextBoxp5.ScrollToCaret()
-$TextBoxp5.Refresh()
-$TextBoxp1.Text = ""
-$TextBoxp2.Text = ""
-sleep -s 1 
-}
+    $TextBoxp5.Text += $patchcode
+    $TextBoxp5.Select()
+    $TextBoxp5.SelectionStart = $TextBox5.Text.Length
+    $TextBoxp5.ScrollToCaret()
+    $TextBoxp5.Refresh()
+    $TextBoxp1.Text = ""
+    $TextBoxp2.Text = ""
+    sleep -s 1 
+    $global:state = "need"
+    }
 
 $handler_button_Clickp2=({
-$script:counter ++
 
-$patch = $TextBoxp1.text
-$tbox2 = $TextBoxp2.lines
-$patchcode2 = $TextBoxp5.Text
-
-foreach ($line in $tbox2)
-{
-$line2 = "* " + $line +"`r`n"
-$editedTextBox2 += $line2
-}
-$changes = $editedTextBox2
-
-if ($counter -ne 1)
-{
-$additions = @"
+    Switch ($global:state) {
+        "evenmore"
+            {
+                $patch = $TextBoxp1.text
+                $tbox2 = $TextBoxp2.lines
+                $TextBoxp5Text = $TextBoxp5.Text
+                $TextBoxp5Text = $TextBoxp5Text.trimend("|}")
+                $editedTextBox2 = ""
+                foreach ($line in $tbox2)
+                    {
+                        $line2 = "* " + $line +"`r`n"
+                        $editedTextBox2 += $line2
+                    }
+                $changes4 = $editedTextBox2
+$additionsem = @"
 |-
 |style="border-bottom: 1px solid #a2a9b1;"|$patch||style="border-bottom: 1px solid #a2a9b1;"|
-$changes
-|}
+$changes4
 "@
-$patchcode3 = $patchcode2.Replace("|}", $additions + "`r`n"+"|}")
-$TextBoxp5.Text = ""
-$TextBoxp5.Text += $patchcode3
-$TextBoxp1.Text = ""
-$TextBoxp2.Text = ""
-}
-if ($counter -eq 1)
-{
-$additions = @"
+                $TextBoxp5Text = $TextBoxp5Text.trimend("|}") <###############################>
+                $TextBoxp5Text = $TextBoxp5Text.trimend("|}")
+                $TextBoxp5Text = $TextBoxp5Text.replace("|}","")
+                #$patchcode3 = ($TextBoxp5Text + $additionsem + "`r`n"+"|}"+ "`r`n"+"|}")
+                $patchcode3 = ($TextBoxp5Text + $additionsem + "|}"+ "`r`n"+"|}")
+
+                $TextBoxp5.Text = ""
+                $TextBoxp5.Text = $patchcode3
+                $TextBoxp5.Select()
+                $TextBoxp5.SelectionStart = $TextBox5.Text.Length
+                $TextBoxp5.ScrollToCaret()
+                $TextBoxp5.Refresh()
+                $TextBoxp1.Text = ""
+                $TextBoxp2.Text = ""
+                $global:state = "evenmore"
+            }
+
+        "noneed"
+            {
+                $patch = $TextBoxp1.text
+                $tbox2 = $TextBoxp2.lines
+                $TextBoxp5Text = $TextBoxp5.Text
+                $editedTextBox2 = ""
+                foreach ($line in $tbox2)
+                    {
+                        $line2 = "* " + $line +"`r`n"
+                        $editedTextBox2 += $line2
+                    }
+                $changes3 = $editedTextBox2
+
+$additionsnn = @"
+|-
+|style="border-bottom: 1px solid #a2a9b1;"|$patch||style="border-bottom: 1px solid #a2a9b1;"|
+$changes3
+"@
+                $TextBoxp5Text = $TextBoxp5Text.trimend("|}")
+                #$patchcode3 = $TextBoxp5Text.Replace("|}", $additionsnn + "`r`n"+"|}" + "`r`n"+"|}")
+                $patchcode3 = $TextBoxp5Text.Replace("|}", $additionsnn + "|}" + "`r`n"+"|}")
+                $TextBoxp5.Text = ""
+                $TextBoxp5.Text += $patchcode3
+                $TextBoxp1.Text = ""
+                $TextBoxp2.Text = ""
+                $global:state = "evenmore"
+            }
+
+        "need"
+            {
+                $patch = $TextBoxp1.text
+                $tbox2 = $TextBoxp2.lines
+                $patchcode2 = $TextBoxp5.Text
+                $editedTextBox2 = ""
+                foreach ($line in $tbox2)
+                    {
+                        $line2 = "* " + $line +"`r`n"
+                        $editedTextBox2 += $line2
+                    }
+
+                $changes2 = $editedTextBox2
+$additionsn = @"
 |-
 | Older Versions
 |
@@ -165,17 +215,20 @@ $additions = @"
 !
 |-
 |style="border-bottom: 1px solid #a2a9b1;"|$patch||style="border-bottom: 1px solid #a2a9b1;"|
-$changes
-|}
+$changes2
 "@
-$patchcode3 = $patchcode2.Replace("|}", $additions + "`r`n"+"|}")
-$TextBoxp5.Text = ""
-$TextBoxp5.Text += $patchcode3
-$TextBoxp1.Text = ""
-$TextBoxp2.Text = ""
+                $global:state = "noneed"
+                #$patchcode3 = $patchcode2.Replace("|}", $additionsn + "`r`n"+"|}" + "`r`n"+"|}")
+                $patchcode3 = $patchcode2.Replace("|}", $additionsn + "|}" + "`r`n"+"|}")
+                $TextBoxp5.Text = ""
+                $TextBoxp5.Text += $patchcode3
+                $TextBoxp1.Text = ""
+                $TextBoxp2.Text = ""
+                $global:state = "noneed"
+            }
+        }
+    })
 
-}
-})
 ## @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ## This is the end of theactual "meat" of the script, the rest is all GUI
 
@@ -186,7 +239,7 @@ $TextBoxp2.Text = ""
 [void] [Reflection.Assembly]::LoadWithPartialName("PresentationCore")
 
 $Form = New-Object System.Windows.Forms.Form
-$Form.Text = "Lazy Tabbed Tool"
+$Form.Text = "The lazy Qord"
 $Form.Size = New-Object System.Drawing.Size(541,590)
 $Form.StartPosition = "CenterScreen"
 $Form.ShowInTaskbar = $True
