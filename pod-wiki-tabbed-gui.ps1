@@ -10,7 +10,7 @@
 .NAME
     Qord's little helper, tabbed edition
 .VERSION 
-    v2.1
+    v2.3
 .DESCRIPTION
     Utility to create copyable code for skill descriptions and patch notes
     Code generated from this is meant to replace the three lines of existing skill 
@@ -60,28 +60,11 @@ function Hide-Console
 ## Tab 1 Functions
 $handler_button_Click={
 $TextBox5.Text = ""
-$url = $TextBox1.text
+$iconurl = $TextBox1.text
 $description = $TextBox2.text
 $lvlreq = $TextBox3.text
 $prereqs = $TextBox4.text
-
-$skillcode = @"
-<!-- If skill doesnt exist in original Diablo 2 remove comment marks below -->
-<!-- <span style="color:green">'''New skill'''</span>  -->
-{|
-|-
-|
-{| <!-- Description table -->
-|rowspan="3" style="vertical-align:top; padding:0.5em 0.5em 0.5em 0.5em; width:5%"|$url ||'''Description:''' $description'''
-|-
-|'''Required Level:''' $lvlreq
-|-
-|'''Prerequisites:''' $prereqs
-|}
-|-
-|
-"@
-
+$skillcode = "{{Skilldesc|$iconurl|$description|$lvlreq|$prereqs}}"
 $TextBox5.Text += $skillcode
 $TextBox5.Select()
 $TextBox5.SelectionStart = $TextBox5.Text.Length
@@ -94,18 +77,43 @@ $TextBox2.text = ""
 $TextBox3.text = ""
 }
 
+## @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ## Tab 2 Functions
 
 $handler_button_Clickp1={
     $global:state = "need"
     $TextBoxp5.Text = ""
-    $patch = $TextBoxp1.text
     $tbox2 = $TextBoxp2.lines
     foreach ($line in $tbox2)
         {
             $line2 = "* " + $line +"`r`n"
             $editedTextBox2 += $line2
         }
+    $x = $listBox.SelectedItem
+    switch -wildcard ($x)
+        {
+          '*Bedrock*' {$url = "[[Patch_Notes#Patch_.231:_Bedrock|#1 Bedrock]]"}
+          '*Quartz*' {$url = "[[Patch_Notes#Patch_.232:_Quartz|#2 Quartz]]"}
+          '*Granite*' {$url = "[[Patch_Notes#Patch_.233:_Granite|#3 Granite]]"}
+          '*Onyx*' {$url = "[[Patch_Notes#Patch_.234:_Onyx|#4 Onyx]]"}
+          '*Limestone*' {$url = "[[Patch_Notes#Patch_.235:_Limestone|#5 Limestone]]"}
+          '*Obsidian*' {$url = "[[Patch_Notes#Patch_.236:_Obsidian|#6 Obsidian]]"}
+          '*Beryl*' {$url = "[[Patch_Notes#Patch_.237:_Beryl|#7 Beryl]]"}
+          '*Pyrite*' {$url = "[[Patch_Notes#Patch_.238:_Pyrite|#8 Pyrite]]"}
+          '*Aventurine*' {$url = "[[Patch_Notes#Patch_.239:_Aventurine|#9 Aventurine]]"}
+          '*Tanzanite*' {$url = "[[Patch_Notes#Patch_.2310:_Tanzanite|#10 Tanzanite]]"}
+          '*Kyanite*' {$url = "[[Patch_Notes#Patch_.2311:_Kyanite|#11 Kyanite]]"}
+          '*Edenite*' {$url = "[[Patch_Notes#Patch_.2312:_Edenite|#12 Edenite]]"}
+          '*Titanium*' {$url = "[[Patch_Notes#Patch_.2313:_Titanium|#13 Titanium]]"}
+          '*Serandite*' {$url = "[[Patch_Notes#Patch_.2314:_Serandite|#14 Serandite]]"}
+          '*Graphite*' {$url = "[[Patch_Notes#Patch_.2315:_Graphite|#15 Graphite]]"}
+          '*Jade*' {$url = "[[Patch_Notes#Patch_.2316:_Jade|#16 Jade]]"}
+          '*Tourmaline*' {$url = "[[Patch_Notes#Patch_.2317:_Tourmaline|#17 Tourmaline]]"}
+          '*Flint*' {$url = "[[Patch_Notes#Patch_.2318:_Flint|#18 Flint]]"}
+          '*Zincite*' {$url = "[[Patch_Notes#Patch_.2319:_Zincite|#19 Zincite]]"}
+          '*Perlite*' {$url = "[[Patch_Notes#Patch_.2320:_Perlite|#20 Perlite]]"}
+        }
+$patch = $url
     $changes = $editedTextBox2
 $patchcode = @"
 {| class="wikitable"
@@ -128,11 +136,34 @@ $changes
     }
 
 $handler_button_Clickp2=({
-
+    $x = $listBox.SelectedItem
+    switch -wildcard ($x)
+        {
+          '*Bedrock*' {$url = "[[Patch_Notes#Patch_.231:_Bedrock|#1 Bedrock]]"}
+          '*Quartz*' {$url = "[[Patch_Notes#Patch_.232:_Quartz|#2 Quartz]]"}
+          '*Granite*' {$url = "[[Patch_Notes#Patch_.233:_Granite|#3 Granite]]"}
+          '*Onyx*' {$url = "[[Patch_Notes#Patch_.234:_Onyx|#4 Onyx]]"}
+          '*Limestone*' {$url = "[[Patch_Notes#Patch_.235:_Limestone|#5 Limestone]]"}
+          '*Obsidian*' {$url = "[[Patch_Notes#Patch_.236:_Obsidian|#6 Obsidian]]"}
+          '*Beryl*' {$url = "[[Patch_Notes#Patch_.237:_Beryl|#7 Beryl]]"}
+          '*Pyrite*' {$url = "[[Patch_Notes#Patch_.238:_Pyrite|#8 Pyrite]]"}
+          '*Aventurine*' {$url = "[[Patch_Notes#Patch_.239:_Aventurine|#9 Aventurine]]"}
+          '*Tanzanite*' {$url = "[[Patch_Notes#Patch_.2310:_Tanzanite|#10 Tanzanite]]"}
+          '*Kyanite*' {$url = "[[Patch_Notes#Patch_.2311:_Kyanite|#11 Kyanite]]"}
+          '*Edenite*' {$url = "[[Patch_Notes#Patch_.2312:_Edenite|#12 Edenite]]"}
+          '*Titanium*' {$url = "[[Patch_Notes#Patch_.2313:_Titanium|#13 Titanium]]"}
+          '*Serandite*' {$url = "[[Patch_Notes#Patch_.2314:_Serandite|#14 Serandite]]"}
+          '*Graphite*' {$url = "[[Patch_Notes#Patch_.2315:_Graphite|#15 Graphite]]"}
+          '*Jade*' {$url = "[[Patch_Notes#Patch_.2316:_Jade|#16 Jade]]"}
+          '*Tourmaline*' {$url = "[[Patch_Notes#Patch_.2317:_Tourmaline|#17 Tourmaline]]"}
+          '*Flint*' {$url = "[[Patch_Notes#Patch_.2318:_Flint|#18 Flint]]"}
+          '*Zincite*' {$url = "[[Patch_Notes#Patch_.2319:_Zincite|#19 Zincite]]"}
+          '*Perlite*' {$url = "[[Patch_Notes#Patch_.2320:_Perlite|#20 Perlite]]"}
+        }
+$patch = $url
     Switch ($global:state) {
         "evenmore"
             {
-                $patch = $TextBoxp1.text
                 $tbox2 = $TextBoxp2.lines
                 $TextBoxp5Text = $TextBoxp5.Text
                 $TextBoxp5Text = $TextBoxp5Text.trimend("|}")
@@ -143,6 +174,7 @@ $handler_button_Clickp2=({
                         $editedTextBox2 += $line2
                     }
                 $changes4 = $editedTextBox2
+
 $additionsem = @"
 |-
 |style="border-bottom: 1px solid #a2a9b1;"|$patch||style="border-bottom: 1px solid #a2a9b1;"|
@@ -151,7 +183,6 @@ $changes4
                 $TextBoxp5Text = $TextBoxp5Text.trimend("|}") <###############################>
                 $TextBoxp5Text = $TextBoxp5Text.trimend("|}")
                 $TextBoxp5Text = $TextBoxp5Text.replace("|}","")
-                #$patchcode3 = ($TextBoxp5Text + $additionsem + "`r`n"+"|}"+ "`r`n"+"|}")
                 $patchcode3 = ($TextBoxp5Text + $additionsem + "|}"+ "`r`n"+"|}")
 
                 $TextBoxp5.Text = ""
@@ -167,7 +198,6 @@ $changes4
 
         "noneed"
             {
-                $patch = $TextBoxp1.text
                 $tbox2 = $TextBoxp2.lines
                 $TextBoxp5Text = $TextBoxp5.Text
                 $editedTextBox2 = ""
@@ -184,7 +214,6 @@ $additionsnn = @"
 $changes3
 "@
                 $TextBoxp5Text = $TextBoxp5Text.trimend("|}")
-                #$patchcode3 = $TextBoxp5Text.Replace("|}", $additionsnn + "`r`n"+"|}" + "`r`n"+"|}")
                 $patchcode3 = $TextBoxp5Text.Replace("|}", $additionsnn + "|}" + "`r`n"+"|}")
                 $TextBoxp5.Text = ""
                 $TextBoxp5.Text += $patchcode3
@@ -195,7 +224,6 @@ $changes3
 
         "need"
             {
-                $patch = $TextBoxp1.text
                 $tbox2 = $TextBoxp2.lines
                 $patchcode2 = $TextBoxp5.Text
                 $editedTextBox2 = ""
@@ -218,7 +246,6 @@ $additionsn = @"
 $changes2
 "@
                 $global:state = "noneed"
-                #$patchcode3 = $patchcode2.Replace("|}", $additionsn + "`r`n"+"|}" + "`r`n"+"|}")
                 $patchcode3 = $patchcode2.Replace("|}", $additionsn + "|}" + "`r`n"+"|}")
                 $TextBoxp5.Text = ""
                 $TextBoxp5.Text += $patchcode3
@@ -228,6 +255,26 @@ $changes2
             }
         }
     })
+
+## @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+## Tab 3 Functions
+
+$handler_button_Clickpre1=({
+$TextBoxpre1.Text = ""
+$prerqcode = "{{Skilldescnosynergiesleft}}"
+$TextBoxpre1.Text += $prerqcode
+})
+
+$handler_button_Clickpre2=({
+$TextBoxpre1.Text = ""
+$prerqcode = "{{Skilldescnosynergiesright}}"
+$TextBoxpre1.Text += $prerqcode
+})
+
+$handler_button_Clickpre3=({
+
+
+})
 
 ## @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ## This is the end of theactual "meat" of the script, the rest is all GUI
@@ -257,6 +304,7 @@ $FormTabControl.Size = "541,590"
 $FormTabControl.Location = "0,0"
 $FormTabControl.Font = [System.Drawing.Font]::new("Arial", 13, [System.Drawing.FontStyle]::Regular)
 
+#########
 ## Tab1 - Skill description tab and its elements 
 $Tab1 = New-object System.Windows.Forms.Tabpage
 $Tab1.DataBindings.DefaultDataSourceUpdateMode = 0
@@ -352,7 +400,7 @@ $Button1.location                = New-Object System.Drawing.Point(21,363)
 $Button1.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $Button1.add_Click($handler_button_Click)
 
- 
+######### 
 ## Tab2 - Patch changes tab and its elements 
 $Tab2 = New-object System.Windows.Forms.Tabpage
 $Tab2.DataBindings.DefaultDataSourceUpdateMode = 0
@@ -374,7 +422,7 @@ $TextBoxp2.multiline              = $true
 $TextBoxp2.text                   = ""
 $TextBoxp2.width                  = 200
 $TextBoxp2.height                 = 100
-$TextBoxp2.location               = New-Object System.Drawing.Point(14,147)
+$TextBoxp2.location               = New-Object System.Drawing.Point(15,200)
 $TextBoxp2.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $TextBoxp5                        = New-Object system.Windows.Forms.RichTextBox
@@ -392,16 +440,41 @@ $Labelp1.height                   = 10
 $Labelp1.location                 = New-Object System.Drawing.Point(20,58)
 $Labelp1.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
+$listBox                          = New-Object System.Windows.Forms.ListBox
+$listBox.Location                 = New-Object System.Drawing.Point(15,80)
+$listBox.Size                     = New-Object System.Drawing.Size(200,20)
+$listBox.Height                   = 80
+[void] $listBox.Items.Add(' #1 Bedrock ')
+[void] $listBox.Items.Add(' #2 Quartz ')
+[void] $listBox.Items.Add(' #3 Granite ')
+[void] $listBox.Items.Add(' #4 Onyx ')
+[void] $listBox.Items.Add(' #5 Limestone ')
+[void] $listBox.Items.Add(' #6 Obsidian ')
+[void] $listBox.Items.Add(' #7 Beryl ')
+[void] $listBox.Items.Add(' #8 Pyrite ')
+[void] $listBox.Items.Add(' #9 Aventurine ')
+[void] $listBox.Items.Add(' #10 Tanzanite ')
+[void] $listBox.Items.Add(' #11 Kyanite ')
+[void] $listBox.Items.Add(' #12 Edenite ')
+[void] $listBox.Items.Add(' #13 Titanium ')
+[void] $listBox.Items.Add(' #14 Serandite ')
+[void] $listBox.Items.Add(' #15 Graphite ')
+[void] $listBox.Items.Add(' #16 Jade ')
+[void] $listBox.Items.Add(' #17 Tourmaline ')
+[void] $listBox.Items.Add(' #18 Flint ')
+[void] $listBox.Items.Add(' #19 Zincite ')
+[void] $listBox.Items.Add(' #20 Perlite ')
+
 $Labelp2                          = New-Object system.Windows.Forms.Label
 $Labelp2.text                     = "Existing patch notes"
 $Labelp2.AutoSize                 = $true
 $Labelp2.width                    = 25
 $Labelp2.height                   = 10
-$Labelp2.location                 = New-Object System.Drawing.Point(20,123)
+$Labelp2.location                 = New-Object System.Drawing.Point(20,175)
 $Labelp2.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Buttonp1                         = New-Object system.Windows.Forms.Button
-$Buttonp1.text                    = "Generate Code"
+$Buttonp1.text                    = "Generate Patch Notes"
 $Buttonp1.width                   = 152
 $Buttonp1.height                  = 30
 $Buttonp1.location                = New-Object System.Drawing.Point(21,363)
@@ -423,6 +496,93 @@ $Labelp5.width                    = 25
 $Labelp5.height                   = 10
 $Labelp5.location                 = New-Object System.Drawing.Point(249,43)
 $Labelp5.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+#########
+## Tab3 - Empty prereq's left and right
+$Tab3 = New-object System.Windows.Forms.Tabpage
+$Tab3.DataBindings.DefaultDataSourceUpdateMode = 0
+$Tab3.UseVisualStyleBackColor = $True
+$Tab3.Name = "TAB3"
+$Tab3.Text = "Synergies"
+$Tab3.Font = [System.Drawing.Font]::new("Arial", 9, [System.Drawing.FontStyle]::Regular)
+
+$TextBoxpre1                        = New-Object system.Windows.Forms.RichTextBox
+$TextBoxpre1.multiline              = $true
+$TextBoxpre1.width                  = 258
+$TextBoxpre1.height                 = 400
+$TextBoxpre1.location               = New-Object System.Drawing.Point(251,80)
+$TextBoxpre1.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$TextBoxpre2                        = New-Object system.Windows.Forms.RichTextBox
+$TextBoxpre2.multiline              = $true
+$TextBoxpre2.width                  = 200
+$TextBoxpre2.height                 = 30
+$TextBoxpre2.location               = New-Object System.Drawing.Point(20,80)
+$TextBoxpre2.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$TextBoxpre3                        = New-Object system.Windows.Forms.RichTextBox
+$TextBoxpre3.multiline              = $true
+$TextBoxpre3.width                  = 200
+$TextBoxpre3.height                 = 30
+$TextBoxpre3.location               = New-Object System.Drawing.Point(20,153)
+$TextBoxpre3.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+
+$Labelpre1                          = New-Object system.Windows.Forms.Label
+$Labelpre1.text                     = "Generated code can be copied from below"
+$Labelpre1.AutoSize                 = $true
+$Labelpre1.width                    = 25
+$Labelpre1.height                   = 10
+$Labelpre1.location                 = New-Object System.Drawing.Point(249,43)
+$Labelpre1.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$Labelpre2                          = New-Object system.Windows.Forms.Label
+$Labelpre2.text                     = "URL Synergy"
+$Labelpre2.AutoSize                 = $true
+$Labelpre2.width                    = 25
+$Labelpre2.height                   = 10
+$Labelpre2.location                 = New-Object System.Drawing.Point(20,58)
+$Labelpre2.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$Labelpre3                          = New-Object system.Windows.Forms.Label
+$Labelpre3.text                     = "Synergy Effect"
+$Labelpre3.AutoSize                 = $true
+$Labelpre3.width                    = 25
+$Labelpre3.height                   = 10
+$Labelpre3.location                 = New-Object System.Drawing.Point(20,123)
+$Labelpre3.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+
+$Buttonpre1                         = New-Object system.Windows.Forms.Button
+$Buttonpre1.text                    = "Empty on Left"
+$Buttonpre1.width                   = 152
+$Buttonpre1.height                  = 30
+$Buttonpre1.location                = New-Object System.Drawing.Point(20,500)
+$Buttonpre1.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$Buttonpre1.add_Click($handler_button_Clickpre1)
+
+$Buttonpre2                         = New-Object system.Windows.Forms.Button
+$Buttonpre2.text                    = "Empty on Right"
+$Buttonpre2.width                   = 152
+$Buttonpre2.height                  = 30
+$Buttonpre2.location                = New-Object System.Drawing.Point(250,500)
+$Buttonpre2.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$Buttonpre2.add_Click($handler_button_Clickpre2)
+
+$Buttonpre3                         = New-Object system.Windows.Forms.Button
+$Buttonpre3.text                    = "Add Synergy"
+$Buttonpre3.width                   = 152
+$Buttonpre3.height                  = 30
+$Buttonpre3.location                = New-Object System.Drawing.Point(21,300)
+$Buttonpre3.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$Buttonpre3.add_Click($handler_button_Clickpre3)
+
+$Buttonpre4                         = New-Object system.Windows.Forms.Button
+$Buttonpre4.text                    = "Add More Synergy"
+$Buttonpre4.width                   = 152
+$Buttonpre4.height                  = 30
+$Buttonpre4.location                = New-Object System.Drawing.Point(21,363)
+$Buttonpre4.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$Buttonpre4.add_Click($handler_button_Clickpre4)
  
 ## Tab switching
 
@@ -439,10 +599,17 @@ $t2_button_click1 = {
  
 }
  
+## Tab3 - Button1 - Close
+$t3_button_click1 = {  
+ 
+ [System.Windows.Forms.MessageBox]::Show("Tab 3")
+ 
+} 
 ## Add tab controls
  
 $Form.Controls.Add($FormTabControl)
 $FormTabControl.Controls.Add($Tab1)
+#$FormTabControl.Controls.Add($Tab3)
 $FormTabControl.Controls.Add($Tab2)
  
 $Tab1.Controls.Add($TextBox1)
@@ -457,7 +624,10 @@ $Tab1.Controls.Add($Label4)
 $Tab1.Controls.Add($Label5)
 $Tab1.Controls.Add($Button1)
 
-$Tab2.Controls.Addrange(@($TextBoxp1,$TextBoxp2,$TextBoxp5,$Labelp1,$Labelp2,$Labelp5,$Buttonp1,$Buttonp2))
+#$Tab2.Controls.Addrange(@($TextBoxp1,$TextBoxp2,$TextBoxp5,$Labelp1,$Labelp2,$Labelp5,$Buttonp1,$Buttonp2))
+$Tab2.Controls.Addrange(@($ListBox,$TextBoxp2,$TextBoxp5,$Labelp1,$Labelp2,$Labelp5,$Buttonp1,$Buttonp2))
+
+$Tab3.Controls.Addrange(@($TextBoxpre1,$TextBoxpre2,$TextBoxpre3,$Labelpre1,$Labelpre2,$Labelpre3,$Buttonpre1,$Buttonpre2,$Buttonpre3,$Buttonpre4))
 
 ## Hide the console window, show the gui
 Hide-Console
