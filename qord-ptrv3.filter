@@ -25,6 +25,8 @@ Sound[corb3]: "rune_jah"
 //Called with %!facetl!% and %!facetr!%
 TextMacro[facetl]: %RED%»» %YELLOW%»» %GREEN%»  %BLUE%»
 TextMacro[facetr]: %BLUE%«  %GREEN%« %YELLOW%«« %RED%««
+TextMacro[upb4slam]: %RED%Upgrade before corrupting for chance at max sockets
+TextMacro[pcm]: %GRAY%Possible Corruption Mods
 //TextMacro[vendor]: %RED%ØØØØØ //meh....not used, maybe later
 //TextMacro[dolla]: %WHITE%
 
@@ -434,7 +436,8 @@ ItemDisplay[EQ1 (RARE OR SET OR UNI) ID !ETH SOCK=0]:%NAME%{%GRAY% Piercing 15-2
 ItemDisplay[(qui OR lea OR hla OR stu OR rng OR scl OR brs OR chn OR spl OR ltp OR fld OR plt OR xui OR xea OR xla OR xtu OR xng OR xcl OR xrs OR xhn OR xpl OR xlt) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%RED%Upgrade before corrupting for chance at max sockets%NL%%GRAY% IAS 10% | Enh Defense 15-20% | AR 10-20% | FCR 10% | Max Life +2% %NL%%GRAY%Possible Corruption Mods}
 ItemDisplay[EQ2 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% IAS 10% | Enh Def 15-20% | AR 10-20% | FCR 10% | Max Life +2% %NL%%GRAY%Possible Corruption Mods}
 // shield
-ItemDisplay[(buc OR kit OR spk OR tow OR bsh OR xuc OR xpk OR xit OR xsh OR xow OR xts) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%RED%Upgrade before corrupting for chance at max sockets%NL%%GRAY% Block 10% | Fire Damage 10% | Cold Damage 10% | Light Damage 10% | Poison Damage 10% %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[(buc OR kit OR spk OR tow OR bsh OR xuc OR xpk OR xit OR xsh OR xow OR xts) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%!upb4slam!% %NL%%GRAY% Block 10% | Fire Damage 10% | Cold Damage 10% | Light Damage 10% | Poison Damage 10% %NL% %!pcm!%}
+//ItemDisplay[(buc OR kit OR spk OR tow OR bsh OR xuc OR xpk OR xit OR xsh OR xow OR xts) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%RED%Upgrade before corrupting for chance at max sockets%NL%%GRAY% Block 10% | Fire Damage 10% | Cold Damage 10% | Light Damage 10% | Poison Damage 10% %NL%%GRAY%Possible Corruption Mods}
 ItemDisplay[EQ3 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Block 10% | Fire Dam 10% | Cold Dam 10% | Light Dam 10% | Psn Dam 10% %NL%%GRAY%Possible Corruption Mods}
 //weapons
 ItemDisplay[(9ga OR spc OR wnd OR ywn OR bwn OR gwn OR ktr OR wrb OR xtp OR xld OR xlt OR 9wn OR 9yw OR 9bw OR 9gw OR 9wb) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%RED%Upgrade before corrupting for chance at max sockets%NL%%GRAY% Enh Damage 35-50% | Deadly Strike 10% | Max Damage Per Level | Crushing Blow 20% | IAS 10-15% %NL%%GRAY%Possible Corruption Mods}
