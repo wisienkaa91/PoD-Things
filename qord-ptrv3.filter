@@ -29,7 +29,7 @@ TextMacro[facetr]: %BLUE%«  %GREEN%« %YELLOW%«« %RED%««
 //TextMacro[dolla]: %WHITE%
 
 //Custom display styles
-//inline example: <:pelt: BorderColor = 99, BorderSize = 4, NotificationSound = BigDrop>
+//inline example: <:pelt: BorderColor = 99, BorderSize = 4, NotificationSound = SoundFile>
 //called with <<rune>> and <<qspecials>>
 ItemStyle[rare]: NotificationColor = YELLOW
 ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = 364, NotificationSoundPriority = HIGH
