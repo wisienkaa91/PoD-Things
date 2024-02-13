@@ -25,12 +25,16 @@ Sound[corb3]: "rune_jah"
 //Called with %!facetl!% and %!facetr!%
 TextMacro[facetl]: %RED%»» %YELLOW%»» %GREEN%»  %BLUE%»
 TextMacro[facetr]: %BLUE%«  %GREEN%« %YELLOW%«« %RED%««
-TextMacro[vendor]: %RED%ØØØØØ //meh....not used, maybe later
-
+//TextMacro[vendor]: %RED%ØØØØØ //meh....not used, maybe later
+//TextMacro[dolla]: %WHITE%
 
 //Custom display styles
+//inline example: <:pelt: BorderColor = 99, BorderSize = 4, NotificationSound = BigDrop>
+//called with <<rune>> and <<qspecials>>
+ItemStyle[rare]: NotificationColor = YELLOW
 ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = 364, NotificationSoundPriority = HIGH
 ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = 3645, NotificationSoundPriority = HIGH
+ItemStyle[pelt]: MapIcon = 4, MapIconColor = 5, BorderColor = 4, BorderSize = 1, BackgroundColor = 15, NotificationColor = PURPLE //<<pelt>>
 
 //reserved testing space
 //ItemDisplay[SPECIAL]: %GOLD%%NAME%
@@ -164,11 +168,11 @@ ItemDisplay[(sml OR xml OR uml) MAG]: %NAME% %PURPLE%[eth] %GRAY%[%ILVL%]{%GRAY%
 
 //Rares
 //Rare military picks
-ItemDisplay[mpi RARE ILVL>60]: %NL%%NAME%%NL% %NOTIFY(ORANGE)%
-ItemDisplay[cq2 RARE ILVL>60]: %NL%%NAME%%NL% %NOTIFY(ORANGE)%
+ItemDisplay[mpi RARE ILVL>60]: %NL%%NAME%%NL% <<rare>>
+ItemDisplay[cq2 RARE ILVL>60]: %NL%%NAME%%NL% <<rare>>
 //Rare Gloves, Belts and Boots
-ItemDisplay[(EQ4 OR EQ5 OR EQ6 OR mpi) ETH RARE]: %GRAY%ETH %YELLOW%%NAME% %NOTIFY(YELLOW)% 
-ItemDisplay[(EQ4 OR EQ5 OR EQ6 OR mpi) RARE]: %NL%%NAME%%NL% %NOTIFY(YELLOW)% 
+ItemDisplay[(EQ4 OR EQ5 OR EQ6 OR mpi) ETH RARE]: %GRAY%ETH %YELLOW%%NAME% <<rare>>
+ItemDisplay[(EQ4 OR EQ5 OR EQ6 OR mpi) RARE]: %NL%%NAME%%NL% <<rare>>
 
 //Circlets
 ItemDisplay[EQ7 MAG ETH]: %GRAY%ETH %BLUE%%NAME%
@@ -343,30 +347,30 @@ ItemDisplay[EQ2 ELT ETH NMAG (SOCK=0 OR SOCK>2)]: %GRAY%[%WHITE%eth%GRAY%] %NAME
 //Helmets
 ItemDisplay[(ci3 OR uh9) (!INF AND !ETH) AND (NMAG OR RW) SOCK=3]: %NAME% %TAN%[%SOCKETS%]
 //Druid pelts adapted from Mack
-ItemDisplay[CL1 NMAG SK226>2 SOCK=0]: %NAME% %DGREEN%+3 OAK %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(138)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK226>1 SOCK=0]: %NAME% %DGREEN%+2 OAK %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK226>0 SOCK=0]: %NAME% %DGREEN%%SKILL(226)% OAK %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK244>2 SOCK=0]: %NAME% %DGREEN%+3 Volcano Pelt %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK249>2 SOCK=0]: %NAME% %GRAY%+3 Armageddon Pelt %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK250>2 SOCK=0]: %NAME% %GRAY%+3 Hurricane Pelt %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK240>2 SOCK=0]: %NAME% %GRAY%+3 Twister Pelt %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK245>2 SOCK=0]: %NAME% %GRAY%+3 Nado Pelt %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK247>2 SOCK=0]: %NAME% %GRAY%+3 Grizzly Pelt %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK243>2 SOCK=0]: %NAME% %GRAY%+3 Shockwave Pelt %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK238>2 SOCK=0]: %NAME% %GRAY%+3 Rabies Pelt %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK221>2 SOCK=0]: %NAME% %DGREEN%+3 Raven Pelt %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK221>0 SOCK=0]: %NAME% %DGREEN%%SKILL(221)% Raven Pelt %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK226>2 !SOCK=1]: %NAME% %DGREEN%+3 OAK %GRAY%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(138)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK226>0 !SOCK=1]: %NAME% %DGREEN%%SKILL(226)% OAK %GRAY%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK244>2 !SOCK=1]: %NAME% %DGREEN%+3 Volcano Pelt %GRAY%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK249>2 !SOCK=1]: %NAME% %GRAY%+3 Armageddon Pelt %GRAY%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK250>2 !SOCK=1]: %NAME% %GRAY%+3 Hurricane Pelt %GRAY%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK240>2 !SOCK=1]: %NAME% %GRAY%+3 Twister Pelt %GRAY%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK245>2 !SOCK=1]: %NAME% %GRAY%+3 Nado Pelt %GRAY%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK247>2 !SOCK=1]: %NAME% %GRAY%+3 Grizzly Pelt %GRAY%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK243>2 !SOCK=1]: %NAME% %GRAY%+3 Shockwave Pelt %GRAY%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK238>2 !SOCK=1]: %NAME% %GRAY%+3 Rabies Pelt %GRAY%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
-ItemDisplay[CL1 NMAG SK221>2 !SOCK=1]: %NAME% %DGREEN%+3 Raven Pelt %GRAY%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%BGCOLOR(15)%%BORDER(4,1)%
+ItemDisplay[CL1 NMAG SK226>2 SOCK=0]: %NAME% %DGREEN%+3 OAK <:pelt: BackGroundColor = 138>
+ItemDisplay[CL1 NMAG SK226>1 SOCK=0]: %NAME% %DGREEN%+2 OAK  <<pelt>>
+ItemDisplay[CL1 NMAG SK226>0 SOCK=0]: %NAME% %DGREEN%%SKILL(226)% OAK  <<pelt>>
+ItemDisplay[CL1 NMAG SK244>2 SOCK=0]: %NAME% %DGREEN%+3 Volcano Pelt  <<pelt>>
+ItemDisplay[CL1 NMAG SK249>2 SOCK=0]: %NAME% %GRAY%+3 Armageddon Pelt <<pelt>>
+ItemDisplay[CL1 NMAG SK250>2 SOCK=0]: %NAME% %GRAY%+3 Hurricane Pelt <<pelt>>
+ItemDisplay[CL1 NMAG SK240>2 SOCK=0]: %NAME% %GRAY%+3 Twister Pelt <<pelt>>
+ItemDisplay[CL1 NMAG SK245>2 SOCK=0]: %NAME% %GRAY%+3 Nado Pelt <<pelt>>
+ItemDisplay[CL1 NMAG SK247>2 SOCK=0]: %NAME% %GRAY%+3 Grizzly Pelt <<pelt>>
+ItemDisplay[CL1 NMAG SK243>2 SOCK=0]: %NAME% %GRAY%+3 Shockwave Pelt <<pelt>>
+ItemDisplay[CL1 NMAG SK238>2 SOCK=0]: %NAME% %GRAY%+3 Rabies Pelt <<pelt>>
+ItemDisplay[CL1 NMAG SK221>2 SOCK=0]: %NAME% %DGREEN%+3 Raven Pelt <<pelt>>
+ItemDisplay[CL1 NMAG SK221>0 SOCK=0]: %NAME% %DGREEN%%SKILL(221)% Raven Pelt <<pelt>>
+ItemDisplay[CL1 NMAG SK226>2 !SOCK=1]: %NAME% %DGREEN%+3 OAK %GRAY%[%SOCKETS%] <<pelt>>
+ItemDisplay[CL1 NMAG SK226>0 !SOCK=1]: %NAME% %DGREEN%%SKILL(226)% OAK %GRAY%[%SOCKETS%] <<pelt>>
+ItemDisplay[CL1 NMAG SK244>2 !SOCK=1]: %NAME% %DGREEN%+3 Volcano Pelt %GRAY%[%SOCKETS%] <<pelt>>
+ItemDisplay[CL1 NMAG SK249>2 !SOCK=1]: %NAME% %GRAY%+3 Armageddon Pelt %GRAY%[%SOCKETS%] <<pelt>>
+ItemDisplay[CL1 NMAG SK250>2 !SOCK=1]: %NAME% %GRAY%+3 Hurricane Pelt %GRAY%[%SOCKETS%] <<pelt>>
+ItemDisplay[CL1 NMAG SK240>2 !SOCK=1]: %NAME% %GRAY%+3 Twister Pelt %GRAY%[%SOCKETS%] <<pelt>>
+ItemDisplay[CL1 NMAG SK245>2 !SOCK=1]: %NAME% %GRAY%+3 Nado Pelt %GRAY%[%SOCKETS%] <<pelt>>
+ItemDisplay[CL1 NMAG SK247>2 !SOCK=1]: %NAME% %GRAY%+3 Grizzly Pelt %GRAY%[%SOCKETS%] <<pelt>>
+ItemDisplay[CL1 NMAG SK243>2 !SOCK=1]: %NAME% %GRAY%+3 Shockwave Pelt %GRAY%[%SOCKETS%] <<pelt>>
+ItemDisplay[CL1 NMAG SK238>2 !SOCK=1]: %NAME% %GRAY%+3 Rabies Pelt %GRAY%[%SOCKETS%] <<pelt>>
+ItemDisplay[CL1 NMAG SK221>2 !SOCK=1]: %NAME% %DGREEN%+3 Raven Pelt %GRAY%[%SOCKETS%] <<pelt>>
 
 //Shields
 ItemDisplay[(pab OR pac) (!INF AND ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK=4) RES>34]: %GRAY%[%WHITE%eth%GRAY%][%WHITE%res%GRAY%] %NAME% %TAN%[%SOCKETS%]
