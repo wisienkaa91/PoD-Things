@@ -27,7 +27,7 @@ TextMacro[facetl]: %RED%»» %YELLOW%»» %GREEN%»  %BLUE%»
 TextMacro[facetr]: %BLUE%«  %GREEN%« %YELLOW%«« %RED%««
 TextMacro[upb4slam]: %RED%Upgrade before corrupting for chance at max sockets
 TextMacro[pcm]: %GRAY%Possible Corruption Mods
-//TextMacro[vendor]: %RED%ØØØØØ //meh....not used, maybe later
+TextMacro[shopping]: %RED%ØØØØØ //meh....not used, maybe later %!shopping!%
 //TextMacro[dolla]: %WHITE%
 
 //Custom display styles
@@ -36,7 +36,7 @@ TextMacro[pcm]: %GRAY%Possible Corruption Mods
 ItemStyle[rare]: NotificationColor = YELLOW
 ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = 364, NotificationSoundPriority = HIGH
 ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = 3645, NotificationSoundPriority = HIGH
-ItemStyle[pelt]: MapIcon = 4, MapIconColor = 5, BorderColor = 4, BorderSize = 1, BackgroundColor = 15, NotificationColor = PURPLE //<<pelt>>
+ItemStyle[pelt]: MapIcon = 4, MapIconColor = 5, BorderColor = 4, BorderSize = 1, BackgroundColor = 15 //<<pelt>>
 
 //reserved testing space
 //ItemDisplay[SPECIAL]: %GOLD%%NAME%
@@ -349,7 +349,7 @@ ItemDisplay[EQ2 ELT ETH NMAG (SOCK=0 OR SOCK>2)]: %GRAY%[%WHITE%eth%GRAY%] %NAME
 //Helmets
 ItemDisplay[(ci3 OR uh9) (!INF AND !ETH) AND (NMAG OR RW) SOCK=3]: %NAME% %TAN%[%SOCKETS%]
 //Druid pelts adapted from Mack
-ItemDisplay[CL1 NMAG SK226>2 SOCK=0]: %NAME% %DGREEN%+3 OAK <:pelt: BackGroundColor = 138>
+ItemDisplay[CL1 NMAG SK226>2 SOCK=0]: %NAME% %DGREEN%+3 OAK <:pelt: BackgroundColor = 138>
 ItemDisplay[CL1 NMAG SK226>1 SOCK=0]: %NAME% %DGREEN%+2 OAK  <<pelt>>
 ItemDisplay[CL1 NMAG SK226>0 SOCK=0]: %NAME% %DGREEN%%SKILL(226)% OAK  <<pelt>>
 ItemDisplay[CL1 NMAG SK244>2 SOCK=0]: %NAME% %DGREEN%+3 Volcano Pelt  <<pelt>>
@@ -395,33 +395,33 @@ ItemDisplay[EQ4 (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19]: %RED%»» »» 
 ItemDisplay[WP13 (TABSK24>2 AND SK119>2)]: %RED%»» »» »» %GREEN%FoH Scepter%RED% «« «« «« %NOTIFY(ITEM)%
 ItemDisplay[WP12 MAG CHSK91>0]: %RED%»» »» »» %GREEN%Lower Resist Wand%RED% «« «« «« %NOTIFY(ITEM)%
 //LivEisJeebus shop lines big thanks to him for these lines
-ItemDisplay[CL5 (CLSK6>0 AND SK271>2)]: %RED%ØØØØØ %PURPLE%LIGHT CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>1 AND SK271>1)]: %RED%ØØØØØ %PURPLE%LIGHT CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>0 AND SK271>2)]: %RED%ØØØØØ %PURPLE%LIGHT CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>1 AND SK271>1)]: %RED%ØØØØØ %PURPLE%LIGHT CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>0 AND SK262>2)]: %RED%ØØØØØ %PURPLE%FIRE CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>1 AND SK262>1)]: %RED%ØØØØØ %PURPLE%FIRE CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>0 AND SK262>2)]: %RED%ØØØØØ %PURPLE%FIRE CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>1 AND SK262>1)]: %RED%ØØØØØ %PURPLE%FIRE CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>0 AND SK272>2)]: %RED%ØØØØØ %PURPLE%FIRE CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>1 AND SK272>1)]: %RED%ØØØØØ %PURPLE%FIRE CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>0 AND SK272>2)]: %RED%ØØØØØ %PURPLE%FIRE CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>1 AND SK272>1)]: %RED%ØØØØØ %PURPLE%FIRE CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>0 AND SK277>2)]: %RED%ØØØØØ %PURPLE%BLADESHIELD CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>1 AND SK277>1)]: %RED%ØØØØØ %PURPLE%BLADESHIELD CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>0 AND SK277>2)]: %RED%ØØØØØ %PURPLE%BLADESHIELD CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>1 AND SK277>1)]: %RED%ØØØØØ %PURPLE%BLADESHIELD CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>0 AND SK278>2)]: %RED%ØØØØØ %PURPLE%VENOM CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>1 AND SK278>1)]: %RED%ØØØØØ %PURPLE%VENOM CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK49>0 AND SK278>2)]: %RED%ØØØØØ %PURPLE%VENOM CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK49>1 AND SK278>1)]: %RED%ØØØØØ %PURPLE%VENOM CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>0 AND SK271>2)]: %!shopping!% %PURPLE%LIGHT CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>1 AND SK271>1)]: %!shopping!% %PURPLE%LIGHT CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>0 AND SK271>2)]: %!shopping!% %PURPLE%LIGHT CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>1 AND SK271>1)]: %!shopping!% %PURPLE%LIGHT CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>0 AND SK262>2)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>1 AND SK262>1)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>0 AND SK262>2)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>1 AND SK262>1)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>0 AND SK272>2)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>1 AND SK272>1)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>0 AND SK272>2)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>1 AND SK272>1)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>0 AND SK277>2)]: %!shopping!% %PURPLE%BLADESHIELD CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>1 AND SK277>1)]: %!shopping!% %PURPLE%BLADESHIELD CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>0 AND SK277>2)]: %!shopping!% %PURPLE%BLADESHIELD CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>1 AND SK277>1)]: %!shopping!% %PURPLE%BLADESHIELD CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>0 AND SK278>2)]: %!shopping!% %PURPLE%VENOM CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>1 AND SK278>1)]: %!shopping!% %PURPLE%VENOM CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK49>0 AND SK278>2)]: %!shopping!% %PURPLE%VENOM CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK49>1 AND SK278>1)]: %!shopping!% %PURPLE%VENOM CLAW %!shopping!% %NOTIFY(ITEM)%
 //Shopping
-ItemDisplay[MAG WEAPON ID TABSK34=3]: %RED%ØØØØØ %PURPLE%BO STICK%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[MAG CL5 ID TABSK48=3]: %RED%ØØØØØ %PURPLE%TRAP CLAW%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[MAG EQ4 !ETH ID TABSK0=3 IAS=20]: %RED%ØØØØØ %PURPLE%BOW GLOVE%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[MAG EQ4 !ETH ID TABSK2=3 IAS=20]: %RED%ØØØØØ %PURPLE%JAVA GLOVE%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[MAG WP13 (TABSK24=3 AND SK121=3)]: %RED%ØØØØØ %PURPLE%FOH WEP%RED% ØØØØØ %NOTIFY(ITEM)%
-ItemDisplay[MAG WP13 (TABSK25=3 AND SK119=3)]: %RED%ØØØØØ %PURPLE%SANC AURA WEP%RED% ØØØØØ %NOTIFY(ITEM)%
+ItemDisplay[MAG WEAPON ID TABSK34=3]: %!shopping!% %PURPLE%BO STICK %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[MAG CL5 ID TABSK48=3]: %!shopping!% %PURPLE%TRAP CLAW %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[MAG EQ4 !ETH ID TABSK0=3 IAS=20]: %!shopping!% %PURPLE%BOW GLOVE %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[MAG EQ4 !ETH ID TABSK2=3 IAS=20]: %!shopping!% %PURPLE%JAVA GLOVE %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[MAG WP13 (TABSK24=3 AND SK121=3)]: %!shopping!% %PURPLE%FOH WEP %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[MAG WP13 (TABSK25=3 AND SK119=3)]: %!shopping!% %PURPLE%SANC AURA WEP %!shopping!% %NOTIFY(ITEM)%
 
 // SHOW ME THAT UNIQ ITEM IS ETH
 ItemDisplay[UNI AND ETH AND SOCK=0]: %GRAY%ETH %GOLD%%NAME%
@@ -430,30 +430,30 @@ ItemDisplay[RW]: %NAME% %TAN%[%SOCKETS%]
 
 //Show me every identified item and add corruption information
 // helms
-ItemDisplay[(bhm OR xh9 OR ci0 OR ci1) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%RED%Upgrade before corrupting for chance at max sockets%NL%%GRAY% Piercing 15-20% | Life 10-15 | LGOH Melee 10-14, Ranged 5-10 | Energy 5-15 | Strength 5-15 %NL%%GRAY%Possible Corruption Mods}
-ItemDisplay[EQ1 (RARE OR SET OR UNI) ID !ETH SOCK=0]:%NAME%{%GRAY% Piercing 15-20% | Life 10-15 | LGOH MR5-10 | Energy 5-15 | Strength 5-15 %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[(bhm OR xh9 OR ci0 OR ci1) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%!upb4slam!% %NL%%GRAY% Piercing 15-20% | Life 10-15 | LGOH Melee 10-14, Ranged 5-10 | Energy 5-15 | Strength 5-15 %NL% %!pcm!%}
+ItemDisplay[EQ1 (RARE OR SET OR UNI) ID !ETH SOCK=0]:%NAME%{%GRAY% Piercing 15-20% | Life 10-15 | LGOH MR5-10 | Energy 5-15 | Strength 5-15 %NL% %!pcm!%}
 //body armor
-ItemDisplay[(qui OR lea OR hla OR stu OR rng OR scl OR brs OR chn OR spl OR ltp OR fld OR plt OR xui OR xea OR xla OR xtu OR xng OR xcl OR xrs OR xhn OR xpl OR xlt) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%RED%Upgrade before corrupting for chance at max sockets%NL%%GRAY% IAS 10% | Enh Defense 15-20% | AR 10-20% | FCR 10% | Max Life +2% %NL%%GRAY%Possible Corruption Mods}
-ItemDisplay[EQ2 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% IAS 10% | Enh Def 15-20% | AR 10-20% | FCR 10% | Max Life +2% %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[(qui OR lea OR hla OR stu OR rng OR scl OR brs OR chn OR spl OR ltp OR fld OR plt OR xui OR xea OR xla OR xtu OR xng OR xcl OR xrs OR xhn OR xpl OR xlt) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%!upb4slam!% %NL%%GRAY% IAS 10% | Enh Defense 15-20% | AR 10-20% | FCR 10% | Max Life +2% %NL% %!pcm!%}
+ItemDisplay[EQ2 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% IAS 10% | Enh Def 15-20% | AR 10-20% | FCR 10% | Max Life +2% %NL% %!pcm!%}
 // shield
 ItemDisplay[(buc OR kit OR spk OR tow OR bsh OR xuc OR xpk OR xit OR xsh OR xow OR xts) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%!upb4slam!% %NL%%GRAY% Block 10% | Fire Damage 10% | Cold Damage 10% | Light Damage 10% | Poison Damage 10% %NL% %!pcm!%}
 //ItemDisplay[(buc OR kit OR spk OR tow OR bsh OR xuc OR xpk OR xit OR xsh OR xow OR xts) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%RED%Upgrade before corrupting for chance at max sockets%NL%%GRAY% Block 10% | Fire Damage 10% | Cold Damage 10% | Light Damage 10% | Poison Damage 10% %NL%%GRAY%Possible Corruption Mods}
-ItemDisplay[EQ3 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Block 10% | Fire Dam 10% | Cold Dam 10% | Light Dam 10% | Psn Dam 10% %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[EQ3 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Block 10% | Fire Dam 10% | Cold Dam 10% | Light Dam 10% | Psn Dam 10% %NL% %!pcm!%}
 //weapons
-ItemDisplay[(9ga OR spc OR wnd OR ywn OR bwn OR gwn OR ktr OR wrb OR xtp OR xld OR xlt OR 9wn OR 9yw OR 9bw OR 9gw OR 9wb) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%RED%Upgrade before corrupting for chance at max sockets%NL%%GRAY% Enh Damage 35-50% | Deadly Strike 10% | Max Damage Per Level | Crushing Blow 20% | IAS 10-15% %NL%%GRAY%Possible Corruption Mods}
-ItemDisplay[WEAPON (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Enh Dam 35-50% | Deadly Strike 10% | Max Dam Clvl | CB 20% | IAS 10-15% %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[(9ga OR spc OR wnd OR ywn OR bwn OR gwn OR ktr OR wrb OR xtp OR xld OR xlt OR 9wn OR 9yw OR 9bw OR 9gw OR 9wb) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%!upb4slam!% %NL%%GRAY% Enh Damage 35-50% | Deadly Strike 10% | Max Damage Per Level | Crushing Blow 20% | IAS 10-15% %NL% %!pcm!%}
+ItemDisplay[WEAPON (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Enh Dam 35-50% | Deadly Strike 10% | Max Dam Clvl | CB 20% | IAS 10-15% %NL% %!pcm!%}
 //boots
-ItemDisplay[EQ5 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Fire Res 10-20% | All Res 5-10% | Dex 5-15 | Light Res 10-20% | Cooldown -10% %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[EQ5 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Fire Res 10-20% | All Res 5-10% | Dex 5-15 | Light Res 10-20% | Cooldown -10% %NL% %!pcm!%}
 //gloves
-ItemDisplay[EQ4 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% IAS 10% | Cold Res 10-20% | All Res 5-10% | LGOH M5-10, R5-10 | Psn Res 10-20% %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[EQ4 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% IAS 10% | Cold Res 10-20% | All Res 5-10% | LGOH M5-10, R5-10 | Psn Res 10-20% %NL% %!pcm!%}
 //belt
-ItemDisplay[EQ6 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Pierce 8% | Max Fire 2% | Max Cold 2% | Max Light 2% | Max Poison 2% %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[EQ6 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Pierce 8% | Max Fire 2% | Max Cold 2% | Max Light 2% | Max Poison 2% %NL% %!pcm!%}
 //amulet
-ItemDisplay[amu (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | +1 All Skills | Regen Mana 15% | MF 10% | Life 12-18 %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[amu (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | +1 All Skills | Regen Mana 15% | MF 10% | Life 12-18 %NL% %!pcm!%}
 //ring
-ItemDisplay[rin (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% FCR 10% | Faster RW 10% | Life 15 | PDR 5-6% | MF 10% %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[rin (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% FCR 10% | Faster RW 10% | Life 15 | PDR 5-6% | MF 10% %NL% %!pcm!%}
 //bolt-arrow
-ItemDisplay[(aq2 OR cq2) (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | LGOH 4-6 | MGOH 2-4 | IAS 10% | Vita 5-15% %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[(aq2 OR cq2) (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | LGOH 4-6 | MGOH 2-4 | IAS 10% | Vita 5-15% %NL% %!pcm!%}
 // catch all
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME% [%CODE%]
 ItemDisplay[(UNI OR SET)]: %NAME% [%CODE%]
@@ -491,15 +491,3 @@ ItemDisplay[(ARMOR OR WEAPON) ETH SOCK>0 CLVL<19]: %GRAY%ETH %NAME% %TAN%[%SOCKE
 ItemDisplay[(ARMOR OR WEAPON) ETH CLVL<19]: %GRAY%ETH %NAME%
 ItemDisplay[(ARMOR OR WEAPON) SOCK>0 CLVL<19]: %NAME% %TAN%[%SOCKETS%]
 ItemDisplay[(ARMOR OR WEAPON) CLVL>18]:
-
-
-
-
-
-
-
-
-
-
-
-
