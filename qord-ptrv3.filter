@@ -32,6 +32,7 @@ TextMacro[tansocks]: %TAN%[%SOCKETS%] // %!tansocks!%
 TextMacro[graysocks]: %GRAY%[%SOCKETS%] // %!graysocks!%
 TextMacro[stripedsocks]: %WHITE%[%BLUE%%SOCKETS%%WHITE%] // %!stripedsocks!%
 TextMacro[runename]: %ORANGE%%RUNENAME% %GOLD%[%RUNETIER%]  // %!runename!%
+TextMacro[nlnamenl]: %NL%%NAME%%NL% // %!nlnamenl!%
 //TextMacro[dolla]: %WHITE%
 
 //Custom display styles
