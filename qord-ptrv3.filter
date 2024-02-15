@@ -41,7 +41,7 @@ TextMacro[gguunoeth]: %NL%%PURPLE%»»%RED%»» %ORANGE%»»  %YELLOW%»     %RE
 TextMacro[ggidun]: %NL%%GOLD%%NAME%%NL%%NL% // %!ggidun!% "GG ID'd Uniques"
 TextMacro[okuniq]: %YELLOW%»%TAN%»%GRAY%»     %RED%%NAME%%GRAY%     «%TAN%«%YELLOW%«  // %!okuniq!% "Ok Uniques"
 TextMacro[okuniqeth]: %YELLOW%»%TAN%»%GRAY%ETH»     %GOLD%%NAME%%GRAY%     «%TAN%«%YELLOW%« // %!okuniqeth!% "Ok Uniques, ethereal"
-TextMacro[setmacro]: %GREEN%    %NAME%     %GREEN% %NOTIFY // %!setmacro!%
+TextMacro[setmacro]: %GREEN%    %NAME%     %GREEN% // %!setmacro!%
 
 //TextMacro[dolla]: %WHITE%
 
