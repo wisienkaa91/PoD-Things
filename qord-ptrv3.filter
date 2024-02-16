@@ -27,7 +27,7 @@ TextMacro[facetl]: %RED%»» %YELLOW%»» %GREEN%»  %BLUE%»
 TextMacro[facetr]: %BLUE%«  %GREEN%« %YELLOW%«« %RED%««
 TextMacro[upb4slam]: %RED%Upgrade before corrupting for chance at max sockets
 TextMacro[pcm]: %GRAY%Possible Corruption Mods 
-TextMacro[shopping]: %RED%ØØØØØ //meh....not used, maybe later %!shopping!%
+TextMacro[shopping]: %RED%@@@@@  //meh....not used, maybe later %!shopping!%
 TextMacro[tansocks]: %TAN%[%SOCKETS%] // %!tansocks!%
 TextMacro[graysocks]: %GRAY%[%SOCKETS%] // %!graysocks!%
 TextMacro[stripedsocks]: %WHITE%[%BLUE%%SOCKETS%%WHITE%] // %!stripedsocks!%
@@ -121,7 +121,8 @@ ItemDisplay[mbr]: %GRAY%Mephisto's Brain <<notify>>
 //PoD Items
 //ItemDisplay[SPECIAL]: %GOLD%%NAME% %NOTIFY(PURPLE)% %NOTIFYSOUND(364)% %MAPICON(4)% %BORDER(2,111)% %BGCOLOR(75)% 
 ItemDisplay[std]: %NAME%
-ItemDisplay[cx5]: %GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NOTIFY(PURPLE)% %NOTIFYSOUND(364)% %MAPICON(70,75)% %BORDER(2,111)% %BGCOLOR(75)% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%}
+ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 155, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotificationSound = 364, NotificationColor = PURPLE>
+//ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NOTIFY(PURPLE)% %NOTIFYSOUND(364)% %MAPICON(70,75)% %BORDER(2,111)% %BGCOLOR(75)% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 111, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotifySound = 364>
 ItemDisplay[cx6]: %PURPLE%Diablo's Soulstone
 ItemDisplay[cx7]: %RED%»»»» %NAME%%RED% ««««
 ItemDisplay[ma1 OR ma2 OR ma3 OR ma5 OR ma6 OR ma7 OR ma9 OR ma10 OR maz OR ma11]: %NAME% %!mapmacro!%
@@ -293,7 +294,7 @@ ItemDisplay[(wst OR 8ws OR 6ws) NMAG (SOCK=0 OR SOCK>3)]: %NAME% %ORANGE% Probly
 ItemDisplay[(crs OR bsd OR lsd OR 9cr) (ETH AND (NMAG OR RW)) SOCK=4]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
 ItemDisplay[(crs OR bsd OR lsd OR 9cr) (NMAG OR RW) SOCK=4]: %NAME% %!graysocks!%
 //Holy Thunder/Rift
-ItemDisplay[wsp !ETH AND (NMAG OR RW) SOCK=4]: %NAME% %!graysocks!%
+//ItemDisplay[wsp !ETH AND (NMAG OR RW) SOCK=4]: %NAME% %!graysocks!%
 //HOTO AND CTA
 ItemDisplay[fla (ETH AND (NMAG OR RW)) SOCK>3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
 ItemDisplay[fla (NMAG OR RW) SOCK>3]: %NAME% %!graysocks!%
@@ -337,57 +338,48 @@ ItemDisplay[(7tw OR 7qr OR 7ar) (!ETH AND !INF) (NMAG OR RW) (SOCK=0 OR SOCK=3) 
 // MA 
 ItemDisplay[(7tw OR 7qr OR 7ar) (!ETH AND !INF) (NMAG OR RW) (SOCK=0 OR SOCK=3) SK274=3 (SK265>1 OR SK259>1 OR SK280>1 OR SK254>1)]: %GRAY%[%WHITE%ma%GRAY%] %NAME% %!tansocks!%
 ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) !INF (NMAG OR RW) SK274>2 (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%3boi%GRAY%] %NAME% %!tansocks!%
+
 //Plague
-//Specials
-ItemDisplay[CL5  NMAG (SOCK=0 OR SOCK=3) SK254>2]:  %GRAY%[%WHITE% +3 Fix the filter 254%] %NAME% %!tansocks!% 
-ItemDisplay[CL5  NMAG (SOCK=0 OR SOCK=3) SK255>2]:  %GRAY%[%WHITE% +3 Fix the filter 255%] %NAME% %!tansocks!% 
-ItemDisplay[CL5  NMAG (SOCK=0 OR SOCK=3) SK259>2]:  %WHITE%%NAME%  +3 Fist of Fire %!tansocks!% 
-ItemDisplay[CL5  NMAG (SOCK=0 OR SOCK=3) SK260>2]:  %WHITE%%NAME% +3 Dragon Claw %!tansocks!% 
-ItemDisplay[CL5  NMAG (SOCK=0 OR SOCK=3) SK265>2]:  %GRAY%[%WHITE% +3 Fix the filter 265%] %NAME% %!tansocks!% 
-ItemDisplay[CL5  NMAG (SOCK=0 OR SOCK=3) SK269>2]:  %WHITE%%NAME% +3 Claws of Thunder %!tansocks!%
-ItemDisplay[CL5  NMAG (SOCK=0 OR SOCK=3) SK270>2]:  %WHITE%%NAME% +3 Dragon Tail WTF LOL%!tansocks!% 
-ItemDisplay[CL5  NMAG (SOCK=0 OR SOCK=3) SK274>2]:  %GRAY%[%WHITE% +3 Fix the filter 274%] %NAME% %!tansocks!% 
-ItemDisplay[CL5  NMAG (SOCK=0 OR SOCK=3) SK275>2]:  %GRAY%[%WHITE% +3 Fix the filter 275%] %NAME% %!tansocks!% 
-ItemDisplay[CL5  NMAG (SOCK=0 OR SOCK=3) SK280>2]:  %GRAY%[%WHITE% +3 Fix the filter 280%] %NAME% %!tansocks!% 
-//Plague claws
-ItemDisplay[CL5 !INF (NMAG OR RW) (SK277>2 AND SK278>0) (SOCK=0 OR SOCK=3)]: %GRAY%[%PURPLE%+3 BS +3 Venom%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) SK278>2 SK267>0 (SOCK=0 OR SOCK=3)]: %GRAY%[%PURPLE%Venom Fade%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) (SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK278>2 OR SK279>2 OR SK280>2) SK277>2 (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%+3 BS Plus+%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) SK277>2 (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%+3 BS %GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) SK278>2 (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%+3 Venom%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) (SK262>2 AND SK272>0) (SOCK=0 OR SOCK=3)]: %GRAY%[%PURPLE%+3 WoF w/ WoI%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) SK262>2 (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%+3 WoF%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) SK272>2 (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%+3 WoI%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) SK271>2 (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%+3 Light Sentry%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) SK266>2 (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%+3 Blade Fury%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) SK276>2 (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%3ds%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) SK273>2 (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%3mb%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[CL5 !INF (NMAG OR RW) SK267>2 (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%3fa%GRAY%] %NAME% %!tansocks!%
-// Any nonmagical 3 skill claw with 0 or 3 sockets
-ItemDisplay[CL5 !INF (NMAG OR RW) (SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK279>2 OR SK280>2) (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%+3 Misc%GRAY%] %NAME% %!tansocks!%
+//Specials, MA skills
+ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK254>2]:  %NAME% %LIGHT_GRAY%[%WHITE% +3 Fix the filter 254%] %CONTINUE%
+ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK255>2]:  %NAME% %LIGHT_GRAY%[%WHITE% +3 Fix the filter 255%] %CONTINUE% 
+ItemDisplay[CL5  NMAG !INF !ETH !NORM (SOCK=0 OR SOCK=3) SK259>2]:  %NAME% %LIGHT_GRAY% +3 Fist of Fire %CONTINUE%
+ItemDisplay[CL5  NMAG !INF !ETH !NORM (SOCK=0 OR SOCK=3) SK260>2]:  %NAME% %LIGHT_GRAY% +3 Dragon Claw %CONTINUE%
+ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK265>2]:  %NAME% %LIGHT_GRAY%[%WHITE% +3 Fix the filter 265%] %CONTINUE% 
+ItemDisplay[CL5  NMAG !INF !ETH !NORM (SOCK=0 OR SOCK=3) SK269>2]:  %NAME% %LIGHT_GRAY% +3 Claws of Thunder %CONTINUE%
+ItemDisplay[CL5  NMAG !INF !ETH !NORM (SOCK=0 OR SOCK=3) SK270>2]:  %NAME% %LIGHT_GRAY% +3 Dragon Tail WTF LOL%CONTINUE%
+ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK274>2]:  %NAME% %LIGHT_GRAY%[%WHITE% +3 Fix the filter 274%] %CONTINUE% 
+ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK275>2]:  %NAME% %LIGHT_GRAY%[%WHITE% +3 Fix the filter 275%] %CONTINUE% 
+ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK280>2]:  %NAME% %LIGHT_GRAY%[%WHITE% +3 Fix the filter 280%] %!tansocks!%
+ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK254>2 OR SK280>2 OR SK255>2 OR SK259>2 OR SK260>2 OR SK265>2 OR SK269>2 OR SK270>2 OR SK274>2 OR SK255>2]:  %NAME% %!tansocks!%
+
+//More Plague claw
+ItemDisplay[CL5 !INF NMAG (SK262>2 AND SK272>0) (SOCK=0 OR SOCK=3)]: %NAME% %PURPLE%+3 Wake of Fire w/ Wake of Inferno %!tansocks!%
+ItemDisplay[CL5 !INF NMAG (SK277>2 AND SK278>0) (SOCK=0 OR SOCK=3)]: %NAME% %PURPLE%+3 Blade Shield +3 Venom %!tansocks!%
+ItemDisplay[CL5 !INF NMAG SK278>2 SK267>0 (SOCK=0 OR SOCK=3)]: %NAME% %PURPLE%+3 Venom +3 Fade %!tansocks!%
+ItemDisplay[CL5 !INF NMAG (SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK278>2 OR SK279>2 OR SK280>2) SK277>2 (SOCK=0 OR SOCK=3)]: %NAME% %WHITE%+3 Blade Shield Plus+ %!tansocks!%
+ItemDisplay[CL5 !INF NMAG SK277>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Blade Shield %CONTINUE%
+ItemDisplay[CL5 !INF NMAG SK278>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Venom %CONTINUE%
+ItemDisplay[CL5 !INF NMAG SK262>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Wake of Fire %CONTINUE%
+ItemDisplay[CL5 !INF NMAG SK272>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Wake of Inferno %CONTINUE%
+ItemDisplay[CL5 !INF NMAG SK271>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Light Sentry %CONTINUE%
+ItemDisplay[CL5 !INF !NORM NMAG SK266>2 (SOCK=0 OR SOCK=3)]: %LIGHT_GRAY%+3 Blade Fury %CONTINUE%
+ItemDisplay[CL5 !INF NMAG SK276>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Death Sentry %CONTINUE%
+ItemDisplay[CL5 !INF NMAG SK273>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Mind Blast %CONTINUE%
+ItemDisplay[CL5 !INF NMAG SK267>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Fade %CONTINUE%
+ItemDisplay[CL5 !INF NMAG (SOCK=0 OR SOCK=3) SK277>2 OR SK278>2 OR SK262>2 OR SK272>2 OR SK271>2 OR SK266>2 OR SK276>2 OR SK273>2 OR SK267>2]: %NAME% Claw %!tansocks!%
+// Any nonmagical 3 skill claw with 0 or 3 sockets, catch all
+ItemDisplay[CL5 !INF !NORM NMAG (SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK279>2 OR SK280>2) (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%+3 Misc%GRAY%] %NAME% %!tansocks!%
+
 //Armors
 ItemDisplay[xtp !ETH AND (NMAG OR RW) SOCK=2]: %NAME% %!tansocks!%
 ItemDisplay[(xtp OR utp OR uui) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %GRAY%%NAME% %!tansocks!%
-//ItemDisplay[EQ2 ELT ETH NMAG (SOCK=0 OR SOCK>2) DEF>=750]: %GRAY%[%WHITE%eth:%PURPLE%750+%GRAY%] %NAME% %!tansocks!% fails due to POD bug
 ItemDisplay[EQ2 ELT ETH NMAG (SOCK=0 OR SOCK>2)]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!tansocks!%
 //Helmets
 ItemDisplay[(ci3 OR uh9) (!INF AND !ETH) AND (NMAG OR RW) SOCK=3]: %NAME% %!tansocks!%
 //Druid pelts adapted from Mack
-ItemDisplay[CL1 NMAG SK226>2 SOCK=0]: %NAME% %DGREEN%+3 OAK <:pelt: BackgroundColor = 138>
-ItemDisplay[CL1 NMAG SK226>1 SOCK=0]: %NAME% %DGREEN%+2 OAK  <<pelt>>
-ItemDisplay[CL1 NMAG SK226>0 SOCK=0]: %NAME% %DGREEN%%SKILL(226)% OAK  <<pelt>>
-ItemDisplay[CL1 NMAG SK244>2 SOCK=0]: %NAME% %DGREEN%+3 Volcano Pelt  <<pelt>>
-ItemDisplay[CL1 NMAG SK249>2 SOCK=0]: %NAME% %GRAY%+3 Armageddon Pelt <<pelt>>
-ItemDisplay[CL1 NMAG SK250>2 SOCK=0]: %NAME% %GRAY%+3 Hurricane Pelt <<pelt>>
-ItemDisplay[CL1 NMAG SK240>2 SOCK=0]: %NAME% %GRAY%+3 Twister Pelt <<pelt>>
-ItemDisplay[CL1 NMAG SK245>2 SOCK=0]: %NAME% %GRAY%+3 Nado Pelt <<pelt>>
-ItemDisplay[CL1 NMAG SK247>2 SOCK=0]: %NAME% %GRAY%+3 Grizzly Pelt <<pelt>>
-ItemDisplay[CL1 NMAG SK243>2 SOCK=0]: %NAME% %GRAY%+3 Shockwave Pelt <<pelt>>
-ItemDisplay[CL1 NMAG SK238>2 SOCK=0]: %NAME% %GRAY%+3 Rabies Pelt <<pelt>>
-ItemDisplay[CL1 NMAG SK221>2 SOCK=0]: %NAME% %DGREEN%+3 Raven Pelt <<pelt>>
-ItemDisplay[CL1 NMAG SK221>0 SOCK=0]: %NAME% %DGREEN%%SKILL(221)% Raven Pelt <<pelt>>
-ItemDisplay[CL1 NMAG SK226>2 !SOCK=1]: %NAME% %DGREEN%+3 OAK %!graysocks!% <<pelt>>
-ItemDisplay[CL1 NMAG SK226>0 !SOCK=1]: %NAME% %DGREEN%%SKILL(226)% OAK %!graysocks!% <<pelt>>
+ItemDisplay[CL1 NMAG SK226>2 !SOCK=1]: %NAME% %DGREEN%+3 Oak %!graysocks!% <:pelt: BackgroundColor = 138>
+ItemDisplay[CL1 NMAG SK226>0 !SOCK=1]: %NAME% %DGREEN%+2 Oak %!graysocks!% <<pelt>>
 ItemDisplay[CL1 NMAG SK244>2 !SOCK=1]: %NAME% %DGREEN%+3 Volcano Pelt %!graysocks!% <<pelt>>
 ItemDisplay[CL1 NMAG SK249>2 !SOCK=1]: %NAME% %GRAY%+3 Armageddon Pelt %!graysocks!% <<pelt>>
 ItemDisplay[CL1 NMAG SK250>2 !SOCK=1]: %NAME% %GRAY%+3 Hurricane Pelt %!graysocks!% <<pelt>>
@@ -419,27 +411,27 @@ ItemDisplay[EQ4 (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19]: %RED%»» »» 
 ItemDisplay[WP13 (TABSK24>2 AND SK119>2)]: %RED%»» »» »» %GREEN%FoH Scepter%RED% «« «« «« %NOTIFY(ITEM)%
 ItemDisplay[WP12 MAG CHSK91>0]: %RED%»» »» »» %GREEN%Lower Resist Wand%RED% «« «« «« %NOTIFY(ITEM)%
 //LivEisJeebus shop lines big thanks to him for these lines
-ItemDisplay[CL5 (CLSK6>0 AND SK271>2)]: %!shopping!% %PURPLE%LIGHT CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>1 AND SK271>1)]: %!shopping!% %PURPLE%LIGHT CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>0 AND SK271>2)]: %!shopping!% %PURPLE%LIGHT CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>1 AND SK271>1)]: %!shopping!% %PURPLE%LIGHT CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>0 AND SK262>2)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>1 AND SK262>1)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>0 AND SK262>2)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>1 AND SK262>1)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>0 AND SK272>2)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>1 AND SK272>1)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>0 AND SK272>2)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>1 AND SK272>1)]: %!shopping!% %PURPLE%FIRE CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>0 AND SK277>2)]: %!shopping!% %PURPLE%BLADESHIELD CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>1 AND SK277>1)]: %!shopping!% %PURPLE%BLADESHIELD CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>0 AND SK277>2)]: %!shopping!% %PURPLE%BLADESHIELD CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK48>1 AND SK277>1)]: %!shopping!% %PURPLE%BLADESHIELD CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>0 AND SK278>2)]: %!shopping!% %PURPLE%VENOM CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (CLSK6>1 AND SK278>1)]: %!shopping!% %PURPLE%VENOM CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK49>0 AND SK278>2)]: %!shopping!% %PURPLE%VENOM CLAW %!shopping!% %NOTIFY(ITEM)%
-ItemDisplay[CL5 (TABSK49>1 AND SK278>1)]: %!shopping!% %PURPLE%VENOM CLAW %!shopping!% %NOTIFY(ITEM)%
-//Shopping
+ItemDisplay[CL5 (CLSK6>0 AND SK271>2)]: %!shopping!% %PURPLE%Light Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>1 AND SK271>1)]: %!shopping!% %PURPLE%Light Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>0 AND SK271>2)]: %!shopping!% %PURPLE%Light Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>1 AND SK271>1)]: %!shopping!% %PURPLE%Light Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>0 AND SK262>2)]: %!shopping!% %PURPLE%Fire Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>1 AND SK262>1)]: %!shopping!% %PURPLE%Fire Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>0 AND SK262>2)]: %!shopping!% %PURPLE%Fire Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>1 AND SK262>1)]: %!shopping!% %PURPLE%Fire Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>0 AND SK272>2)]: %!shopping!% %PURPLE%Fire Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>1 AND SK272>1)]: %!shopping!% %PURPLE%Fire Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>0 AND SK272>2)]: %!shopping!% %PURPLE%Fire Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>1 AND SK272>1)]: %!shopping!% %PURPLE%Fire Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>0 AND SK277>2)]: %!shopping!% %PURPLE%Bladeshield Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>1 AND SK277>1)]: %!shopping!% %PURPLE%Bladeshield Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>0 AND SK277>2)]: %!shopping!% %PURPLE%Bladeshield Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK48>1 AND SK277>1)]: %!shopping!% %PURPLE%Bladeshield Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>0 AND SK278>2)]: %!shopping!% %PURPLE%Venom Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (CLSK6>1 AND SK278>1)]: %!shopping!% %PURPLE%Venom Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK49>0 AND SK278>2)]: %!shopping!% %PURPLE%Venom Claw %!shopping!% %NOTIFY(ITEM)%
+ItemDisplay[CL5 (TABSK49>1 AND SK278>1)]: %!shopping!% %PURPLE%Venom Claw %!shopping!% %NOTIFY(ITEM)%
+//More Shopping
 ItemDisplay[MAG WEAPON ID TABSK34=3]: %!shopping!% %PURPLE%BO STICK %!shopping!% %NOTIFY(ITEM)%
 ItemDisplay[MAG CL5 ID TABSK48=3]: %!shopping!% %PURPLE%TRAP CLAW %!shopping!% %NOTIFY(ITEM)%
 ItemDisplay[MAG EQ4 !ETH ID TABSK0=3 IAS=20]: %!shopping!% %PURPLE%BOW GLOVE %!shopping!% %NOTIFY(ITEM)%
