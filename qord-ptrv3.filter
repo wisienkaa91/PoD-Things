@@ -13,6 +13,11 @@
 // Hides a lot of blues, hides gems under flawless
 // Hides ID scrolls outside of filterlevel 1, only see TP and ID scrolls if you have less than 15 in tome
 // 
+// To-do - ctrl f "redund" and fix
+// fix tp/id tomes 
+//
+
+Option[IgnoreMissingSounds]: True
 
 //Rename filterlevel
 FilterLevel[1]: Loosey goosey
@@ -103,11 +108,11 @@ ItemDisplay[(hp4 OR mp4) DIFFICULTY>1]:
 
 
 //Utility
-ItemDisplay[vps CLVL<41]: %GREEN%!%WHITE%stamina
+ItemDisplay[vps CLVL<41]: %WHITE%stamina
 ItemDisplay[vps CLVL>40]://
-ItemDisplay[wms CLVL<61]: %GREEN%!%WHITE%thaw
+ItemDisplay[wms CLVL<61]: %WHITE%thaw
 ItemDisplay[wms CLVL>60]:
-ItemDisplay[yps]: %GREEN%!%WHITE%a
+ItemDisplay[yps FILTERLVL<4]: %WHITE%antidote
 ItemDisplay[key]: %GRAY%key
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling
 ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) CLVL>23]:// %NAME%
@@ -133,7 +138,7 @@ ItemDisplay[mbr]: %GRAY%Mephisto's Brain <<notify>>
 //PoD Items
 //ItemDisplay[SPECIAL]: %GOLD%%NAME% %NOTIFY(PURPLE)% %NOTIFYSOUND(364)% %MAPICON(4)% %BORDER(2,111)% %BGCOLOR(75)% 
 ItemDisplay[std]: %NAME%
-ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 155, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotificationSound = 364, NotificationColor = PURPLE>
+ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NL% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 155, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotificationSound = 364, NotificationColor = PURPLE>
 //ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NOTIFY(PURPLE)% %NOTIFYSOUND(364)% %MAPICON(70,75)% %BORDER(2,111)% %BGCOLOR(75)% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 111, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotifySound = 364>
 ItemDisplay[cx6]: %PURPLE%Diablo's Soulstone
 ItemDisplay[cx7]: %RED%»»»» %NAME%%RED% ««««
