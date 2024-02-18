@@ -112,6 +112,7 @@ $handler_button_Clickp1={
           '*Flint*' {$url = "[[Patch_Notes#Patch_.2318:_Flint|#18 Flint]]"}
           '*Zincite*' {$url = "[[Patch_Notes#Patch_.2319:_Zincite|#19 Zincite]]"}
           '*Perlite*' {$url = "[[Patch_Notes#Patch_.2320:_Perlite|#20 Perlite]]"}
+          '*Shugnite*' {$url = "[[Patch_Notes#Patch_.2321:_Shungite|#21 Shungite]]"}
         }
 $patch = $url
     $changes = $editedTextBox2
@@ -159,6 +160,7 @@ $handler_button_Clickp2=({
           '*Flint*' {$url = "[[Patch_Notes#Patch_.2318:_Flint|#18 Flint]]"}
           '*Zincite*' {$url = "[[Patch_Notes#Patch_.2319:_Zincite|#19 Zincite]]"}
           '*Perlite*' {$url = "[[Patch_Notes#Patch_.2320:_Perlite|#20 Perlite]]"}
+          '*Shugnite*' {$url = "[[Patch_Notes#Patch_.2321:_Shungite|#21 Shungite]]"}
         }
 $patch = $url
     Switch ($global:state) {
@@ -464,6 +466,8 @@ $listBox.Height                   = 80
 [void] $listBox.Items.Add(' #18 Flint ')
 [void] $listBox.Items.Add(' #19 Zincite ')
 [void] $listBox.Items.Add(' #20 Perlite ')
+[void] $listBox.Items.Add(' #21 Shugnite ')
+
 
 $Labelp2                          = New-Object system.Windows.Forms.Label
 $Labelp2.text                     = "Existing patch notes"
