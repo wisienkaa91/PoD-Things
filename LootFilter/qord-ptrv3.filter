@@ -1,8 +1,8 @@
 //Filter configs and details
 // Qord PTR Play
-// Credits probably go to Krysard, LivEisJeebus, Kitten, Bellizard, Darain, Mag, Mac, Steve, Necrolis 
+// Credits probably go to Krysard, LivEisJeebus, Kitten, Belli, BetweenWalls, Darain, Mag, Mac, Steve, Necrolis 
 // Sorry if I left anyone out, been using this for so long I don't remember
-// who else I should attribute some of the formatting to. DM me if I missed you. 
+//      who else I should attribute some of the formatting to. DM me if I missed you. 
 // 
 // I like crafts and Sorc/Necro/Assassin RW bases
 // Shows ort even when other low runes are hdden
@@ -13,8 +13,8 @@
 // Hides a lot of blues, hides gems under flawless
 // Hides ID scrolls outside of filterlevel 1, only see TP and ID scrolls if you have less than 15 in tome
 // 
-// To-do - ctrl f "redund" and fix
-// fix tp/id tomes 
+// To-do - check redundant
+// 
 //
 
 Option[IgnoreMissingSounds]: True
@@ -45,7 +45,7 @@ TextMacro[shopping]: %RED%@@@@@  //meh....not used, maybe later %!shopping!%
 //TextMacro[shopping]: %RED%@@@@@  //meh....not used, maybe later %!shopping!%
 TextMacro[tansocks]: %TAN%[%SOCKETS%] // %!tansocks!%
 TextMacro[graysocks]: %GRAY%[%SOCKETS%] // %!graysocks!%
-TextMacro[stripedsocks]: %WHITE%[%BLUE%%SOCKETS%%WHITE%] // %!stripedsocks!%
+TextMacro[stripedsocks]: %WHITE%[%RED%%SOCKETS%%WHITE%] // %!stripedsocks!%
 TextMacro[runename]: %ORANGE%%RUNENAME% %GOLD%[%RUNETIER%]  // %!runename!%
 TextMacro[nlnamenl]: %NL%%NAME%%NL% // %!nlnamenl!%
 TextMacro[mapmacro]: %GRAY%[%DGREEN%~ %PURPLE%MAP %DGREEN%~%GRAY%] [%CODE%] // %!mapmacro!%
@@ -57,7 +57,6 @@ TextMacro[ggidun]: %NL%%GOLD%%NAME%%NL%%NL% // %!ggidun!% "GG ID'd Uniques"
 TextMacro[okuniq]: %YELLOW%»%TAN%»%GRAY%»     %RED%%NAME%%GRAY%     «%TAN%«%YELLOW%«  // %!okuniq!% "Ok Uniques"
 TextMacro[okuniqeth]: %YELLOW%»%TAN%»%GRAY%ETH»     %GOLD%%NAME%%GRAY%     «%TAN%«%YELLOW%« // %!okuniqeth!% "Ok Uniques, ethereal"
 TextMacro[setmacro]: %GREEN%    %NAME%     %GREEN% // %!setmacro!%
-
 //TextMacro[dolla]: %WHITE%
 
 //Custom display styles
@@ -170,7 +169,6 @@ ItemDisplay[(ARMOR OR WEAPON) ((MAG OR RARE OR SET OR UNI) AND ETH) SOCK>0]: %NA
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) SOCK>0]: %NAME% %!tansocks!%
 
 //Gems
-//Gem lines below stolen from Beavis
 ItemDisplay[gzv]: %PURPLE%Amethyst //Flawless Amethyst
 ItemDisplay[glw]: %WHITE%Diamond //Flawless Diamond
 ItemDisplay[glg]: %GREEN%Emerald //Flawless Emerald = SoundFile
@@ -179,13 +177,13 @@ ItemDisplay[glb]: %BLUE%Sapphire //Flawless Sapphire
 ItemDisplay[gly]: %YELLOW%Topaz //Flawless Topaz
 ItemDisplay[skl]: %WHITE%Flawless Skull  <:notify: MapIcon = 49>
 ////Perfect Gems
-ItemDisplay[gpv]: %PURPLE%Amethyst <<notify>>
-ItemDisplay[gpw]: %WHITE%# DIAMOND # <<notify>>
-ItemDisplay[gpg]: %GREEN%# EMERALD # <<notify>>
-ItemDisplay[gpr]: %RED%# RUBY # <:notify: MapIcon = 49>
-ItemDisplay[gpb]: %BLUE%# SAPPHIRE # <<notify>>
-ItemDisplay[gpy]: %YELLOW%# TOPAZ # <<notify>>
-ItemDisplay[skz]: %WHITE%# P SKULL # <:notify: MapIcon = 49> //<<stack>>
+ItemDisplay[gpv]: %PURPLE%Ø P Amethyst Ø<<notify>>
+ItemDisplay[gpw]: %WHITE%Ø P Diamond Ø<<notify>>
+ItemDisplay[gpg]: %GREEN%Ø P Emerald Ø<<notify>>
+ItemDisplay[gpr]: %RED%Ø P Ruby Ø<:notify: MapIcon = 49>
+ItemDisplay[gpb]: %BLUE%Ø P Sapphire Ø<<notify>>
+ItemDisplay[gpy]: %YELLOW%Ø P Topaz Ø<<notify>>
+ItemDisplay[skz]: %WHITE%Ø P Skull Ø<:notify: MapIcon = 49> //<<stack>>
 
 //Magic and rare Rings and amulets
 ItemDisplay[(rin OR amu) RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
@@ -286,7 +284,7 @@ ItemDisplay[NMAG SK54>2 (SOCK=0 OR SOCK=3) CL6]: %NAME% %LIGHT_GRAY%+3 Chain Lig
 ItemDisplay[NMAG SK57>2 (SOCK=0 OR SOCK=3) CL6]: %NAME% %LIGHT_GRAY%+3 Discharge %CONTINUE%
 ItemDisplay[NMAG (SOCK=0 OR SOCK=3) (SK58>2 OR SK44>2 OR SK50>2 OR SK40>2 OR SK59>2 OR SK52>2 OR SK46>2 OR SK47>2 OR SK62>2 OR SK38>2 OR SK48>2 OR SK49>2 OR SK54>2 OR SK57>2) CL6]: %NAME% Orb %!stripedsocks!%
 //ItemDisplay[CL6 NMAG !SOCK=1 !SOCK=2 SK*>2]: %NAME% %ORANGE% Probly garbage %RED%[%SOCKETS%]
-ItemDisplay[CL6 NMAG SOCK=3]: %NAME% %ORANGE% Probly garbage %RED%[%SOCKETS%]
+ItemDisplay[CL6 NMAG SOCK=3]: %NAME% %ORANGE% Probly garbage %!stripedsocks!%
 //Staves for things
 ItemDisplay[NMAG SK58>2 (SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)]: %NAME% %LIGHT_GRAY%+3 E-Shield   %CONTINUE%
 ItemDisplay[NMAG SK44>2 (SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)]: %NAME% %BLUE%+3 Frost Nova   %CONTINUE%
@@ -302,8 +300,8 @@ ItemDisplay[NMAG SK48>2 (SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)]: %NAME% %LIGHT_G
 ItemDisplay[NMAG SK49>2 (SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)]: %NAME% %LIGHT_GRAY%+3 Surge  %CONTINUE%
 ItemDisplay[NMAG SK54>2 (SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)]: %NAME% %LIGHT_GRAY%+3 Chain Light  %CONTINUE%
 ItemDisplay[NMAG SK57>2 (SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)]: %NAME% %LIGHT_GRAY%+3 Discharge  %CONTINUE%
-ItemDisplay[NMAG (SOCK=0 OR SOCK>3) (SK58>2 OR SK44>2 OR SK50>2 OR SK40>2 OR SK59>2 OR SK52>2 OR SK46>2 OR SK47>2 OR SK62>2 OR SK38>2 OR SK48>2 OR SK49>2 OR SK54>2 OR SK57>2) (wst OR 8ws OR 6ws)]: %NAME% +3 Misc Staff %!tansocks!%
-ItemDisplay[(wst OR 8ws OR 6ws) NMAG (SOCK=0 OR SOCK>3)]: %NAME% %ORANGE% Probly garbage %RED%[%SOCKETS%]
+ItemDisplay[NMAG (SOCK=0 OR SOCK>3) (SK58>2 OR SK44>2 OR SK50>2 OR SK40>2 OR SK59>2 OR SK52>2 OR SK46>2 OR SK47>2 OR SK62>2 OR SK38>2 OR SK48>2 OR SK49>2 OR SK54>2 OR SK57>2) (wst OR 8ws OR 6ws)]: %NAME% %!tansocks!%
+ItemDisplay[(wst OR 8ws OR 6ws) NMAG (SOCK=0 OR SOCK>3)]: %NAME% %ORANGE% Probly garbage %!stripedsocks!%
 
 //Assassin
 //Specials, MA skills
@@ -427,13 +425,13 @@ ItemDisplay[CL1 NMAG SK238>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Rabies Pelt %!grays
 ItemDisplay[CL1 NMAG SK221>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Raven Pelt %!graysocks!% <<pelt>>
 
 //Shields
-ItemDisplay[(pab OR pac) (!INF AND ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK=4) RES>34]: %GRAY%[%WHITE%eth%GRAY%][%WHITE%res%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[(pab OR pac) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2) RES>34]: %GRAY%[%WHITE%res%GRAY%] %NAME% %!tansocks!%
+ItemDisplay[(pab OR pac) (!INF AND ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK=4) RES>34]: %GRAY%[%WHITE%Eth%GRAY%][%WHITE%Resists%GRAY%] %NAME% %!tansocks!%
+ItemDisplay[(pab OR pac) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2) RES>34]: %GRAY%[%WHITE%Resists%GRAY%] %NAME% %!tansocks!%
 ItemDisplay[CL3 (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2) (RES>34 AND CLVL<81)]: %GRAY%[%WHITE%res%GRAY%] %NAME% %!tansocks!%
 ItemDisplay[ush (!INF AND !ETH) AND (NMAG OR RW)  SOCK>1]: %NAME% %!tansocks!%
 ItemDisplay[uit !ETH !RW  NMAG (SOCK=4 OR SOCK=0) !STAT91=0 !STAT91=-10]: %GRAY%[%WHITE%-% Req%GRAY%] %NAME% %!tansocks!%
 ItemDisplay[uit !ETH NMAG (SOCK=4 OR SOCK=0) STAT91=-10]: %GRAY%[%WHITE%-10% Req%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[uit (!INF AND ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=4)]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!tansocks!%
+ItemDisplay[uit (!INF AND ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=4)]: %GRAY%[%WHITE%Eth%GRAY%] %NAME% %!tansocks!%
 ItemDisplay[uit (!INF AND !ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=4)]: %GRAY%%NAME% %!tansocks!%
 //Dream shields, tower and troll nest
 ItemDisplay[(tow OR ush) (!INF AND ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=3)]: %GRAY%Dream base %NAME% %!tansocks!%
@@ -524,7 +522,7 @@ ItemDisplay[tbk]: %NAME%
 ItemDisplay[ibk]: %NAME%
 ItemDisplay[tsc TPSCROLLS>15]:
 ItemDisplay[tsc]: %WHITE% Tp
-ItemDisplay[isc TPSCROLLS>15]:
+ItemDisplay[isc IDSCROLLS>15]:
 ItemDisplay[isc FILTERLVL=1]: %WHITE% ID
 
 //EVERYTHING ELSE
