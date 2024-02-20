@@ -14,7 +14,8 @@
 // Hides ID scrolls outside of filterlevel 1, only see TP and ID scrolls if you have less than 15 in tome
 // 
 // To-do - check redundant
-// 
+// Check white/gray for double names
+// Give pelts continue lines
 //
 
 Option[IgnoreMissingSounds]: True
@@ -380,8 +381,8 @@ ItemDisplay[amc (NMAG OR RW) TABSK0>2 SOCK=4]: %GRAY%[%WHITE%3bow%GRAY%] %NAME% 
 ItemDisplay[amc (NMAG OR RW) TABSK0>2 SOCK=0 (!INF AND !SUP)]: %GRAY%[%WHITE%3bow%GRAY%] %NAME% %!tansocks!%
 ItemDisplay[6cb SOCK=4]: %NAME% %!tansocks!%
 //botd bow
-ItemDisplay[6lw (NMAG OR RW) SOCK=6]: %GRAY%[%WHITE%Hydra bow%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[6lw (NMAG OR RW) SOCK=0 (!INF AND !SUP)]: %GRAY%[%WHITE%Hydra bow%GRAY%] %NAME% %!tansocks!%
+ItemDisplay[6lw (NMAG OR RW) SOCK=6]: %GRAY% %NAME% %!tansocks!%
+ItemDisplay[6lw (NMAG OR RW) SOCK=0 (!INF AND !SUP)]: %GRAY% %NAME% %!tansocks!%
 //Infi/Insi/Pride and Obedience/Doom
 ItemDisplay[(7wc OR 7pa OR 7s8 OR 7vo OR 7h7 OR 7tr OR 7br OR 7st OR 7p7) (ETH AND (NMAG OR RW)) (SOCK=4 OR SOCK=5)]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!tansocks!%
 ItemDisplay[(7vo OR 7tr) (ETH AND !INF) AND (NMAG OR RW) SOCK=0]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!tansocks!%
@@ -423,6 +424,7 @@ ItemDisplay[CL1 NMAG SK247>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Grizzly Pelt %!gray
 ItemDisplay[CL1 NMAG SK243>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Shockwave Pelt %!graysocks!% <<pelt>>
 ItemDisplay[CL1 NMAG SK238>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Rabies Pelt %!graysocks!% <<pelt>>
 ItemDisplay[CL1 NMAG SK221>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Raven Pelt %!graysocks!% <<pelt>>
+// to-do - add continues to above
 
 //Shields
 ItemDisplay[(pab OR pac) (!INF AND ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK=4) RES>34]: %GRAY%[%WHITE%Eth%GRAY%][%WHITE%Resists%GRAY%] %NAME% %!tansocks!%
@@ -507,7 +509,7 @@ ItemDisplay[(aq2 OR cq2) (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | LGO
 // catch all
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME% [%CODE%]
 ItemDisplay[(UNI OR SET)]: %NAME% [%CODE%]
-
+da
 //Class items  cl1 Druid pelts, cl2 barb helms, cl5 assassin weapons, cl6 sorc orbs, cl7 zon weapons, wp6 javelins, wp12 wands, wsp war scepters, 9ws divine scepter, 7ws caduceus
 ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) MAG ETH]: %GRAY%ETH %BLUE%%NAME%
 ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) RARE ETH]: %GRAY%ETH %YELLOW%%NAME%
