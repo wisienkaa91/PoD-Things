@@ -332,7 +332,74 @@ ItemDisplay[MAG WP13 (TABSK25=3 AND SK119=3)]: %!shopping!% %PURPLE%Sanctuary We
 
 
 
+// SHOW ME THAT UNIQ ITEM IS ETH
+ItemDisplay[UNI AND ETH AND SOCK=0]: %GRAY%ETH %GOLD%%NAME%
+//Show me every runeword
+ItemDisplay[RW]: %NAME% %!tansocks!%
 
+//Show me every identified item and add corruption information
+// helms
+ItemDisplay[(bhm OR xh9 OR ci0 OR ci1) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%!upb4slam!% %NL%%GRAY% Piercing 15-20% | Life 10-15 | LGOH Melee 10-14, Ranged 5-10 | Energy 5-15 | Strength 5-15 %NL% %!pcm!%}
+ItemDisplay[EQ1 (RARE OR SET OR UNI) ID !ETH SOCK=0]:%NAME%{%GRAY% Piercing 15-20% | Life 10-15 | LGOH MR5-10 | Energy 5-15 | Strength 5-15 %NL% %!pcm!%}
+//body armor
+ItemDisplay[(qui OR lea OR hla OR stu OR rng OR scl OR brs OR chn OR spl OR ltp OR fld OR plt OR xui OR xea OR xla OR xtu OR xng OR xcl OR xrs OR xhn OR xpl OR xlt) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%!upb4slam!% %NL%%GRAY% IAS 10% | Enh Defense 15-20% | AR 10-20% | FCR 10% | Max Life +2% %NL% %!pcm!%}
+ItemDisplay[EQ2 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% IAS 10% | Enh Def 15-20% | AR 10-20% | FCR 10% | Max Life +2% %NL% %!pcm!%}
+// shield
+ItemDisplay[(buc OR kit OR spk OR tow OR bsh OR xuc OR xpk OR xit OR xsh OR xow OR xts) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%!upb4slam!% %NL%%GRAY% Block 10% | Fire Damage 10% | Cold Damage 10% | Light Damage 10% | Poison Damage 10% %NL% %!pcm!%}
+//ItemDisplay[(buc OR kit OR spk OR tow OR bsh OR xuc OR xpk OR xit OR xsh OR xow OR xts) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%RED%Upgrade before corrupting for chance at max sockets%NL%%GRAY% Block 10% | Fire Damage 10% | Cold Damage 10% | Light Damage 10% | Poison Damage 10% %NL%%GRAY%Possible Corruption Mods}
+ItemDisplay[EQ3 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Block 10% | Fire Dam 10% | Cold Dam 10% | Light Dam 10% | Psn Dam 10% %NL% %!pcm!%}
+//weapons
+ItemDisplay[(9ga OR spc OR wnd OR ywn OR bwn OR gwn OR ktr OR wrb OR xtp OR xld OR xlt OR 9wn OR 9yw OR 9bw OR 9gw OR 9wb) (!NMAG AND !MAG) !ETH SOCK=0]: %NAME%{%!upb4slam!% %NL%%GRAY% Enh Damage 35-50% | Deadly Strike 10% | Max Damage Per Level | Crushing Blow 20% | IAS 10-15% %NL% %!pcm!%}
+ItemDisplay[WEAPON (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Enh Dam 35-50% | Deadly Strike 10% | Max Dam Clvl | CB 20% | IAS 10-15% %NL% %!pcm!%}
+//boots
+ItemDisplay[EQ5 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Fire Res 10-20% | All Res 5-10% | Dex 5-15 | Light Res 10-20% | Cooldown -10% %NL% %!pcm!%}
+//gloves
+ItemDisplay[EQ4 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% IAS 10% | Cold Res 10-20% | All Res 5-10% | LGOH M5-10, R5-10 | Psn Res 10-20% %NL% %!pcm!%}
+//belt
+ItemDisplay[EQ6 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Pierce 8% | Max Fire 2% | Max Cold 2% | Max Light 2% | Max Poison 2% %NL% %!pcm!%}
+//amulet
+ItemDisplay[amu (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | +1 All Skills | Regen Mana 15% | MF 10% | Life 12-18 %NL% %!pcm!%}
+//ring
+ItemDisplay[rin (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% FCR 10% | Faster RW 10% | Life 15 | PDR 5-6% | MF 10% %NL% %!pcm!%}
+//bolt-arrow
+ItemDisplay[(aq2 OR cq2) (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | LGOH 4-6 | MGOH 2-4 | IAS 10% | Vita 5-15% %NL% %!pcm!%}
+// catch all
+ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME% [%CODE%]
+
+da
+//Class items  cl1 Druid pelts, cl2 barb helms, cl5 assassin weapons, cl6 sorc orbs, cl7 zon weapons, wp6 javelins, wp12 wands, wsp war scepters, 9ws divine scepter, 7ws caduceus
+ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) MAG ETH]: %GRAY%ETH %BLUE%%NAME%
+ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) RARE ETH]: %GRAY%ETH %YELLOW%%NAME%
+ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) (MAG OR RARE)]: %NAME%
+ItemDisplay[WEAPON (WP6 AND CL7) MAG ETH]: %GRAY%ETH %BLUE%Fix the filter Qord %NAME% //redundant?
+ItemDisplay[WEAPON (WP6 AND CL7) RARE ETH]: %GRAY%ETH %YELLOW%Fix the filter Qord %NAME% //redundant?
+ItemDisplay[WEAPON (WP6 AND CL7) (MAG OR RARE)]: Fix the filter Qord %NAME% //redundant?
+ItemDisplay[(wsp OR 9ws OR 7ws) (MAG OR RARE) !ETH]: %NAME%
+
+//TP & ID Scrolls
+ItemDisplay[tbk]: %NAME%
+ItemDisplay[ibk]: %NAME%
+ItemDisplay[tsc TPSCROLLS>15]:
+ItemDisplay[tsc]: %WHITE% Tp
+ItemDisplay[isc IDSCROLLS>15]:
+ItemDisplay[isc FILTERLVL=1]: %WHITE% ID
+
+//EVERYTHING ELSE
+ItemDisplay[(CL1 OR CL2 OR CL4 OR CL6 OR WP11 OR WP12 OR WP13) NMAG ETH CLVL<31 SOCK>0]: %GRAY%ETH %NAME% %!tansocks!%
+ItemDisplay[(CL1 OR CL2 OR CL4 OR CL6 OR WP11 OR WP12 OR WP13) NMAG ETH CLVL<31]: %GRAY%ETH %NAME%
+ItemDisplay[(CL1 OR CL2 OR CL4 OR CL6 OR WP11 OR WP12 OR WP13) NMAG CLVL<31 SOCK>0]: %NAME% %!tansocks!%
+ItemDisplay[(CL1 OR CL2 OR CL4 OR CL6 OR WP11 OR WP12 OR WP13) NMAG CLVL<31]: %NAME% 
+ItemDisplay[(ARMOR OR WEAPON) MAG ETH CLVL<60]: %GRAY%ETH %BLUE%%NAME%
+ItemDisplay[(ARMOR OR WEAPON) RARE ETH CLVL<60]: %GRAY%ETH %YELLOW%%NAME%
+ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) CLVL<60]: %NAME%
+ItemDisplay[(ARMOR OR WEAPON) NMAG AND (!ETH AND !INF) SOCK>1 CLVL<40]: %GRAY%%NAME% %!tansocks!%
+ItemDisplay[WEAPON NMAG AND (ETH AND !INF) SOCK=4 CLVL<60]: %GRAY%ETH %NAME% %!tansocks!%
+ItemDisplay[(ARMOR OR WEAPON) (EXC OR ELT) NMAG AND (!ETH AND !INF) SOCK>1 CLVL>39 AND CLVL<81]: %NAME% %!tansocks!%
+ItemDisplay[(ARMOR OR WEAPON) INF]:
+ItemDisplay[(ARMOR OR WEAPON) ETH SOCK>0 CLVL<19]: %GRAY%ETH %NAME% %!tansocks!%
+ItemDisplay[(ARMOR OR WEAPON) ETH CLVL<19]: %GRAY%ETH %NAME%
+ItemDisplay[(ARMOR OR WEAPON) SOCK>0 CLVL<19]: %NAME% %!tansocks!%
+ItemDisplay[(ARMOR OR WEAPON) CLVL>18]:
 
 
 
