@@ -14,8 +14,10 @@
 // Hides ID scrolls outside of filterlevel 1, only see TP and ID scrolls if you have less than 15 in tome
 // 
 // To-do - check redundant
-// Check white/gray for double names
-// Give pelts continue lines
+// Add more +skill lines for sorc, necro, assasin bases
+// Fix the "fix" lines, added numbers for ease of finding
+// Check white/gray for double names, rethink those socket colors
+// Give pelts continue lines and add more skills
 //
 
 Option[IgnoreMissingSounds]: True
@@ -373,9 +375,9 @@ ItemDisplay[fla (NMAG OR RW) SOCK>3]: %NAME% %!graysocks!%
 ItemDisplay[crs (ETH AND (NMAG OR RW)) SOCK=5]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
 ItemDisplay[crs (NMAG OR RW) SOCK=5]: %NAME% %!graysocks!%
 //Memory
-ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG OR RW) SK58>2 (SOCK=0 OR SOCK=4)]: %GRAY%[%WHITE%+3 to tell Qord he dum%GRAY%] %NAME% %!tansocks!% //redundant
-ItemDisplay[(wst OR 8ws OR 6ws) (NMAG OR RW) SK58>2 SOCK=0 (!INF AND !SUP)]: %GRAY%[%WHITE%+3 to tell Qord he dum%GRAY%] %NAME% %!tansocks!% //redundant
-ItemDisplay[(wst OR 8ws OR 6ws) (NMAG OR RW) SK58>2 SOCK=4]: %GRAY%[%WHITE%+3 to tell Qord he dum%GRAY%] %NAME% %!tansocks!% //redundant
+ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG OR RW) SK58>2 (SOCK=0 OR SOCK=4)]: %GRAY%[%WHITE%+3 to tell Qord he dum1%GRAY%] %NAME% %!tansocks!% //redundant
+ItemDisplay[(wst OR 8ws OR 6ws) (NMAG OR RW) SK58>2 SOCK=0 (!INF AND !SUP)]: %GRAY%[%WHITE%+3 to tell Qord he dum2%GRAY%] %NAME% %!tansocks!% //redundant
+ItemDisplay[(wst OR 8ws OR 6ws) (NMAG OR RW) SK58>2 SOCK=4]: %GRAY%[%WHITE%+3 to tell Qord he dum3%GRAY%] %NAME% %!tansocks!% //redundant
 //Faith
 ItemDisplay[amc (NMAG OR RW) TABSK0>2 SOCK=4]: %GRAY%[%WHITE%3bow%GRAY%] %NAME% %!tansocks!%
 ItemDisplay[amc (NMAG OR RW) TABSK0>2 SOCK=0 (!INF AND !SUP)]: %GRAY%[%WHITE%3bow%GRAY%] %NAME% %!tansocks!%
@@ -514,9 +516,9 @@ da
 ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) MAG ETH]: %GRAY%ETH %BLUE%%NAME%
 ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) RARE ETH]: %GRAY%ETH %YELLOW%%NAME%
 ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) (MAG OR RARE)]: %NAME%
-ItemDisplay[WEAPON (WP6 AND CL7) MAG ETH]: %GRAY%ETH %BLUE%Fix the filter Qord %NAME% //redundant?
-ItemDisplay[WEAPON (WP6 AND CL7) RARE ETH]: %GRAY%ETH %YELLOW%Fix the filter Qord %NAME% //redundant?
-ItemDisplay[WEAPON (WP6 AND CL7) (MAG OR RARE)]: Fix the filter Qord %NAME% //redundant?
+ItemDisplay[WEAPON (WP6 AND CL7) MAG ETH]: %GRAY%ETH %BLUE%Fix the filter Qord4 %NAME% //redundant?
+ItemDisplay[WEAPON (WP6 AND CL7) RARE ETH]: %GRAY%ETH %YELLOW%Fix the filter Qord5 %NAME% //redundant?
+ItemDisplay[WEAPON (WP6 AND CL7) (MAG OR RARE)]: Fix the filter Qord6 %NAME% //redundant?
 ItemDisplay[(wsp OR 9ws OR 7ws) (MAG OR RARE) !ETH]: %NAME%
 
 //TP & ID Scrolls
