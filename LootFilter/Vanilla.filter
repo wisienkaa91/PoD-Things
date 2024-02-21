@@ -1,22 +1,31 @@
-
-
-
-
-
+//
+//
+// The Vanilla Experience
+// Made to keep a more simple viewing experience
+//
+// To-do:
+// Fix sorc, assassin, druid, and necro white/gray items 
+//      need to add more skills for all
+// More work on filterlevel hiding
+//
 
 //Rename filterlevel
+// Filterlevel 1
 FilterLevel[1]: Loosey goosey
-FilterLevel[2]: Meh
+// Filterlevel 2 hides items in the utiluty section, id scrolls
+FilterLevel[2]: Utility
+// Filterlevel 3 hides the above, as well as low runes, large charms
 FilterLevel[3]: No low runes
+// Filterlevel 4 hides the above, as well as health/mana pots
 FilterLevel[4]: No hp/mp pots
-FilterLevel[5]: No magic floor junk
+// Filterlevel 5 hides the above, as well as lower set and unique items
+FilterLevel[5]: No extra floor junk
 
 
 // Sounds
 // None
 //
 
-// Text Macro's
 //Text Macros
 TextMacro[pcm]: %GRAY%Possible Corruption Mods 
 TextMacro[tansocks]: %TAN%[%SOCKETS%] // %!tansocks!%
@@ -30,14 +39,13 @@ TextMacro[setmacro]: %GREEN%%NAME% // %!setmacro!%
 TextMacro[ilvl]: %WHITE%[%ILVL%] // %!ilvl!%
 TextMacro[gilvl]: %GRAY%[%ILVL%] // %!gilvl!%
 TextMacro[shopping]: %WHITE%Vendor is selling //%!shopping!%
-TextMacro[upb4slam]: %RED%Upgrade before corrupting for chance at max sockets
+TextMacro[upb4slam]: %RED%Upgrade before corrupting for chance at max sockets //%!upb4slam!%
 
 // Style
 ItemStyle[rune]: NotificationColor = TAN //<<rune>>
 ItemStyle[unique]: NotificationColor = GOLD //<<unique>>
 ItemStyle[notify]: NotificationColor = WHITE //<<notify>>
 ItemStyle[vendor]: NotificationColor = GREEN //<<vendor>>
-
 
 //Gold
 ItemDisplay[GOLD<100 CLVL<20]:
@@ -61,7 +69,6 @@ ItemDisplay[mp4 FILTERLVL<4 DIFFICULTY<2]: %BLUE%!%WHITE%great mp
 ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) FILTERLVL<4 DIFFICULTY>0]:
 ItemDisplay[(hp4 OR mp4) DIFFICULTY>1]:
 
-
 //Utility
 ItemDisplay[vps (CLVL<41 OR FILTERLVL=1)]: %WHITE%stamina
 ItemDisplay[vps CLVL>40]:
@@ -72,7 +79,7 @@ ItemDisplay[key FILTERLVL=1]: %GRAY%key
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling
 ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) FILTERLVL=1]: %NAME%
 //Throws $35k+, money maker
-ItemDisplay[(7tk OR 7bk OR 7ta) (MAG OR RARE OR NMAG) (!ETH AND !INF)]: %NAME% %TAN%[35k]
+ItemDisplay[(7tk OR 7bk OR 7ta) (MAG OR RARE OR NMAG) (!ETH AND !INF) FILTERLVL=1]: %GRAY%throw %TAN%[35k]
 
 //Essences
 ItemDisplay[tes]: %BLUE%%NAME% %GRAY%[Andariel] <<notify>>
@@ -163,7 +170,7 @@ ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 //All Charms
 ItemDisplay[cm3 MAG !ID ILVL>90]: %BLUE%%NAME% %!gilvl!%
 ItemDisplay[cm1 MAG !ID]: %BLUE%%NAME% %!gilvl!%
-ItemDisplay[cm2 MAG !ID]: %BLUE%%NAME%
+ItemDisplay[cm2 MAG !ID FILTERLVL<4]: %BLUE%%NAME%
 ItemDisplay[cm3 MAG !ID]: %BLUE%%NAME%
 ItemDisplay[(cm1 OR cm2 OR cm3) !UNI]: %NAME%
 
@@ -177,16 +184,16 @@ ItemDisplay[(xhn OR upl OR uld OR uow OR ama OR 6cs OR 7s8) ETH UNI !ID]: %!ethu
 //OK UNIQUE Items NONETH
 ItemDisplay[(6hx OR uow OR pa9 OR nea OR 7cr OR 7fl OR 7kr OR oba OR ama OR lbt OR xhb OR uhb OR xvb OR xhn OR uhm OR xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR xhn OR xtp OR xlt OR upl OR uld OR uvg OR uhg OR utu OR zlb OR zvb OR zhb OR umc OR 6cs OR xmb OR amf OR umg OR 7s8 OR xhm OR rxb OR 8rx OR 6sw OR 9mp) UNI !ID !ETH]: %!uniq!%
 //Uinque catch all 
-ItemDisplay[UNI ETH]: %!ethuniq!%
+ItemDisplay[UNI ETH FILTERLVL<5 ]: %!ethuniq!%
 ItemDisplay[UNI ID]: %!uniq!% <<unique>>
-ItemDisplay[UNI]: %NAME% [%CODE%]
+ItemDisplay[UNI FILTERLVL<5]: %NAME% [%CODE%]
 
 
 //Sets
 //Good set parts
 ItemDisplay[(7ma OR amu OR uar OR ci3 OR 7qr OR uth OR ulg OR xtb OR xhm OR xmg OR ult) SET]: %!setmacro!% <<vendor>>
 //Set catch all
-ItemDisplay[SET]: %NAME% [%CODE%]
+ItemDisplay[SET FILTERLVL<5]: %NAME% [%CODE%]
 
 
 //Runeword bases
