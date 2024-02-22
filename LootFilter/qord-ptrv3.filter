@@ -66,11 +66,11 @@ TextMacro[setmacro]: %GREEN%    %NAME%     %GREEN% // %!setmacro!%
 //inline example: <:pelt: BorderColor = 99, BorderSize = 4, NotificationSound = SoundFile>
 //called with <<rune>> and <<qspecials>>
 ItemStyle[rare]: NotificationColor = YELLOW
-ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = 364, NotificationSoundPriority = HIGH
-ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = 3645, NotificationSoundPriority = HIGH
+ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH
+ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH
 ItemStyle[pelt]: MapIcon = 4, MapIconColor = 5, BorderColor = 4, BorderSize = 1, BackgroundColor = 15 //<<pelt>>
-ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = HIGH //<<qnique>>
-ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = HIGH  //<<gguniqs>>
+ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
+ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH  //<<gguniqs>>
 ItemStyle[uniq1s]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = HIGH  //<<uniq1s>>
 ItemStyle[okuniqs]: BorderColor = 111, BorderSize = 2, BackgroundColor = 203, NotificationColor = ORANGE //<<okuniqs>>
 ItemStyle[ggsets]: BorderColor = 111, BorderSize = 2, NotificationColor = GREEN //<<ggsets>>
@@ -79,7 +79,8 @@ ItemStyle[stack]: NotificationColor = PURPLE //<<stack>>
 ItemStyle[notify]: NotificationColor = WHITE //<<notify>>
 ItemStyle[craygray]: BorderColor = 27, BorderSize = 1, BackgroundColor = 31, NotificationColor = WHITE //<<craygray>>
 
-
+//<NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\rune"><NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\rune">
+//"@local\sfx\Common\Cain\Cain_hello.wav"
 
 //reserved testing space
 //ItemDisplay[SPECIAL]: %GOLD%%NAME%
@@ -108,19 +109,17 @@ ItemDisplay[mp4 FILTERLVL<4 DIFFICULTY<2]: %BLUE%!%WHITE%great mp
 ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) FILTERLVL<4 DIFFICULTY>0]:
 ItemDisplay[(hp4 OR mp4) DIFFICULTY>1]:
 
-
 //Utility
-ItemDisplay[vps CLVL<41]: %WHITE%stamina
-ItemDisplay[vps CLVL>40]://
-ItemDisplay[wms CLVL<61]: %WHITE%thaw
+ItemDisplay[vps (CLVL<41 OR FILTERLVL=1)]: %WHITE%stamina
+ItemDisplay[vps CLVL>40]:
+ItemDisplay[wms CLVL<61 OR FILTERLVL=1]: %WHITE%thaw
 ItemDisplay[wms CLVL>60]:
-ItemDisplay[yps FILTERLVL<4]: %WHITE%antidote
-ItemDisplay[key]: %GRAY%key
+ItemDisplay[yps FILTERLVL=1]: %WHITE%antidote
+ItemDisplay[key FILTERLVL=1]: %GRAY%key
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling
-ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) CLVL>23]:// %NAME%
-ItemDisplay[gpm OR opm OR opl OR ops OR gps OR gpl]:// %NAME%
-//Throws 35k+, money maker
-ItemDisplay[(7tk OR 7bk OR 7ta) (MAG OR RARE OR NMAG) (!ETH AND !INF)]: %GRAY%throw %TAN%[35k]
+ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) FILTERLVL=1]: %NAME%
+//Throws $35k+, money maker
+ItemDisplay[(7tk OR 7bk OR 7ta) (MAG OR RARE OR NMAG) (!ETH AND !INF) FILTERLVL<3]: %GRAY%throw %TAN%[35k]
 
 //Essences
 ItemDisplay[tes]: %BLUE%%NAME% %GRAY%[Andariel] <<notify>>
@@ -138,10 +137,9 @@ ItemDisplay[bey]: %GRAY%Baal's Eye <<notify>>
 ItemDisplay[mbr]: %GRAY%Mephisto's Brain <<notify>>
 
 //PoD Items
-//ItemDisplay[SPECIAL]: %GOLD%%NAME% %NOTIFY(PURPLE)% %NOTIFYSOUND(364)% %MAPICON(4)% %BORDER(2,111)% %BGCOLOR(75)% 
+ItemDisplay[SPECIAL]: %GOLD%%NAME% <:notify: NotificationColor = PURPLE>
 ItemDisplay[std]: %NAME%
 ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NL% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 155, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotificationSound = 364, NotificationColor = PURPLE>
-//ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NOTIFY(PURPLE)% %NOTIFYSOUND(364)% %MAPICON(70,75)% %BORDER(2,111)% %BGCOLOR(75)% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 111, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotifySound = 364>
 ItemDisplay[cx6]: %PURPLE%Diablo's Soulstone
 ItemDisplay[cx7]: %RED%»»»» %NAME%%RED% ««««
 ItemDisplay[ma1 OR ma2 OR ma3 OR ma5 OR ma6 OR ma7 OR ma9 OR ma10 OR maz OR ma11]: %NAME% %!mapmacro!%
@@ -150,7 +148,7 @@ ItemDisplay[MAP]: %GOLD%%NAME% %WHITE%[T%MAPTIER%] %BLUE%(%ILVL%) %BORDER(122,2)
 
 //Wirt Leg
 ItemDisplay[leg SOCK>0]: %NAME% %!stripedsocks!% <<notify>>
-ItemDisplay[leg]: %NAME%
+ItemDisplay[leg]: %NAME% <:notify: NotificationColor = GOLD>
 
 // Other quest
 ItemDisplay[QUEST]: %TAN%%NAME% <:notify: NotificationColor = GOLD> //%NOTIFY(GOLD)%
