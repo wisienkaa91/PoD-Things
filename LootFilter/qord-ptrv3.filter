@@ -36,7 +36,7 @@ FilterLevel[5]: No magic floor junk
 //ItemDisplay[MAP]: %NAME%%NOTIFYSOUND(FANCY_SOUND)%
 //In use
 Sound[corb2]: "ding"
-Sound[corb3]: "rune_jah"
+Sound[corb3]: "zelda2"
 
 //Text Macros
 //Called with %!facetl!% and %!facetr!%
@@ -66,11 +66,11 @@ TextMacro[setmacro]: %GREEN%    %NAME%     %GREEN% // %!setmacro!%
 //inline example: <:pelt: BorderColor = 99, BorderSize = 4, NotificationSound = SoundFile>
 //called with <<rune>> and <<qspecials>>
 ItemStyle[rare]: NotificationColor = YELLOW
-ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH
+ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = corb3, NotificationSoundPriority = HIGH
 ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH
 ItemStyle[pelt]: MapIcon = 4, MapIconColor = 5, BorderColor = 4, BorderSize = 1, BackgroundColor = 15 //<<pelt>>
 ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
-ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH  //<<gguniqs>>
+ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
 ItemStyle[uniq1s]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = HIGH  //<<uniq1s>>
 ItemStyle[okuniqs]: BorderColor = 111, BorderSize = 2, BackgroundColor = 203, NotificationColor = ORANGE //<<okuniqs>>
 ItemStyle[ggsets]: BorderColor = 111, BorderSize = 2, NotificationColor = GREEN //<<ggsets>>
@@ -112,7 +112,7 @@ ItemDisplay[(hp4 OR mp4) DIFFICULTY>1]:
 //Utility
 ItemDisplay[vps (CLVL<41 OR FILTERLVL=1)]: %WHITE%stamina
 ItemDisplay[vps CLVL>40]:
-ItemDisplay[wms CLVL<61 OR FILTERLVL=1]: %WHITE%thaw
+ItemDisplay[wms (CLVL<61 OR FILTERLVL=1)]: %WHITE%thaw
 ItemDisplay[wms CLVL>60]:
 ItemDisplay[yps FILTERLVL=1]: %WHITE%antidote
 ItemDisplay[key FILTERLVL=1]: %GRAY%key
@@ -139,7 +139,7 @@ ItemDisplay[mbr]: %GRAY%Mephisto's Brain <<notify>>
 //PoD Items
 ItemDisplay[SPECIAL]: %GOLD%%NAME% <:notify: NotificationColor = PURPLE>
 ItemDisplay[std]: %NAME%
-ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NL% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 155, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotificationSound = 364, NotificationColor = PURPLE>
+ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NL% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 155, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotificationSound = corb2, NotificationColor = PURPLE>
 ItemDisplay[cx6]: %PURPLE%Diablo's Soulstone
 ItemDisplay[cx7]: %RED%»»»» %NAME%%RED% ««««
 ItemDisplay[ma1 OR ma2 OR ma3 OR ma5 OR ma6 OR ma7 OR ma9 OR ma10 OR maz OR ma11]: %NAME% %!mapmacro!%
