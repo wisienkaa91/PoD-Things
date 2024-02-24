@@ -25,7 +25,7 @@ Option[IgnoreMissingSounds]: True
 //Rename filterlevel
 // Filterlevel 1
 FilterLevel[1]: Loosey goosey
-// Filterlevel 2 hides items in the utiluty section, id scrolls
+// Filterlevel 2 hides items in the utility section, id scrolls
 FilterLevel[2]: Utility
 // Filterlevel 3 hides the above, as well as low runes, large charms
 FilterLevel[3]: No low runes
@@ -60,22 +60,27 @@ TextMacro[mapmacro]: %GRAY%[%DGREEN%~ %PURPLE%MAP %DGREEN%~%GRAY%] [%CODE%] // %
 TextMacro[qniq]:  %NL%%GRAY% »      %GOLD%%NAME%%GRAY%      « %NL%  // %!qniq!%
 TextMacro[qspecial]: %GREEN%    %NAME%     %GREEN% %NOTIFY // %!qspecial!% "Qords special"
 TextMacro[gguueth]: %NL%%GRAY% »      Eth %GOLD%%NAME%%GRAY%      « %NL% // %!gguueth!% "GG Unid'd Unique Ethereal"
+TextMacro[ethuniq]: %GRAY%Eth %GOLD%%NAME% // %!ethuniq!%
 TextMacro[gguunoeth]: %NL%%PURPLE%»»%RED%»» %ORANGE%»»  %YELLOW%»     %RED%%NAME%%YELLOW%     «%ORANGE%  «« %RED%««%PURPLE%««%NL% // %!gguunoeth!% "GG Unid'd Unique Not Ethereal"
 TextMacro[ggidun]: %NL%%GOLD%%NAME%%NL%%NL% // %!ggidun!% "GG ID'd Uniques"
 TextMacro[okuniq]: %YELLOW%»%TAN%»%GRAY%»     %RED%%NAME%%GRAY%     «%TAN%«%YELLOW%«  // %!okuniq!% "Ok Uniques"
 TextMacro[okuniqeth]: %YELLOW%»%TAN%»%GRAY%ETH»     %GOLD%%NAME%%GRAY%     «%TAN%«%YELLOW%« // %!okuniqeth!% "Ok Uniques, ethereal"
 TextMacro[setmacro]: %GREEN%    %NAME%     %GREEN% // %!setmacro!%
 //TextMacro[dolla]: %WHITE%
+TextMacro[uniq]:  %GOLD%%NAME% // %!uniq!%
 
 //Custom display styles
 //inline example: <:pelt: BorderColor = 99, BorderSize = 4, NotificationSound = SoundFile>
 //called with <<rune>> and <<qspecials>>
 ItemStyle[rare]: NotificationColor = YELLOW
 ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = corb3, NotificationSoundPriority = HIGH
-ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH
+//ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH
+ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH
 ItemStyle[pelt]: MapIcon = 4, MapIconColor = 5, BorderColor = 4, BorderSize = 1, BackgroundColor = 15 //<<pelt>>
-ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
-ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
+//ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
+ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@global\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
+//ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
+ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@global\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
 ItemStyle[uniq1s]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = HIGH  //<<uniq1s>>
 ItemStyle[okuniqs]: BorderColor = 111, BorderSize = 2, BackgroundColor = 203, NotificationColor = ORANGE //<<okuniqs>>
 ItemStyle[ggsets]: BorderColor = 111, BorderSize = 2, NotificationColor = GREEN //<<ggsets>>
@@ -250,13 +255,13 @@ ItemDisplay[(xhn OR upl OR uld OR uow OR ama OR 6cs OR 7s8) ETH UNI !ID]: %!okun
 //OK UNIQUE Items NONETH
 ItemDisplay[(6hx OR uow OR pa9 OR nea OR 7cr OR 7fl OR 7kr OR oba OR ama OR lbt OR xhb OR uhb OR xvb OR xhn OR uhm OR xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR xhn OR xtp OR xlt OR upl OR uld OR uvg OR uhg OR utu OR zlb OR zvb OR zhb OR umc OR 6cs OR xmb OR amf OR umg OR 7s8 OR xhm OR rxb OR 8rx OR 6sw OR 9mp) UNI !ID !ETH]: %!okuniq!% <<okuniqs>>
 //Uinque catch all 
-ItemDisplay[UNI ETH FILTERLVL<5]: %!ethuniq!%
-ItemDisplay[UNI ID]: %!uniq!% <<unique>>
+ItemDisplay[UNI !ID ETH FILTERLVL<5]: %!ethuniq!%
+ItemDisplay[UNI !ID]: %!uniq!% [%CODE%]//<<unique>>
 ItemDisplay[UNI FILTERLVL<5]: %NAME% [%CODE%]
 
 //Sets
 //Good set parts
-ItemDisplay[(7ma OR amu OR uar OR ci3 OR 7qr OR uth OR ulg OR xtb OR xhm OR xmg OR ult) SET]: %!setmacro!% <<ggsets>>
+ItemDisplay[(7ma OR amu OR uar OR ci3 OR 7qr OR uth OR ulg OR xtb OR xhm OR xmg OR ult OR xhl OR 7ls OR upl) SET]: %!setmacro!% <<ggsets>>
 //Set catch all
 ItemDisplay[SET FILTERLVL<5]: %NAME% [%CODE%]
 
