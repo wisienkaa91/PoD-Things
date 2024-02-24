@@ -23,11 +23,16 @@
 Option[IgnoreMissingSounds]: True
 
 //Rename filterlevel
+// Filterlevel 1
 FilterLevel[1]: Loosey goosey
-FilterLevel[2]: Meh
+// Filterlevel 2 hides items in the utiluty section, id scrolls
+FilterLevel[2]: Utility
+// Filterlevel 3 hides the above, as well as low runes, large charms
 FilterLevel[3]: No low runes
+// Filterlevel 4 hides the above, as well as health/mana pots
 FilterLevel[4]: No hp/mp pots
-FilterLevel[5]: No magic floor junk
+// Filterlevel 5 hides the above, as well as lower set and unique items
+FilterLevel[5]: No extra floor junk
 //FilterLevel[6]: Max filterlevel name length
 
 // Define filter sounds
@@ -44,7 +49,7 @@ TextMacro[facetl]: %RED%»» %YELLOW%»» %GREEN%»  %BLUE%»
 TextMacro[facetr]: %BLUE%«  %GREEN%« %YELLOW%«« %RED%««
 TextMacro[upb4slam]: %RED%Upgrade before corrupting for chance at max sockets
 TextMacro[pcm]: %GRAY%Possible Corruption Mods 
-TextMacro[shopping]: %RED%@@@@@  //meh....not used, maybe later %!shopping!%
+TextMacro[shopping]: %RED%@@@@@  // %!shopping!%
 //TextMacro[shopping]: %RED%@@@@@  //meh....not used, maybe later %!shopping!%
 TextMacro[tansocks]: %TAN%[%SOCKETS%] // %!tansocks!%
 TextMacro[graysocks]: %GRAY%[%SOCKETS%] // %!graysocks!%
@@ -94,7 +99,7 @@ ItemDisplay[GOLD<5000 CLVL>79]:
 ItemDisplay[GOLD>5000 CLVL>79]: %NAME%
 
 //Pots
-ItemDisplay[rvl]: %PURPLE%R %WHITE%70% %NOTIFYSOUND(corb3)%
+ItemDisplay[rvl]: %PURPLE%R %WHITE%70% //%NOTIFYSOUND(corb3)%
 ItemDisplay[rvs]: %PURPLE%r %WHITE%35%
 ItemDisplay[hp5 FILTERLVL<4]: %RED%!%WHITE%Hp
 ItemDisplay[mp5 FILTERLVL<4]: %BLUE%!%WHITE%Mp
@@ -144,7 +149,8 @@ ItemDisplay[cx6]: %PURPLE%Diablo's Soulstone
 ItemDisplay[cx7]: %RED%»»»» %NAME%%RED% ««««
 ItemDisplay[ma1 OR ma2 OR ma3 OR ma5 OR ma6 OR ma7 OR ma9 OR ma10 OR maz OR ma11]: %NAME% %!mapmacro!%
 ItemDisplay[ma4 OR ma8]: %NAME% %RED%No Boss %!mapmacro!%
-ItemDisplay[MAP]: %GOLD%%NAME% %WHITE%[T%MAPTIER%] %BLUE%(%ILVL%) %BORDER(122,2)% [%CODE%] 
+//ItemDisplay[MAP]: %GOLD%%NAME% %WHITE%[T%MAPTIER%] %BLUE%(%ILVL%) %BORDER(122,2)% [%CODE%] 
+ItemDisplay[MAP]: %GOLD%%NAME% %WHITE%[T%MAPTIER%] %BLUE%(%ILVL%) [%CODE%] <:notify: BorderColor = 122, BorderSize = 2>
 
 //Wirt Leg
 ItemDisplay[leg SOCK>0]: %NAME% %!stripedsocks!% <<notify>>
@@ -193,7 +199,7 @@ ItemDisplay[(rin OR amu) MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
 //Jewels
 ItemDisplay[jew MAG !ID]: %BLUE%%NAME%
 ItemDisplay[jew RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
-ItemDisplay[UNI !ID jew]:%NL%%!facetl!%  %PURPLE%Rainbow Facet  %!facetr!% %NL% <<qnique>>
+ItemDisplay[UNI !ID jew]:%NL%%!facetl!%  %PURPLE%Rainbow Facet  %!facetr!% %NL%%NL% <<qnique>>
 
 //Craftables
 ItemDisplay[(7wa) MAG]: %NL% %NAME% %RED%[ort] %GRAY%[%ILVL%]%NL% <:notify: MapIcon = 66, NotificationColor = RED> {%GRAY%Ort Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Zerker Axe%NL%%GRAY%Horadric Cube Craft Recipe}
@@ -227,7 +233,7 @@ ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 //All Charms
 ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»%BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]
 ItemDisplay[cm1 MAG !ID]:%BLUE%  %NAME%  %GRAY%[%ILVL%]
-ItemDisplay[cm2 MAG !ID]:// %BLUE%  %NAME%  %GRAY%[%ILVL%]
+ItemDisplay[cm2 MAG !ID FILTERLVL<4]: %BLUE%%NAME%
 ItemDisplay[cm3 MAG !ID]: %BLUE%  %NAME%  %GRAY%[%ILVL%]
 ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»  »»» %BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]%PURPLE%  «««  «««
 ItemDisplay[(cm1 OR cm2 OR cm3) !UNI]: %NAME% %GRAY%[%ILVL%]
@@ -243,11 +249,16 @@ ItemDisplay[(rin OR amu OR ulc OR xea OR urn OR uap OR ulm OR ci3 OR xtb OR uit 
 ItemDisplay[(xhn OR upl OR uld OR uow OR ama OR 6cs OR 7s8) ETH UNI !ID]: %!okuniqeth!% <:notify: NotificationColor = GOLD> //%NOTIFY(ORANGE)%
 //OK UNIQUE Items NONETH
 ItemDisplay[(6hx OR uow OR pa9 OR nea OR 7cr OR 7fl OR 7kr OR oba OR ama OR lbt OR xhb OR uhb OR xvb OR xhn OR uhm OR xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR xhn OR xtp OR xlt OR upl OR uld OR uvg OR uhg OR utu OR zlb OR zvb OR zhb OR umc OR 6cs OR xmb OR amf OR umg OR 7s8 OR xhm OR rxb OR 8rx OR 6sw OR 9mp) UNI !ID !ETH]: %!okuniq!% <<okuniqs>>
-//Uinque catch-all further down
+//Uinque catch all 
+ItemDisplay[UNI ETH FILTERLVL<5]: %!ethuniq!%
+ItemDisplay[UNI ID]: %!uniq!% <<unique>>
+ItemDisplay[UNI FILTERLVL<5]: %NAME% [%CODE%]
 
 //Sets
 //Good set parts
 ItemDisplay[(7ma OR amu OR uar OR ci3 OR 7qr OR uth OR ulg OR xtb OR xhm OR xmg OR ult) SET]: %!setmacro!% <<ggsets>>
+//Set catch all
+ItemDisplay[SET FILTERLVL<5]: %NAME% [%CODE%]
 
 //Sorceress Orbs, plague base
 ItemDisplay[NMAG (SOCK=0 OR SOCK=3) CL6]: %NAME% %CONTINUE%
@@ -509,7 +520,7 @@ ItemDisplay[(aq2 OR cq2) (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | LGO
 // catch all
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME% [%CODE%]
 ItemDisplay[(UNI OR SET)]: %NAME% [%CODE%]
-da
+
 //Class items  cl1 Druid pelts, cl2 barb helms, cl5 assassin weapons, cl6 sorc orbs, cl7 zon weapons, wp6 javelins, wp12 wands, wsp war scepters, 9ws divine scepter, 7ws caduceus
 ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) MAG ETH]: %GRAY%ETH %BLUE%%NAME%
 ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) RARE ETH]: %GRAY%ETH %YELLOW%%NAME%
