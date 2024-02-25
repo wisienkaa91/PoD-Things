@@ -1,6 +1,6 @@
 //Filter configs and details
 // Qord's Filter
-// Credits probably go to Krysard, LivEisJeebus, Kitten, Belli, BetweenWalls, Darain, Mag, Mackanmusic, Steve/Beavis, Necrolis 
+// Credits and thanks to Krysard, LivEisJeebus, Kitten, Belli, BetweenWalls, Darain, Mag, Mackanmusic, Steve/Beavis, Necrolis 
 // Sorry if I left anyone out, been using this for so long I don't remember
 //      who else I should attribute some of the formatting to. DM me if I missed you. 
 // 
@@ -22,7 +22,7 @@
 // Duplicate sound macro lines with global vs local sounds, need to address
 //
 Attribute[Author]: Qord 
-Attribute[Name]: QordFilter
+Attribute[Name]: QordsFilter
 Attribute[Version]: 3.3
 Attribute[Date]: 25 Feb
 
@@ -50,9 +50,7 @@ Sound[corb2]: "ding"
 Sound[corb3]: "zelda2"
 
 //Text Macros
-//Called with %!facetl!% and %!facetr!%
-TextMacro[facetl]: %RED%»» %YELLOW%»» %GREEN%»  %BLUE%» //to be deleted?
-TextMacro[facetr]: %BLUE%«  %GREEN%« %YELLOW%«« %RED%«« //to be deleted?
+//Called with %!macroname!%, %!tansocks!% for example
 TextMacro[upb4slam]: %RED%Upgrade before corrupting for chance at max sockets
 TextMacro[pcm]: %GRAY%Possible Corruption Mods 
 TextMacro[shopping]: %RED%@@@@@  // %!shopping!%
