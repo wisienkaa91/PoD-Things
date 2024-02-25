@@ -65,6 +65,7 @@ TextMacro[ethuniq]: %GRAY%Eth %GOLD%%NAME% // %!ethuniq!%
 TextMacro[gguunoeth]: %NL%%PURPLE%»»%RED%»» %ORANGE%»»  %YELLOW%»     %RED%%NAME%%YELLOW%     «%ORANGE%  «« %RED%««%PURPLE%««%NL% // %!gguunoeth!% "GG Unid'd Unique Not Ethereal"
 TextMacro[ggidun]: %NL%%GOLD%%NAME%%NL%%NL% // %!ggidun!% "GG ID'd Uniques"
 TextMacro[okuniq]: %YELLOW%»%TAN%»%GRAY%»     %RED%%NAME%%GRAY%     «%TAN%«%YELLOW%«  // %!okuniq!% "Ok Uniques"
+TextMacro[okuniqid]: %GOLD%%NAME%%NL%  // %!okuniqid!% "Ok Uniques, ID'd'"
 TextMacro[okuniqeth]: %YELLOW%»%TAN%»%GRAY%ETH»     %GOLD%%NAME%%GRAY%     «%TAN%«%YELLOW%« // %!okuniqeth!% "Ok Uniques, ethereal"
 TextMacro[setmacro]: %GREEN%    %NAME%     %GREEN% // %!setmacro!%
 
@@ -252,14 +253,15 @@ ItemDisplay[(cm1 OR cm2 OR cm3) !UNI]: %NAME% %GRAY%[%ILVL%]
 ItemDisplay[(uui OR utu) UNI !ID]: %!qspecial!% <<qspecials>>
 //GG Uniq Items (things that trade easy)
 ItemDisplay[(ulc OR xea OR uap OR ulm OR ci3 OR xtb OR 7gw OR obf OR uvb OR uar) UNI ETH !ID]: %!gguueth!% <<gguniqs>>
+ItemDisplay[(ulc OR xea OR uap OR ulm OR ci3 OR xtb OR 7gw OR obf OR uvb OR uar) UNI ETH]: %!ethuniq!% <<gguniqs>>
 ItemDisplay[(jew OR rin OR amu OR ulc OR xea OR urn OR uap OR ulm OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR uvb OR uar OR ucl OR 7qr OR xhn OR xh9 OR cm1 OR cm2 OR cm3) UNI !ID]: %!gguunoeth!% <<gguniqs>>
 ItemDisplay[(jew OR rin OR amu OR ulc OR xea OR urn OR uap OR ulm OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR uvb OR uar OR ucl OR 7qr OR xhn OR xh9 OR cm1 OR cm2 OR cm3) !ETH UNI]: %!ggidun!% <<gguniqs>>
 //OK UNIQUE Items ETH
 ItemDisplay[(xhn OR upl OR uld OR uow OR ama OR 6cs OR 7s8) ETH UNI !ID]: %!okuniqeth!% <:notify: NotificationColor = GOLD> //%NOTIFY(ORANGE)%
-//OK UNIQUE Items NONETH
+//OK UNIQUE Items NONETH unid
 ItemDisplay[(6hx OR uow OR pa9 OR nea OR 7cr OR 7fl OR 7kr OR oba OR ama OR lbt OR xhb OR uhb OR xvb OR xhn OR uhm OR xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR xhn OR xtp OR xlt OR upl OR uld OR uvg OR uhg OR utu OR zlb OR zvb OR zhb OR umc OR 6cs OR xmb OR amf OR umg OR 7s8 OR xhm OR rxb OR 8rx OR 6sw OR 9mp) UNI !ID !ETH]: %!okuniq!% <<okuniqs>>
-//did i fix facets above? If not, let me know
-ItemDisplay[UNI !ID jew]:%NL%%!facetl!%  %PURPLE%Fix the facet qord!!  %!facetr!% %NL%%NL% <<qnique>>
+//OK UNIQUE Items NONETH ID'd
+ItemDisplay[(6hx OR uow OR pa9 OR nea OR 7cr OR 7fl OR 7kr OR oba OR ama OR lbt OR xhb OR uhb OR xvb OR xhn OR uhm OR xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR xhn OR xtp OR xlt OR upl OR uld OR uvg OR uhg OR utu OR zlb OR zvb OR zhb OR umc OR 6cs OR xmb OR amf OR umg OR 7s8 OR xhm OR rxb OR 8rx OR 6sw OR 9mp) UNI !ETH]: %!okuniqid!% <<okuniqs>>
 //Show me all ID'd uniques
 ItemDisplay[UNI]: %NAME% [%CODE%]
 //Uinque catch all 
@@ -485,7 +487,7 @@ ItemDisplay[CL5 (CLSK6>0 AND SK278>2)]: %!shopping!% %PURPLE%Venom Claw %!shoppi
 ItemDisplay[CL5 (CLSK6>1 AND SK278>1)]: %!shopping!% %PURPLE%Venom Claw %!shopping!% <<notify>>
 ItemDisplay[CL5 (TABSK49>0 AND SK278>2)]: %!shopping!% %PURPLE%Venom Claw %!shopping!% <<notify>>
 ItemDisplay[CL5 (TABSK49>1 AND SK278>1)]: %!shopping!% %PURPLE%Venom Claw %!shopping!% <<notify>>
-//More Shopping
+//More Shopping, redundant?
 ItemDisplay[MAG WEAPON ID TABSK34=3]: %!shopping!% %PURPLE%BO STICK %!shopping!% <<notify>>
 ItemDisplay[MAG CL5 ID TABSK48=3]: %!shopping!% %PURPLE%TRAP CLAW %!shopping!% <<notify>>
 ItemDisplay[MAG EQ4 !ETH ID TABSK0=3 IAS=20]: %!shopping!% %PURPLE%Bow Glove %!shopping!% <<notify>>
@@ -493,7 +495,7 @@ ItemDisplay[MAG EQ4 !ETH ID TABSK2=3 IAS=20]: %!shopping!% %PURPLE%Java Glove %!
 ItemDisplay[MAG WP13 (TABSK24=3 AND SK121=3)]: %!shopping!% %PURPLE%FoH Weapon %!shopping!% <<notify>>
 ItemDisplay[MAG WP13 (TABSK25=3 AND SK119=3)]: %!shopping!% %PURPLE%Sanctuary Weapon %!shopping!% <<notify>>
 
-// SHOW ME THAT UNIQ ITEM IS ETH
+// SHOW ME THAT UNIQ ITEM IS ETH, redundant?
 ItemDisplay[UNI AND ETH AND SOCK=0]: %GRAY%ETH %GOLD%%NAME%
 //Show me every runeword
 ItemDisplay[RW]: %NAME% %!tansocks!%
