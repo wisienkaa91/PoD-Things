@@ -42,11 +42,12 @@ FilterLevel[5]: No extra floor junk
 //FilterLevel[6]: Max filterlevel name length
 
 // Define filter sounds
-Sound[corb1]: "qordnoise/goat"
-Sound[corb2]: "qordnoise/ding"
-Sound[corb3]: "qordnoise/zelda2"
-//Sound[corb2]: "ding"
-//Sound[corb3]: "zelda2"
+//Sound[corb1]: "qordnoise/goat"
+//Sound[corb2]: "qordnoise/ding"
+//Sound[corb3]: "qordnoise/zelda2"
+Sound[corb1]: "ding"
+Sound[corb2]: "ding"
+Sound[corb3]: "zelda2"
 
 //Text Macros
 //Called with %!facetl!% and %!facetr!%
@@ -58,7 +59,7 @@ TextMacro[shopping]: %RED%@@@@@  // %!shopping!%
 TextMacro[tansocks]: %TAN%[%SOCKETS%] // %!tansocks!%
 TextMacro[graysocks]: %GRAY%[%SOCKETS%] // %!graysocks!%
 TextMacro[stripedsocks]: %WHITE%[%RED%%SOCKETS%%WHITE%] // %!stripedsocks!%
-TextMacro[runename]: %ORANGE%©©%RUNENAME%©© %GOLD%[%RUNETIER%]  // %!runename!%
+TextMacro[runename]: %ORANGE%  %RUNENAME%  %GOLD%[%RUNETIER%]  // %!runename!%
 TextMacro[mapmacro]: %GRAY%[%DGREEN%~ %PURPLE%MAP %DGREEN%~%GRAY%] [%CODE%] // %!mapmacro!%
 TextMacro[qspecial]: %SAGE%    %NAME%     Qord special // %!qspecial!% "Qords special"
 TextMacro[gguueth]: %NL%%GRAY% »      Eth %GOLD%%NAME%%GRAY%      « %NL% // %!gguueth!% "GG Unid'd Unique Ethereal"
@@ -73,9 +74,9 @@ TextMacro[setmacro]: %GREEN%    %NAME%     %GREEN% // %!setmacro!%
 //inline example: <:pelt: BorderColor = 99, BorderSize = 4, NotificationSound = SoundFile>
 //called with <<rune>> and <<qspecials>>
 ItemStyle[rare]: NotificationColor = YELLOW //<<rare>>
-ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = corb2, NotificationSoundPriority = HIGH //<<rune>>
+ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = HIGH, NotificationSound = corb2, NotificationSoundPriority = HIGH //<<rune>>
 //ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH
-ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH //<<qspecials>>
+ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = HIGH, NotificationSound = "@global\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH //<<qspecials>>
 ItemStyle[pelt]: MapIcon = 4, MapIconColor = 5, BorderColor = 4, BorderSize = 1, BackgroundColor = 15 //<<pelt>>
 ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
 //ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@global\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
@@ -92,7 +93,7 @@ ItemStyle[craygray]: BorderColor = 27, BorderSize = 1, BackgroundColor = 31, Not
 //"@local\sfx\Common\Cain\Cain_hello.wav"
 
 //reserved testing space
-ItemDisplay[SPECIAL]: %GOLD%%NAME%
+//ItemDisplay[SPECIAL]: %GOLD%%NAME% %!qspecial!% 
 //tester mctest
 //ItemDisplay[r08]: %TAN%Ral [%RUNETIER%] %RED%oo {%WHITE%Ral + Thul + %WHITE%P.%PURPLE%Ame %WHITE%+ %YELLOW%Norm Rare Arm %WHITE%-> %YELLOW%Exc Ver Rare Arm%NL%%WHITE%Ral + Sol + %WHITE%P.%GREEN%Eme %WHITE%+ %TAN%Norm Uniq Wea %WHITE%-> %TAN%Exc Ver of Wea%NL%%WHITE%Ral + Amn + %WHITE%P.%PURPLE%Ame %WHITE%+ Norm Wea -> Sock Wea of same type%NL%Ral + Thul + %WHITE%P.%BLUE%Sa %WHITE%+ Norm Helm -> Sock Helm of same type%NL%%NL%%PURPLE%[Caster]:%WHITE% Mag %BLUE%Amulet %WHITE%+ P.%PURPLE%Ame %WHITE%+ Jewel%NL%%RED%[Blood]:%WHITE% Mag %BLUE%Helm %WHITE%+ P.%RED%Ruby %WHITE%+ Jewel%NL%%ORANGE%Best Crafts Info%WHITE%%NL%}
 
@@ -148,7 +149,7 @@ ItemDisplay[bey]: %GRAY%Baal's Eye <<notify>>
 ItemDisplay[mbr]: %GRAY%Mephisto's Brain <<notify>>
 
 //PoD Items
-ItemDisplay[SPECIAL]: %GOLD%%NAME% <:notify: NotificationColor = PURPLE>
+ItemDisplay[SPECIAL]: %GOLD%%NAME% <<qspecials>>
 ItemDisplay[std]: %NAME%
 ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NL% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 155, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotificationSound = corb2, NotificationColor = PURPLE>
 ItemDisplay[cx6]: %PURPLE%Diablo's Soulstone
@@ -205,7 +206,7 @@ ItemDisplay[(rin OR amu) MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
 //Jewels, magic and rare
 ItemDisplay[jew MAG !ID]: %BLUE%%NAME%
 ItemDisplay[jew RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
-ItemDisplay[jew MAG ID]: %NAME%
+ItemDisplay[jew (RARE OR MAG) ID]: %NAME%
 
 //Craftables
 ItemDisplay[(7wa) MAG]: %NL% %NAME% %RED%[ort] %GRAY%[%ILVL%]%NL% <:notify: MapIcon = 66, NotificationColor = RED> {%GRAY%Ort Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Zerker Axe%NL%%GRAY%Horadric Cube Craft Recipe}
@@ -278,7 +279,7 @@ ItemDisplay[SET FILTERLVL<5]: %NAME% [%CODE%]
 //trim old lines, no need enflame-frig since pre-buff is no more
 ItemDisplay[NMAG (SOCK=0 OR SOCK=3) CL6]: %NAME% %CONTINUE%
 //Combo
-ItemDisplay[NMAG (SK62>1 AND SK64>1) (SOCK=0 OR SOCK=3) CL6]: %SAGE%Hydra/Orb Orb %!qspecial!% %!stripedsocks!%
+ItemDisplay[NMAG (SK62>1 AND SK64>1) (SOCK=0 OR SOCK=3) CL6]: %SAGE%Hydra/Orb Orb %!qspecial!% %!stripedsocks!% <<qspecials>>
 ItemDisplay[NMAG (SK40>2 AND SK52>2) (SOCK=0 OR SOCK=3) CL6]: %NAME% %ORANGE%GG +3 Enflame +3 Frigerate Pick me! %!stripedsocks!%
 //Cold with mastery
 ItemDisplay[NMAG (SK44>1 AND SK65>1) (SOCK=0 OR SOCK=3) CL6]: %ORANGE%Frost Nova Cold Mastery Orb %PURPLE%[%SOCKETS%] <:orbs: BorderColor = 151>
@@ -339,7 +340,7 @@ ItemDisplay[CL5  NMAG !INF !ETH !NORM (SOCK=0 OR SOCK=3) SK260>2]:  %NAME% %LIGH
 ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK265>2]:  %NAME% %LIGHT_GRAY%[%WHITE% +3 Fix the filter 265%] %CONTINUE% 
 ItemDisplay[CL5  NMAG !INF !ETH !NORM (SOCK=0 OR SOCK=3) SK269>2]:  %NAME% %LIGHT_GRAY% +3 Claws of Thunder %CONTINUE%
 ItemDisplay[CL5  NMAG !INF !ETH !NORM (SOCK=0 OR SOCK=3) SK270>2]:  %NAME% %LIGHT_GRAY% +3 Dragon Tail WTF LOL%CONTINUE%
-ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK274>2]:  %NAME% %LIGHT_GRAY%[%WHITE% +3 Fix the filter 274%] %CONTINUE% 
+ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK274>2]:  %NAME% %LIGHT_GRAY% +3 Blades of Ice %CONTINUE% 
 ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK275>2]:  %NAME% %LIGHT_GRAY%[%WHITE% +3 Fix the filter 275%] %CONTINUE% 
 ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK280>2]:  %NAME% %LIGHT_GRAY%[%WHITE% +3 Fix the filter 280%] %!tansocks!%
 ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK254>2 OR SK280>2 OR SK255>2 OR SK259>2 OR SK260>2 OR SK265>2 OR SK269>2 OR SK270>2 OR SK274>2 OR SK255>2]:  %NAME% %!tansocks!%
@@ -394,7 +395,7 @@ ItemDisplay[fla (NMAG OR RW) SOCK>3 FILTERLVL<3]: %NAME% %!graysocks!%
 ItemDisplay[crs (ETH AND (NMAG OR RW)) SOCK=5 FILTERLVL<3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
 ItemDisplay[crs (NMAG OR RW) SOCK=5 FILTERLVL<3]: %NAME% %!graysocks!%
 //Memory
-ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG OR RW) SK58>2 (SOCK=0 OR SOCK=4)]: %GRAY%[%WHITE%+3 to tell Qord he dum1%GRAY%] %NAME% %!tansocks!% //redundant
+ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG OR RW) SK58>2 (SOCK=0 OR SOCK=4)]: %LIGHT_GRAY%+3 ES %NAME% %!tansocks!% //redundant
 ItemDisplay[(wst OR 8ws OR 6ws) (NMAG OR RW) SK58>2 SOCK=0 (!INF AND !SUP)]: %GRAY%[%WHITE%+3 to tell Qord he dum2%GRAY%] %NAME% %!tansocks!% //redundant
 ItemDisplay[(wst OR 8ws OR 6ws) (NMAG OR RW) SK58>2 SOCK=4]: %GRAY%[%WHITE%+3 to tell Qord he dum3%GRAY%] %NAME% %!tansocks!% //redundant
 //Faith
@@ -561,4 +562,3 @@ ItemDisplay[(ARMOR OR WEAPON) ETH SOCK>0 CLVL<19]: %GRAY%ETH %NAME% %!tansocks!%
 ItemDisplay[(ARMOR OR WEAPON) ETH CLVL<19]: %GRAY%ETH %NAME%
 ItemDisplay[(ARMOR OR WEAPON) SOCK>0 CLVL<19]: %NAME% %!tansocks!%
 ItemDisplay[(ARMOR OR WEAPON) CLVL>18]:
-
