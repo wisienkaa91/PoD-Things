@@ -1,33 +1,39 @@
 //Filter configs and details
-// Qord PTR Play
-// Credits probably go to Krysard, LivEisJeebus, Kitten, Belli, BetweenWalls, Darain, Mag, Mac, Steve, Necrolis 
+// Qord's Filter
+// Credits probably go to Krysard, LivEisJeebus, Kitten, Belli, BetweenWalls, Darain, Mag, Mackanmusic, Steve/Beavis, Necrolis 
 // Sorry if I left anyone out, been using this for so long I don't remember
 //      who else I should attribute some of the formatting to. DM me if I missed you. 
 // 
+// Trying to keep filterlevel dscriptions up to date, but some highlights include
 // I like crafts and Sorc/Necro/Assassin RW bases
 // Shows ort even when other low runes are hdden
 // Shows no large charms except torch
-// Hides no uniques or set items, but does append the item code of less desirable ones
+// Hides no uniques or set items until filterlevel 5, but does append the item code of less desirable ones
 //      in case user wants to add it to a higher visibility list
 // Shows a lot rares
-// Hides a lot of blues, hides gems under flawless
+// Hides a lot of blues, hides gems under flawless; testing alternate config to show regular gems under certain conditions
 // Hides ID scrolls outside of filterlevel 1, only see TP and ID scrolls if you have less than 15 in tome
 // 
 // To-do - check redundant
-// Add more +skill lines for sorc, necro, assasin bases
+// Add more +skill lines for sorc, necro, assasin bases; overhaul this completely
 // Fix the "fix" lines, added numbers for ease of finding
-// Check white/gray for double names, rethink those socket colors
+// Check white/gray for double names, ie name showing up as "Claw Claw" or "Hydra Bow Hydra Bow", rethink those socket colors
 // Give pelts continue lines and add more skills
+// Duplicate sound macro lines with global vs local sounds, need to address
 //
+Attribute[Author]: Qord 
+Attribute[Name]: QordFilter
+Attribute[Version]: 3.2
+Attribute[Date]: 25 Feb
 
 Option[IgnoreMissingSounds]: True
 
 //Rename filterlevel
 // Filterlevel 1
 FilterLevel[1]: Loosey goosey
-// Filterlevel 2 hides items in the utility section, id scrolls
+// Filterlevel 2 hides items in the utility section, id scrolls, some blues
 FilterLevel[2]: Utility
-// Filterlevel 3 hides the above, as well as low runes, large charms
+// Filterlevel 3 hides the above, as well as low runes, large charms, hides some bases (spirit, hoto, cta)
 FilterLevel[3]: No low runes
 // Filterlevel 4 hides the above, health/mana pots, "probly garbage" labeled items
 FilterLevel[4]: No hp/mp pots
@@ -48,8 +54,8 @@ Sound[corb3]: "qordnoise/zelda2"
 
 //Text Macros
 //Called with %!facetl!% and %!facetr!%
-TextMacro[facetl]: %RED%»» %YELLOW%»» %GREEN%»  %BLUE%»
-TextMacro[facetr]: %BLUE%«  %GREEN%« %YELLOW%«« %RED%««
+TextMacro[facetl]: %RED%»» %YELLOW%»» %GREEN%»  %BLUE%» //to be deleted?
+TextMacro[facetr]: %BLUE%«  %GREEN%« %YELLOW%«« %RED%«« //to be deleted?
 TextMacro[upb4slam]: %RED%Upgrade before corrupting for chance at max sockets
 TextMacro[pcm]: %GRAY%Possible Corruption Mods 
 TextMacro[shopping]: %RED%@@@@@  // %!shopping!%
@@ -129,7 +135,8 @@ ItemDisplay[vps CLVL>40]:
 ItemDisplay[wms (FILTERLVL=1)]: %WHITE%thaw
 ItemDisplay[wms CLVL>60]:
 ItemDisplay[yps FILTERLVL=1]: %WHITE%antidote
-ItemDisplay[key FILTERLVL=1]: %GRAY%key
+ItemDisplay[key FILTERLVL=1 !PLRCLASS(ASS)]: %GRAY%key
+//ItemDisplay[key FILTERLVL=1]: %GRAY%key
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling
 ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) FILTERLVL=1]: %NAME%
 //Throws $35k+, money maker
@@ -185,6 +192,7 @@ ItemDisplay[(ARMOR OR WEAPON) ((MAG OR RARE OR SET OR UNI) AND ETH) SOCK>0]: %NA
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) SOCK>0]: %NAME% %!tansocks!%
 
 //Gems
+ItemDisplay[GEMLEVEL=3 FILERTLVL=1(DIFFICULTY=0 or CLVL<40)] %NAME%
 ItemDisplay[gzv]: %PURPLE%Amethyst //Flawless Amethyst
 ItemDisplay[glw]: %WHITE%Diamond //Flawless Diamond
 ItemDisplay[glg]: %GREEN%Emerald //Flawless Emerald = SoundFile
@@ -208,7 +216,7 @@ ItemDisplay[(rin OR amu) MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
 //Jewels
 ItemDisplay[jew MAG !ID]: %BLUE%%NAME%
 ItemDisplay[jew RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
-ItemDisplay[UNI !ID jew]:%NL%%!facetl!%  %PURPLE%Rainbow Facet  %!facetr!% %NL%%NL% <<qnique>>
+//ItemDisplay[UNI !ID jew]:%NL%%!facetl!%  %PURPLE%Rainbow Facet  %!facetr!% %NL%%NL% <<qnique>>
 
 //Craftables
 ItemDisplay[(7wa) MAG]: %NL% %NAME% %RED%[ort] %GRAY%[%ILVL%]%NL% <:notify: MapIcon = 66, NotificationColor = RED> {%GRAY%Ort Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Zerker Axe%NL%%GRAY%Horadric Cube Craft Recipe}
@@ -223,6 +231,9 @@ ItemDisplay[uit MAG]: %NAME% %GREEN%[nef] %GRAY%[%ILVL%]{%GRAY%Nef Rune + Perfec
 ItemDisplay[(hbt OR xhb) MAG]: %NAME% %GREEN%[ort] %GRAY%[%ILVL%]{%GRAY%Amn Rune + Perfect Emerald + This Magical Item + Jewel = Crafted Safety Boots%NL%%GRAY%Horadric Cube Craft Recipe}
 ItemDisplay[(ltp OR xtp OR utp) MAG]: %NAME% %PURPLE%[tal] %GRAY%[%ILVL%]{%GRAY%Tal Rune + Perfect Amethyst + This Magical Item + Jewel = Crafted Caster Armor%NL%%GRAY%Horadric Cube Craft Recipe}
 ItemDisplay[(sml OR xml OR uml) MAG]: %NAME% %PURPLE%[eth] %GRAY%[%ILVL%]{%GRAY%Eth Rune + Perfect Amethyst + This Magical Item + Jewel = Crafted Caster Shield%NL%%GRAY%Horadric Cube Craft Recipe}
+//Craft catch-all, always show crafterd items
+ItemDisplay[CRAFT !SOCK=0]: %NAME% %!tansocks!%
+ItemDisplay[CRAFT]: %NAME% 
 
 //Rares
 //Rare military picks
@@ -252,12 +263,14 @@ ItemDisplay[(cm1 OR cm2 OR cm3) !UNI]: %NAME% %GRAY%[%ILVL%]
 ItemDisplay[(uui OR utu) UNI !ID]: %!qspecial!% <<qspecials>>
 //GG Uniq Items (things that trade easy)
 ItemDisplay[(ulc OR xea OR uap OR ulm OR ci3 OR xtb OR 7gw OR obf OR uvb OR uar) UNI ETH !ID]: %!gguueth!% <<gguniqs>>
-ItemDisplay[(rin OR amu OR ulc OR xea OR urn OR uap OR ulm OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR uvb OR uar OR ucl OR 7qr OR xhn OR xh9 OR cm1 OR cm2 OR cm3) UNI !ID]: %!gguunoeth!% <<gguniqs>>
-ItemDisplay[(rin OR amu OR ulc OR xea OR urn OR uap OR ulm OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR uvb OR uar OR ucl OR 7qr OR xhn OR xh9 OR cm1 OR cm2 OR cm3) !ETH UNI]: %!ggidun!% <<gguniqs>>
+ItemDisplay[(jew OR rin OR amu OR ulc OR xea OR urn OR uap OR ulm OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR uvb OR uar OR ucl OR 7qr OR xhn OR xh9 OR cm1 OR cm2 OR cm3) UNI !ID]: %!gguunoeth!% <<gguniqs>>
+ItemDisplay[(jew OR rin OR amu OR ulc OR xea OR urn OR uap OR ulm OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR uvb OR uar OR ucl OR 7qr OR xhn OR xh9 OR cm1 OR cm2 OR cm3) !ETH UNI]: %!ggidun!% <<gguniqs>>
 //OK UNIQUE Items ETH
 ItemDisplay[(xhn OR upl OR uld OR uow OR ama OR 6cs OR 7s8) ETH UNI !ID]: %!okuniqeth!% <:notify: NotificationColor = GOLD> //%NOTIFY(ORANGE)%
 //OK UNIQUE Items NONETH
 ItemDisplay[(6hx OR uow OR pa9 OR nea OR 7cr OR 7fl OR 7kr OR oba OR ama OR lbt OR xhb OR uhb OR xvb OR xhn OR uhm OR xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR xhn OR xtp OR xlt OR upl OR uld OR uvg OR uhg OR utu OR zlb OR zvb OR zhb OR umc OR 6cs OR xmb OR amf OR umg OR 7s8 OR xhm OR rxb OR 8rx OR 6sw OR 9mp) UNI !ID !ETH]: %!okuniq!% <<okuniqs>>
+//did i fix facets above?
+ItemDisplay[UNI !ID jew]:%NL%%!facetl!%  %PURPLE%Fix the facet qord!!  %!facetr!% %NL%%NL% <<qnique>>
 //Show me all ID'd uniques
 ItemDisplay[UNI]: %NAME% [%CODE%]
 //Uinque catch all 
@@ -343,7 +356,7 @@ ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK254>2 OR SK280>2 OR SK255>
 ItemDisplay[CL5 !INF NMAG (SK262>2 AND SK272>0) (SOCK=0 OR SOCK=3)]: %NAME% %PURPLE%+3 Wake of Fire w/ Wake of Inferno %!tansocks!%
 ItemDisplay[CL5 !INF NMAG (SK277>2 AND SK278>0) (SOCK=0 OR SOCK=3)]: %NAME% %PURPLE%+3 Blade Shield +3 Venom %!tansocks!%
 ItemDisplay[CL5 !INF NMAG SK278>2 SK267>0 (SOCK=0 OR SOCK=3)]: %NAME% %PURPLE%+3 Venom +3 Fade %!tansocks!%
-ItemDisplay[CL5 !INF NMAG (SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK278>2 OR SK279>2 OR SK280>2) SK277>2 (SOCK=0 OR SOCK=3)]: %NAME% %WHITE%+3 Blade Shield Plus+ %!tansocks!%
+ItemDisplay[CL5 !INF NMAG (SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK278>2 OR SK279>2 OR SK280>2) SK277>2 (SOCK=0 OR SOCK=3)]: %NAME% %WHITE%+3 Blade Shield Plus++ %!tansocks!%
 ItemDisplay[CL5 !INF NMAG SK277>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Blade Shield %CONTINUE%
 ItemDisplay[CL5 !INF NMAG SK278>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Venom %CONTINUE%
 ItemDisplay[CL5 !INF NMAG SK262>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Wake of Fire %CONTINUE%
@@ -385,15 +398,15 @@ ItemDisplay[(CL4 OR WP12) NMAG !SOCK=1 SK67>2 OR SK73>2 OR SK84>2 OR SK92>2 OR S
 
 //Other RuneWord Bases
 //Spirit Swords
-ItemDisplay[(crs OR bsd OR lsd OR 9cr) (ETH AND (NMAG OR RW)) SOCK=4]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
-ItemDisplay[(crs OR bsd OR lsd OR 9cr) (NMAG OR RW) SOCK=4]: %NAME% %!graysocks!%
+ItemDisplay[(crs OR bsd OR lsd OR 9cr) (ETH AND (NMAG OR RW)) SOCK=4 FILTERLVL<3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
+ItemDisplay[(crs OR bsd OR lsd OR 9cr) (NMAG OR RW) SOCK=4 FILTERLVL<3]: %NAME% %!graysocks!%
 //Holy Thunder/Rift
 //ItemDisplay[wsp !ETH AND (NMAG OR RW) SOCK=4]: %NAME% %!graysocks!%
 //HOTO AND CTA
-ItemDisplay[fla (ETH AND (NMAG OR RW)) SOCK>3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
-ItemDisplay[fla (NMAG OR RW) SOCK>3]: %NAME% %!graysocks!%
-ItemDisplay[crs (ETH AND (NMAG OR RW)) SOCK=5]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
-ItemDisplay[crs (NMAG OR RW) SOCK=5]: %NAME% %!graysocks!%
+ItemDisplay[fla (ETH AND (NMAG OR RW)) SOCK>3 FILTERLVL<3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
+ItemDisplay[fla (NMAG OR RW) SOCK>3 FILTERLVL<3]: %NAME% %!graysocks!%
+ItemDisplay[crs (ETH AND (NMAG OR RW)) SOCK=5 FILTERLVL<3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
+ItemDisplay[crs (NMAG OR RW) SOCK=5 FILTERLVL<3]: %NAME% %!graysocks!%
 //Memory
 ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG OR RW) SK58>2 (SOCK=0 OR SOCK=4)]: %GRAY%[%WHITE%+3 to tell Qord he dum1%GRAY%] %NAME% %!tansocks!% //redundant
 ItemDisplay[(wst OR 8ws OR 6ws) (NMAG OR RW) SK58>2 SOCK=0 (!INF AND !SUP)]: %GRAY%[%WHITE%+3 to tell Qord he dum2%GRAY%] %NAME% %!tansocks!% //redundant
@@ -455,12 +468,12 @@ ItemDisplay[CL3 (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2) (RES>34 AND 
 ItemDisplay[ush (!INF AND !ETH) AND (NMAG OR RW)  SOCK>1]: %NAME% %!tansocks!%
 ItemDisplay[uit !ETH !RW  NMAG (SOCK=4 OR SOCK=0) !STAT91=0 !STAT91=-10]: %GRAY%[%WHITE%-% Req%GRAY%] %NAME% %!tansocks!%
 ItemDisplay[uit !ETH NMAG (SOCK=4 OR SOCK=0) STAT91=-10]: %GRAY%[%WHITE%-10% Req%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[uit (!INF AND ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=4)]: %GRAY%[%WHITE%Eth%GRAY%] %NAME% %!tansocks!%
-ItemDisplay[uit (!INF AND !ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=4)]: %GRAY%%NAME% %!tansocks!%
+ItemDisplay[uit (!INF AND ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=4) FILTERLVL<3]: %GRAY%[%WHITE%Eth%GRAY%] %NAME% %!tansocks!%
+ItemDisplay[uit (!INF AND !ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=4) FILTERLVL<3]: %GRAY%%NAME% %!tansocks!%
 //Dream shields, tower and troll nest
-ItemDisplay[(tow OR ush) (!INF AND ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=3)]: %GRAY%Dream base %NAME% %!tansocks!%
+ItemDisplay[(tow OR ush) (!INF AND ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=3) FILTERLVL<3]: %GRAY%Dream base %NAME% %!tansocks!%
 //caduceus for rift
-ItemDisplay[ NMAG (SOCK=0 OR SOCK=4) (7ws OR wsp)]: %GRAY%Rift base  %NAME% %!tansocks!%
+ItemDisplay[ NMAG (SOCK=0 OR SOCK=4) (7ws OR wsp) FILTERLVL<3]: %GRAY%Rift base  %NAME% %!tansocks!%
 //ItemDisplay[(7ws OR wsp) NMAG]: %GRAY%Rift base  %NAME% %!tansocks!%
 
 //Shopping list
@@ -533,7 +546,7 @@ ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME% [%CODE%]
 ItemDisplay[(UNI OR SET)]: %NAME% [%CODE%]
 
 //Class items  cl1 Druid pelts, cl2 barb helms, cl5 assassin weapons, cl6 sorc orbs, cl7 zon weapons, wp6 javelins, wp12 wands, wsp war scepters, 9ws divine scepter, 7ws caduceus
-ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) MAG ETH]: %GRAY%ETH %BLUE%%NAME%
+ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) (FILTERLVL=1) MAG ETH]: %GRAY%ETH %BLUE%%NAME%
 ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) RARE ETH]: %GRAY%ETH %YELLOW%%NAME%
 ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) (MAG OR RARE)]: %NAME%
 ItemDisplay[WEAPON (WP6 AND CL7) MAG ETH]: %GRAY%ETH %BLUE%Fix the filter Qord4 %NAME% //redundant?
