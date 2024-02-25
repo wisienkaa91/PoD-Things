@@ -29,7 +29,7 @@ FilterLevel[1]: Loosey goosey
 FilterLevel[2]: Utility
 // Filterlevel 3 hides the above, as well as low runes, large charms
 FilterLevel[3]: No low runes
-// Filterlevel 4 hides the above, as well as health/mana pots
+// Filterlevel 4 hides the above, health/mana pots, "probly garbage" labeled items
 FilterLevel[4]: No hp/mp pots
 // Filterlevel 5 hides the above, as well as lower set and unique items
 FilterLevel[5]: No extra floor junk
@@ -40,8 +40,11 @@ FilterLevel[5]: No extra floor junk
 //Sound[FANCY_SOUND]: "myfilter\filename"
 //ItemDisplay[MAP]: %NAME%%NOTIFYSOUND(FANCY_SOUND)%
 //In use
-Sound[corb2]: "ding"
-Sound[corb3]: "zelda2"
+Sound[corb1]: "qordnoise/goat"
+Sound[corb2]: "qordnoise/ding"
+Sound[corb3]: "qordnoise/zelda2"
+//Sound[corb2]: "ding"
+//Sound[corb3]: "zelda2"
 
 //Text Macros
 //Called with %!facetl!% and %!facetr!%
@@ -73,14 +76,14 @@ TextMacro[uniq]:  %GOLD%%NAME% // %!uniq!%
 //inline example: <:pelt: BorderColor = 99, BorderSize = 4, NotificationSound = SoundFile>
 //called with <<rune>> and <<qspecials>>
 ItemStyle[rare]: NotificationColor = YELLOW
-ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = corb3, NotificationSoundPriority = HIGH
+ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 75, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = corb2, NotificationSoundPriority = HIGH
 //ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH
 ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH
 ItemStyle[pelt]: MapIcon = 4, MapIconColor = 5, BorderColor = 4, BorderSize = 1, BackgroundColor = 15 //<<pelt>>
-//ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
-ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@global\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
-//ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
-ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@global\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
+ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
+//ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@global\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
+ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
+//ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@global\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
 ItemStyle[uniq1s]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = HIGH  //<<uniq1s>>
 ItemStyle[okuniqs]: BorderColor = 111, BorderSize = 2, BackgroundColor = 203, NotificationColor = ORANGE //<<okuniqs>>
 ItemStyle[ggsets]: BorderColor = 111, BorderSize = 2, NotificationColor = GREEN //<<ggsets>>
@@ -122,7 +125,8 @@ ItemDisplay[(hp4 OR mp4) DIFFICULTY>1]:
 //Utility
 ItemDisplay[vps (CLVL<41 OR FILTERLVL=1)]: %WHITE%stamina
 ItemDisplay[vps CLVL>40]:
-ItemDisplay[wms (CLVL<61 OR FILTERLVL=1)]: %WHITE%thaw
+//ItemDisplay[wms (CLVL<61 OR FILTERLVL=1)]: %WHITE%thaw
+ItemDisplay[wms (FILTERLVL=1)]: %WHITE%thaw
 ItemDisplay[wms CLVL>60]:
 ItemDisplay[yps FILTERLVL=1]: %WHITE%antidote
 ItemDisplay[key FILTERLVL=1]: %GRAY%key
@@ -254,10 +258,12 @@ ItemDisplay[(rin OR amu OR ulc OR xea OR urn OR uap OR ulm OR ci3 OR xtb OR uit 
 ItemDisplay[(xhn OR upl OR uld OR uow OR ama OR 6cs OR 7s8) ETH UNI !ID]: %!okuniqeth!% <:notify: NotificationColor = GOLD> //%NOTIFY(ORANGE)%
 //OK UNIQUE Items NONETH
 ItemDisplay[(6hx OR uow OR pa9 OR nea OR 7cr OR 7fl OR 7kr OR oba OR ama OR lbt OR xhb OR uhb OR xvb OR xhn OR uhm OR xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR xhn OR xtp OR xlt OR upl OR uld OR uvg OR uhg OR utu OR zlb OR zvb OR zhb OR umc OR 6cs OR xmb OR amf OR umg OR 7s8 OR xhm OR rxb OR 8rx OR 6sw OR 9mp) UNI !ID !ETH]: %!okuniq!% <<okuniqs>>
+//Show me all ID'd uniques
+ItemDisplay[UNI]: %NAME% [%CODE%]
 //Uinque catch all 
 ItemDisplay[UNI !ID ETH FILTERLVL<5]: %!ethuniq!%
-ItemDisplay[UNI !ID]: %!uniq!% [%CODE%]//<<unique>>
-ItemDisplay[UNI FILTERLVL<5]: %NAME% [%CODE%]
+//ItemDisplay[UNI !ID]: %!uniq!% [%CODE%]//<<unique>>
+ItemDisplay[UNI !ID FILTERLVL<5]: %NAME% [%CODE%]
 
 //Sets
 //Good set parts
@@ -301,7 +307,7 @@ ItemDisplay[NMAG SK54>2 (SOCK=0 OR SOCK=3) CL6]: %NAME% %LIGHT_GRAY%+3 Chain Lig
 ItemDisplay[NMAG SK57>2 (SOCK=0 OR SOCK=3) CL6]: %NAME% %LIGHT_GRAY%+3 Discharge %CONTINUE%
 ItemDisplay[NMAG (SOCK=0 OR SOCK=3) (SK58>2 OR SK44>2 OR SK50>2 OR SK40>2 OR SK59>2 OR SK52>2 OR SK46>2 OR SK47>2 OR SK62>2 OR SK38>2 OR SK48>2 OR SK49>2 OR SK54>2 OR SK57>2) CL6]: %NAME% Orb %!stripedsocks!%
 //ItemDisplay[CL6 NMAG !SOCK=1 !SOCK=2 SK*>2]: %NAME% %ORANGE% Probly garbage %RED%[%SOCKETS%]
-ItemDisplay[CL6 NMAG SOCK=3]: %NAME% %ORANGE% Probly garbage %!stripedsocks!%
+ItemDisplay[CL6 NMAG SOCK=3 FILTERLVL<4]: %NAME% %ORANGE% Probly garbage %!stripedsocks!%
 //Staves for things
 ItemDisplay[NMAG SK58>2 (SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)]: %NAME% %LIGHT_GRAY%+3 E-Shield   %CONTINUE%
 ItemDisplay[NMAG SK44>2 (SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)]: %NAME% %BLUE%+3 Frost Nova   %CONTINUE%
@@ -318,7 +324,7 @@ ItemDisplay[NMAG SK49>2 (SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)]: %NAME% %LIGHT_G
 ItemDisplay[NMAG SK54>2 (SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)]: %NAME% %LIGHT_GRAY%+3 Chain Light  %CONTINUE%
 ItemDisplay[NMAG SK57>2 (SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)]: %NAME% %LIGHT_GRAY%+3 Discharge  %CONTINUE%
 ItemDisplay[NMAG (SOCK=0 OR SOCK>3) (SK58>2 OR SK44>2 OR SK50>2 OR SK40>2 OR SK59>2 OR SK52>2 OR SK46>2 OR SK47>2 OR SK62>2 OR SK38>2 OR SK48>2 OR SK49>2 OR SK54>2 OR SK57>2) (wst OR 8ws OR 6ws)]: %NAME% %!tansocks!%
-ItemDisplay[(wst OR 8ws OR 6ws) NMAG (SOCK=0 OR SOCK>3)]: %NAME% %ORANGE% Probly garbage %!stripedsocks!%
+ItemDisplay[(wst OR 8ws OR 6ws) NMAG (SOCK=0 OR SOCK>3) FILTERLVL<4]: %NAME% %ORANGE% Probly garbage %!stripedsocks!%
 
 //Assassin
 //Specials, MA skills
@@ -550,7 +556,7 @@ ItemDisplay[(CL1 OR CL2 OR CL4 OR CL6 OR WP11 OR WP12 OR WP13) NMAG CLVL<31 SOCK
 ItemDisplay[(CL1 OR CL2 OR CL4 OR CL6 OR WP11 OR WP12 OR WP13) NMAG CLVL<31]: %NAME% 
 ItemDisplay[(ARMOR OR WEAPON) MAG ETH CLVL<60]: %GRAY%ETH %BLUE%%NAME%
 ItemDisplay[(ARMOR OR WEAPON) RARE ETH CLVL<60]: %GRAY%ETH %YELLOW%%NAME%
-ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) CLVL<60]: %NAME%
+ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) FILTERLVL<4 CLVL<60]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) NMAG AND (!ETH AND !INF) SOCK>1 CLVL<40]: %GRAY%%NAME% %!tansocks!%
 ItemDisplay[WEAPON NMAG AND (ETH AND !INF) SOCK=4 CLVL<60]: %GRAY%ETH %NAME% %!tansocks!%
 ItemDisplay[(ARMOR OR WEAPON) (EXC OR ELT) NMAG AND (!ETH AND !INF) SOCK>1 CLVL>39 AND CLVL<81]: %NAME% %!tansocks!%
