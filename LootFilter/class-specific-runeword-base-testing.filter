@@ -1,4 +1,5 @@
-
+// Need to change sorc back to (ob5 OR oba OR obf) instead of CL6
+// Split into 2, one for orbs and one for staff
 // Sorc bases, not memory
 ItemDisplay[NMAG SKILL("Ice Bolt") >2((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))]: %NAME% %LIGHT_GRAY%+3 Ice Bolt%CONTINUE%
 ItemDisplay[NMAG SKILL("Frigerate") >2((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))]: %NAME% %LIGHT_GRAY%+3 Frigerate%CONTINUE%
