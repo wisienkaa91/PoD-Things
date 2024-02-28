@@ -310,7 +310,10 @@ ItemDisplay[NMAG SK48>2 (SOCK=0 OR SOCK=3) CL6]: %NAME% %LIGHT_GRAY%+3 Nova %CON
 ItemDisplay[NMAG SK49>2 (SOCK=0 OR SOCK=3) CL6]: %NAME% %LIGHT_GRAY%+3 Surge %CONTINUE%
 ItemDisplay[NMAG SK54>2 (SOCK=0 OR SOCK=3) CL6]: %NAME% %LIGHT_GRAY%+3 Chain Light %CONTINUE%
 ItemDisplay[NMAG SK57>2 (SOCK=0 OR SOCK=3) CL6]: %NAME% %LIGHT_GRAY%+3 Discharge %CONTINUE%
-ItemDisplay[NMAG (SOCK=0 OR SOCK=3) (SK58>2 OR SK44>2 OR SK50>2 OR SK40>2 OR SK59>2 OR SK52>2 OR SK46>2 OR SK47>2 OR SK62>2 OR SK38>2 OR SK48>2 OR SK49>2 OR SK54>2 OR SK57>2) CL6]: %NAME% Orb %!stripedsocks!%
+ItemDisplay[NMAG SK41>2 (SOCK=0 OR SOCK=3) CL6]: %NAME% %RED%+3 Blaze %CONTINUE%
+ItemDisplay[NMAG SK60>2 (SOCK=0 OR SOCK=3) CL6]: %NAME% %BLUE%+3 Chilling Armor %CONTINUE%
+ItemDisplay[NMAG SK51>2 (SOCK=0 OR SOCK=3) CL6]: %NAME% %RED%+3 Fire Wall %CONTINUE%
+ItemDisplay[NMAG (SOCK=0 OR SOCK=3) (SK58>2 OR SK44>2 OR SK50>2 OR SK40>2 OR SK59>2 OR SK52>2 OR SK46>2 OR SK47>2 OR SK62>2 OR SK38>2 OR SK48>2 OR SK49>2 OR SK54>2 OR SK57>2 OR SK41>2 OR SK60>2 OR SK51>2) CL6]: %NAME% Orb %!tansocks!%
 //ItemDisplay[CL6 NMAG !SOCK=1 !SOCK=2 SK*>2]: %NAME% %ORANGE% Probly garbage %RED%[%SOCKETS%]
 ItemDisplay[CL6 NMAG SOCK=3 FILTERLVL<4]: %NAME% %ORANGE% Probly garbage %!stripedsocks!%
 //Staves for things
@@ -430,7 +433,7 @@ ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw 
 
 //Armors
 ItemDisplay[xtp !ETH AND (NMAG OR RW) SOCK=2]: %NAME% %!tansocks!%
-ItemDisplay[(xtp OR utp OR uui) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %GRAY%%NAME% %!tansocks!%
+ItemDisplay[(xtp OR utp OR uui OR uhn) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %GRAY%%NAME% %!tansocks!%
 ItemDisplay[EQ2 ELT ETH NMAG (SOCK=0 OR SOCK>2)]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!tansocks!%
 //Helmets
 ItemDisplay[(ci3 OR uh9) (!INF AND !ETH) AND (NMAG OR RW) SOCK=3]: %NAME% %!tansocks!%
