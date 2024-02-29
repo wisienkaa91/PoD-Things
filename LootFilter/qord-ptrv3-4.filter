@@ -21,13 +21,13 @@
 // Give pelts continue lines and add more skills
 // Duplicate sound macro lines with global vs local sounds, need to address
 //
-// Big reno on sorc, necro, and druid runeword bases; need to do assassin
+// Big reno on sorc, necro, and druid runeword bases; need to do assassin; Sorc misc line not working
 // minimal bases to test necro with, so there's a 2nd known-working section after the newer, test code
 //
 Attribute[Author]: Qord 
 Attribute[Name]: QordsFilter
 Attribute[Version]: 3.4
-Attribute[Date]: 28 Feb
+Attribute[Date]: 29 Feb
 
 Option[IgnoreMissingSounds]: True
 
@@ -329,9 +329,11 @@ ItemDisplay[NMAG SKILL(47)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (w
 ItemDisplay[NMAG SKILL(51)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Fire Wall%CONTINUE%
 //ItemDisplay[NMAG SKILL(52)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Enflame%CONTINUE%
 ItemDisplay[NMAG SKILL(56)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Meteor<:orbs: BorderColor = 98> %CONTINUE%
-ItemDisplay[NMAG SKILL(62)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Hydra<:orbs: BorderColor = 98> %CONTINUE%
+ItemDisplay[NMAG SKILL(62)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Hydra %CONTINUE%
 //ItemDisplay[NMAG SKILL(61)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Fire Mastery%CONTINUE%
+
 ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL(39)>2 OR SKILL(40)>2 OR SKILL(42)>2 OR SKILL(43)>2 OR SKILL(53)>2 OR SKILL(63)>2 OR SKILL(36)>2 OR SKILL(37)>2 OR SKILL(41)>2 OR SKILL(52)>2 OR SKILL(61)>2)]: %NAME% +3 misc %CONTINUE%
+
 ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL(44)>2 OR SKILL(45)>2 OR SKILL(50)>2 OR SKILL(55)>2 OR SKILL(59)>2 OR SKILL("Freezing Pulse")>2 OR SKILL(60)>2 OR SKILL(64)>2 OR SKILL(65)>2 OR SKILL(38)>2 OR SKILL(48)>2 OR SKILL(49)>2 OR SKILL(54)>2 OR SKILL(57)>2 OR SKILL("Thunder Storm")>2 OR SKILL(58)>2 OR SKILL(46)>2 OR SKILL(47)>2 OR SKILL(51)>2 OR SKILL(56)>2 OR SKILL(62)>2)]: %NAME% %!tansocks!%
 
 //Druid pelts
