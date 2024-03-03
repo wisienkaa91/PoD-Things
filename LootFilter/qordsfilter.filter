@@ -495,8 +495,10 @@ ItemDisplay[(CL4 OR WP12) NMAG !SOCK=1 SK67>2 OR SK73>2 OR SK84>2 OR SK92>2 OR S
 //ItemDisplay[(CL4 OR WP12) NMAG !SOCK=1 SK67>2 OR SK73>2 OR SK84>2 OR SK92>2 OR SK83>2 OR SK74>2 OR SK94>2]: %NAME% %!tansocks!%
 
 //Other RuneWord Bases
+//Aramex requests, legelndary  mallet and boneweave
+ItemDisplay[(uhn OR 7wh) (NMAG OR RW) (SOCK=0 OR SOCK>2) FILTERLVL<3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
 //Spirit Swords
-ItemDisplay[(crs OR bsd OR lsd OR 9cr OR 7wh) (ETH AND (NMAG OR RW)) SOCK=4 FILTERLVL<3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
+ItemDisplay[(crs OR bsd OR lsd OR 9cr) (ETH AND (NMAG OR RW)) SOCK=4 FILTERLVL<3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
 ItemDisplay[(crs OR bsd OR lsd OR 9cr) (NMAG OR RW) SOCK=4 FILTERLVL<3]: %NAME% %!graysocks!%
 //Holy Thunder/Rift
 ItemDisplay[ NMAG (SOCK=0 OR SOCK=4) (7ws OR wsp) FILTERLVL<3]: %GRAY%Rift base  %NAME% %!tansocks!%
@@ -541,7 +543,7 @@ ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw 
 
 //Armors
 ItemDisplay[xtp !ETH AND (NMAG OR RW) SOCK=2]: %NAME% %!tansocks!%
-ItemDisplay[(xtp OR utp OR uui OR uhn) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %GRAY%%NAME% %!tansocks!%
+ItemDisplay[(xtp OR utp OR uui) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %GRAY%%NAME% %!tansocks!%
 ItemDisplay[EQ2 ELT ETH NMAG (SOCK=0 OR SOCK>2)]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!tansocks!%
 //Helmets
 ItemDisplay[(ci3 OR uh9) (!INF AND !ETH) AND (NMAG OR RW) SOCK=3]: %NAME% %!tansocks!%
