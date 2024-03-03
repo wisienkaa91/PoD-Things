@@ -27,7 +27,7 @@
 Attribute[Author]: Qord 
 Attribute[Name]: QordsFilter
 Attribute[Version]: 3.4
-Attribute[Date]: 3-March
+Attribute[Date]: 29 Feb
 
 Option[IgnoreMissingSounds]: True
 
@@ -93,11 +93,13 @@ ItemStyle[craygray]: BorderColor = 27, BorderSize = 1, BackgroundColor = 31, Not
 
 //<NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\rune"><NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\rune">
 //"@local\sfx\Common\Cain\Cain_hello.wav"
+// "@global\sfx\object\shrine\warping.wav"
 
 //reserved testing space
 //ItemDisplay[SPECIAL]: %GOLD%%NAME% %!qspecial!% 
 //tester mctest
 //ItemDisplay[r08]: %TAN%Ral [%RUNETIER%] %RED%oo {%WHITE%Ral + Thul + %WHITE%P.%PURPLE%Ame %WHITE%+ %YELLOW%Norm Rare Arm %WHITE%-> %YELLOW%Exc Ver Rare Arm%NL%%WHITE%Ral + Sol + %WHITE%P.%GREEN%Eme %WHITE%+ %TAN%Norm Uniq Wea %WHITE%-> %TAN%Exc Ver of Wea%NL%%WHITE%Ral + Amn + %WHITE%P.%PURPLE%Ame %WHITE%+ Norm Wea -> Sock Wea of same type%NL%Ral + Thul + %WHITE%P.%BLUE%Sa %WHITE%+ Norm Helm -> Sock Helm of same type%NL%%NL%%PURPLE%[Caster]:%WHITE% Mag %BLUE%Amulet %WHITE%+ P.%PURPLE%Ame %WHITE%+ Jewel%NL%%RED%[Blood]:%WHITE% Mag %BLUE%Helm %WHITE%+ P.%RED%Ruby %WHITE%+ Jewel%NL%%ORANGE%Best Crafts Info%WHITE%%NL%}
+//ItemDisplay[rvs]: %PURPLE%R %WHITE%70% <:notify: NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\object\shrine\warping">
 
 //Gold
 ItemDisplay[GOLD<100 CLVL<20]:
@@ -495,8 +497,8 @@ ItemDisplay[(CL4 OR WP12) NMAG !SOCK=1 SK67>2 OR SK73>2 OR SK84>2 OR SK92>2 OR S
 //ItemDisplay[(CL4 OR WP12) NMAG !SOCK=1 SK67>2 OR SK73>2 OR SK84>2 OR SK92>2 OR SK83>2 OR SK74>2 OR SK94>2]: %NAME% %!tansocks!%
 
 //Other RuneWord Bases
-//Aramex requests, legelndary  mallet and boneweave
-ItemDisplay[(uhn OR 7wh) (NMAG OR RW) (SOCK=0 OR SOCK>2) FILTERLVL<3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
+//Aramex requests, legendary  mallet and boneweave
+ItemDisplay[(uhn OR 7wh) (NMAG OR RW) (SOCK=0 OR SOCK>2) FILTERLVL<3]: %NAME% %!graysocks!%
 //Spirit Swords
 ItemDisplay[(crs OR bsd OR lsd OR 9cr) (ETH AND (NMAG OR RW)) SOCK=4 FILTERLVL<3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
 ItemDisplay[(crs OR bsd OR lsd OR 9cr) (NMAG OR RW) SOCK=4 FILTERLVL<3]: %NAME% %!graysocks!%
