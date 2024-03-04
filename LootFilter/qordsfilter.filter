@@ -15,19 +15,19 @@
 // Hides ID scrolls outside of filterlevel 1, only see TP and ID scrolls if you have less than 15 in tome
 // 
 // To-do - check redundant
-// Add more +skill lines for sorc, necro, assasin bases; overhaul this completely
+// Done except for sin-> Add more +skill lines for sorc, necro, assasin bases; overhaul this completely
 // Fix the "fix" lines, added numbers for ease of finding
 // Check white/gray for double names, ie name showing up as "Claw Claw" or "Hydra Bow Hydra Bow", rethink those socket colors
-// Give pelts continue lines and add more skills
+// Done -> Give pelts continue lines and add more skills
 // Duplicate sound macro lines with global vs local sounds, need to address
 //
 // Big reno on sorc, necro, and druid runeword bases; need to do assassin; Sorc misc line not working
-// minimal bases to test necro with, so there's a 2nd known-working section after the newer, test code
+// Minimal bases to test necro with, so there's a 2nd known-working section after the newer, test code
 //
 Attribute[Author]: Qord 
 Attribute[Name]: QordsFilter
 Attribute[Version]: 3.4
-Attribute[Date]: 29 Feb
+Attribute[Date]: 3 March
 
 Option[IgnoreMissingSounds]: True
 
