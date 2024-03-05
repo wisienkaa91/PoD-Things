@@ -36,132 +36,140 @@ ItemDisplay[NMAG SKILL("Fire Mastery") >2((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR
 ItemDisplay[NMAG ((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)) (SKILL("Frigerate") >2 OR SKILL("Frost Nova") >2 OR SKILL("Ice Blast") >2 OR SKILL("Shiver Armor") >2 OR SKILL("Glacial Spike") >2 OR SKILL("Blizzard") >2 OR SKILL("Freezing Pulse") >2 OR SKILL("Chilling Arm OR ") >2 OR SKILL("Frozen Orb") >2 OR SKILL("Cold Mastery") >2 OR SKILL("Charged Bolt") >2 OR SKILL("Static Field") >2 OR SKILL("Telekinesis") >2 OR SKILL("Nova") >2 OR SKILL("Lightning Surge") >2 OR SKILL("Chain Lightning") >2 OR SKILL("Teleport") >2 OR SKILL("Discharge") >2 OR SKILL("Thunder Storm") >2 OR SKILL("Energy Shield") >2 OR SKILL("Lightning Mastery") >2 OR SKILL("Fire Bolt") >2 OR SKILL("Warmth") >2 OR SKILL("Blaze") >2 OR SKILL("Immolate") >2 OR SKILL("Fire Ball") >2 OR SKILL("Fire Wall") >2 OR SKILL("Enflame") >2 OR SKILL("Meteor") >2 OR SKILL("Hydra") >2 OR SKILL("Fire Mastery") >2
 )]: %NAME% %GRAY%[%SOCKETS%]
 
+
 //Necro bases, heads and wands with zero or two sockets
-ItemDisplay[NMAG SKILL("Summon Mastery") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Summon Mastery%CONTINUE%
-ItemDisplay[NMAG SKILL("Raise Skeleton Warrior") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Raise Skeleton Warrior%CONTINUE%
-ItemDisplay[NMAG SKILL("Bone Offering") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Offering%CONTINUE%
-ItemDisplay[NMAG SKILL("Clay Golem") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Clay Golem%CONTINUE%
-ItemDisplay[NMAG SKILL("Flesh Offering") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Flesh Offering%CONTINUE%
-ItemDisplay[NMAG SKILL("Raise Sekeltal Mage") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Raise Sekeltal Mage%CONTINUE%
-ItemDisplay[NMAG SKILL("Blood Golem") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Blood Golem%CONTINUE%
-ItemDisplay[NMAG SKILL("Convocation") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Convocation%CONTINUE%
-ItemDisplay[NMAG SKILL("Iron Golem") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Iron Golem%CONTINUE%
-ItemDisplay[NMAG SKILL("Fire Golem") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Fire Golem%CONTINUE%
-ItemDisplay[NMAG SKILL("Revive") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Revive%CONTINUE%
-ItemDisplay[NMAG SKILL("Deadly Poison") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Deadly Poison%CONTINUE%
-ItemDisplay[NMAG SKILL("Teeth") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Teeth%CONTINUE%
-ItemDisplay[NMAG SKILL("Bone Armor") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Bone Armor%CONTINUE%
-ItemDisplay[NMAG SKILL("Corpse Explosion") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Corpse Explosion%CONTINUE%
-ItemDisplay[NMAG SKILL("Desecrate") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Desecrate%CONTINUE%
-ItemDisplay[NMAG SKILL("Bone Spear") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Bone Spear%CONTINUE%
-ItemDisplay[NMAG SKILL("Bone Wall") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Bone Wall%CONTINUE%
-ItemDisplay[NMAG SKILL("Bone Spirit") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Bone Spirit%CONTINUE%
-ItemDisplay[NMAG SKILL("Poison Nova") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Poison Nova%CONTINUE%
-ItemDisplay[NMAG SKILL("Amplify Damage") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Amplify Damage%CONTINUE%
-ItemDisplay[NMAG SKILL("Dim Vision") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Dim Vision%CONTINUE%
-ItemDisplay[NMAG SKILL("Hemorrhage") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Hemorrhage%CONTINUE%
-ItemDisplay[NMAG SKILL("Weaken") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Weaken%CONTINUE%
-ItemDisplay[NMAG SKILL("Iron Maiden") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Iron Maiden%CONTINUE%
-ItemDisplay[NMAG SKILL("Terror") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Terror%CONTINUE%
-ItemDisplay[NMAG SKILL("Confuse") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Confuse%CONTINUE%
-ItemDisplay[NMAG SKILL("Life Tap") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Life Tap%CONTINUE%
-ItemDisplay[NMAG SKILL("Attract") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Attract%CONTINUE%
-ItemDisplay[NMAG SKILL("Decrepify") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Decrepify%CONTINUE%
-ItemDisplay[NMAG SKILL("Lower Resist") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Lower Resist%CONTINUE%
-ItemDisplay[NMAG !SOCK=1 (CL4 OR WP12) SKILL("Summon Mastery") >2 OR SKILL("Raise Skeleton Warrior") >2 OR SKILL("Bone Offering") >2 OR SKILL("Clay Golem") >2 OR SKILL("Flesh Offering") >2 OR SKILL("Raise Sekeltal Mage") >2 OR SKILL("Blood Golem") >2 OR SKILL("Convocation") >2 OR SKILL("Iron Golem") >2 OR SKILL("Fire Golem") >2 OR SKILL("Revive") >2 OR SKILL("Deadly Poison") >2 OR SKILL("Teeth") >2 OR SKILL("Bone Armor") >2 OR SKILL("Corpse Explosion") >2 OR SKILL("Desecrate") >2 OR SKILL("Bone Spear") >2 OR SKILL("Bone Wall") >2 OR SKILL("Bone Spirit") >2 OR SKILL("Poison Nova") >2 OR SKILL("Amplify Damage") >2 OR SKILL("Dim Vision") >2 OR SKILL("Hemorrhage") >2 OR SKILL("Weaken") >2 OR SKILL("Iron Maiden") >2 OR SKILL("Terror") >2 OR SKILL("Confuse") >2 OR SKILL("Life Tap") >2 OR SKILL("Attract") >2 OR SKILL("Decrepify") >2 OR SKILL("Lower Resist") >2]: %NAME% %GRAY%[%SOCKETS%]
+ItemDisplay[NMAG SKILL("Summon Mastery")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Summon Mastery%CONTINUE%
+ItemDisplay[NMAG SKILL("Raise Skeleton Warrior")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Raise Skeleton Warrior%CONTINUE%
+ItemDisplay[NMAG SKILL("Bone Offering")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Offering%CONTINUE%
+ItemDisplay[NMAG SKILL("Clay Golem")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Clay Golem%CONTINUE%
+ItemDisplay[NMAG SKILL("Flesh Offering")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Flesh Offering%CONTINUE%
+ItemDisplay[NMAG SKILL("Raise Skeletal Mage")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Raise Skeletal Mage%CONTINUE%
+ItemDisplay[NMAG SKILL("Blood Golem")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Blood Golem%CONTINUE%
+ItemDisplay[NMAG SKILL("Convocation")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Convocation%CONTINUE%
+ItemDisplay[NMAG SKILL("Iron Golem")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Iron Golem%CONTINUE%
+ItemDisplay[NMAG SKILL("Fire Golem")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Fire Golem%CONTINUE%
+ItemDisplay[NMAG SKILL("Revive")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Revive%CONTINUE%
+ItemDisplay[NMAG SKILL("Deadly Poison")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Deadly Poison%CONTINUE%
+ItemDisplay[NMAG SKILL("Teeth")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Teeth%CONTINUE%
+ItemDisplay[NMAG SKILL("Bone Armor")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Bone Armor%CONTINUE%
+ItemDisplay[NMAG SKILL("Corpse Explosion")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Corpse Explosion%CONTINUE%
+ItemDisplay[NMAG SKILL("Desecrate")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Desecrate%CONTINUE%
+ItemDisplay[NMAG SKILL("Bone Spear")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Bone Spear%CONTINUE%
+ItemDisplay[NMAG SKILL("Bone Wall")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Bone Wall%CONTINUE%
+ItemDisplay[NMAG SKILL("Bone Spirit")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Bone Spirit%CONTINUE%
+ItemDisplay[NMAG SKILL("Poison Nova")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Poison Nova%CONTINUE%
+ItemDisplay[NMAG SKILL("Amplify Damage")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Amplify Damage%CONTINUE%
+ItemDisplay[NMAG SKILL("Dim Vision")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Dim Vision%CONTINUE%
+ItemDisplay[NMAG SKILL("Hemorrhage")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Hemorrhage%CONTINUE%
+ItemDisplay[NMAG SKILL("Weaken")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Weaken%CONTINUE%
+ItemDisplay[NMAG SKILL("Iron Maiden")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Iron Maiden%CONTINUE%
+ItemDisplay[NMAG SKILL("Terror")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Terror%CONTINUE%
+ItemDisplay[NMAG SKILL("Confuse")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Confuse%CONTINUE%
+ItemDisplay[NMAG SKILL("Life Tap")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Life Tap%CONTINUE%
+ItemDisplay[NMAG SKILL("Attract")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Attract%CONTINUE%
+ItemDisplay[NMAG SKILL("Decrepify")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Decrepify%CONTINUE%
+ItemDisplay[NMAG SKILL("Lower Resist")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3Lower Resist%CONTINUE%
+ItemDisplay[NMAG !SOCK=1 (CL4 OR WP12) SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2]: %NAME% %GRAY%[%SOCKETS%]
 
 //Druid pelts
-ItemDisplay[NMAG SKILL("FireStorm") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 FireStorm%CONTINUE%
-ItemDisplay[NMAG SKILL("Molten Boulder") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Molten Boulder%CONTINUE%
-ItemDisplay[NMAG SKILL("Flame Dash") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Flame Dash%CONTINUE%
-ItemDisplay[NMAG SKILL("Artic Blast") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Artic Blast%CONTINUE%
-ItemDisplay[NMAG SKILL("Fissure") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Fissure%CONTINUE%
-ItemDisplay[NMAG SKILL("Cyclone Armor") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Cyclone Armor%CONTINUE%
-ItemDisplay[NMAG SKILL("Twister") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Twister%CONTINUE%
-ItemDisplay[NMAG SKILL("Volcano") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Volcano%CONTINUE%
-ItemDisplay[NMAG SKILL("Tornado") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Tornado%CONTINUE%
-ItemDisplay[NMAG SKILL("Armageddon") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Armageddon%CONTINUE%
-ItemDisplay[NMAG SKILL("Hurricane") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Hurricane%CONTINUE%
-ItemDisplay[NMAG SKILL("Werewolf") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Werewolf%CONTINUE%
-ItemDisplay[NMAG SKILL("Lycanthropy") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Lycanthropy%CONTINUE%
-ItemDisplay[NMAG SKILL("Werbear") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Werbear%CONTINUE%
-ItemDisplay[NMAG SKILL("Feral Rage") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Feral Rage%CONTINUE%
-ItemDisplay[NMAG SKILL("Maul") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Maul%CONTINUE%
-ItemDisplay[NMAG SKILL("Rabies") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Rabies%CONTINUE%
-ItemDisplay[NMAG SKILL("Fire Claws") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Fire Claws%CONTINUE%
-ItemDisplay[NMAG SKILL("Hunger") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Hunger%CONTINUE%
-ItemDisplay[NMAG SKILL("Shock Wave") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Shock Wave%CONTINUE%
-ItemDisplay[NMAG SKILL("Fury") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Fury%CONTINUE%
-ItemDisplay[NMAG SKILL("Raven") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Raven%CONTINUE%
-ItemDisplay[NMAG SKILL("Poison Creeper") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Poison Creeper%CONTINUE%
-ItemDisplay[NMAG SKILL("Heart of Wolverine") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Heart of Wolverine%CONTINUE%
-ItemDisplay[NMAG SKILL("Summon Sprit Wolf") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Summon Sprit Wolf%CONTINUE%
-ItemDisplay[NMAG SKILL("Carrion Vine") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Carrion Vine%CONTINUE%
-ItemDisplay[NMAG SKILL("Oak Sage") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Oak Sage%CONTINUE%
-ItemDisplay[NMAG SKILL("Summon Dire Wolf") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Summon Dire Wolf%CONTINUE%
-ItemDisplay[NMAG SKILL("Solar Creeper") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Solar Creeper%CONTINUE%
-ItemDisplay[NMAG SKILL("Spirit of Barbs") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Spirit of Barbs%CONTINUE%
-ItemDisplay[NMAG SKILL("Summon Grizzly") >2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Summon Grizzly%CONTINUE%
-ItemDisplay[NMAG CL1 !SOCK=1 SKILL("FireStorm") >2 OR SKILL("Molten Boulder") >2 OR SKILL("Flame Dash") >2 OR SKILL("Artic Blast") >2 OR SKILL("Fissure") >2 OR SKILL("Cyclone Armor") >2 OR SKILL("Twister") >2 OR SKILL("Volcano") >2 OR SKILL("Tornado") >2 OR SKILL("Armageddon") >2 OR SKILL("Hurricane") >2 OR SKILL("Werewolf") >2 OR SKILL("Lycanthropy") >2 OR SKILL("Werbear") >2 OR SKILL("Feral Rage") >2 OR SKILL("Maul") >2 OR SKILL("Rabies") >2 OR SKILL("Fire Claws") >2 OR SKILL("Hunger") >2 OR SKILL("Shock Wave") >2 OR SKILL("Fury") >2 OR SKILL("Raven") >2 OR SKILL("Poison Creeper") >2 OR SKILL("Heart of Wolverine") >2 OR SKILL("Summon Sprit Wolf") >2 OR SKILL("Carrion Vine") >2 OR SKILL("Oak Sage") >2 OR KILL("Summon Dire Wolf") >2 OR KILL("Solar Creeper") >2 OR SKILL("Spirit of Barbs") >2 OR SKILL("Summon Grizzly") >2]:%NAME% %GRAY%[%SOCKETS%]
+ItemDisplay[NMAG SKILL("Firestorm")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Firestorm%CONTINUE%
+ItemDisplay[NMAG SKILL("Molten Boulder")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Molten Boulder%CONTINUE%
+ItemDisplay[NMAG SKILL("Flame Dash")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Flame Dash%CONTINUE%
+ItemDisplay[NMAG SKILL("Arctic Blast")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Arctic Blast%CONTINUE%
+ItemDisplay[NMAG SKILL("Fissure")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Fissure%CONTINUE%
+ItemDisplay[NMAG SKILL("Cyclone Armor")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Cyclone Armor%CONTINUE%
+ItemDisplay[NMAG SKILL("Twister")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Twister%CONTINUE%
+ItemDisplay[NMAG SKILL("Volcano")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Volcano%CONTINUE%
+ItemDisplay[NMAG SKILL("Tornado")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Tornado%CONTINUE%
+ItemDisplay[NMAG SKILL("Armageddon")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Armageddon%CONTINUE%
+ItemDisplay[NMAG SKILL("Hurricane")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Hurricane%CONTINUE%
+ItemDisplay[NMAG SKILL("Werewolf")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Werewolf%CONTINUE%
+ItemDisplay[NMAG SKILL("Lycanthropy")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Lycanthropy%CONTINUE%
+ItemDisplay[NMAG SKILL("Werebear")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Werebear%CONTINUE%
+ItemDisplay[NMAG SKILL("Feral Rage")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Feral Rage%CONTINUE%
+ItemDisplay[NMAG SKILL("Maul")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Maul%CONTINUE%
+ItemDisplay[NMAG SKILL("Rabies")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Rabies%CONTINUE%
+ItemDisplay[NMAG SKILL("Fire Claws")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Fire Claws%CONTINUE%
+ItemDisplay[NMAG SKILL("Hunger")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Hunger%CONTINUE%
+ItemDisplay[NMAG SKILL("Shock Wave")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Shock Wave%CONTINUE%
+ItemDisplay[NMAG SKILL("Fury")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Fury%CONTINUE%
+ItemDisplay[NMAG SKILL("Raven")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Raven%CONTINUE%
+ItemDisplay[NMAG SKILL("Poison Creeper")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Poison Creeper%CONTINUE%
+ItemDisplay[NMAG SKILL("Heart of Wolverine")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Heart of Wolverine%CONTINUE%
+ItemDisplay[NMAG SKILL("Summon Spirit Wolf")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Summon Spirit Wolf%CONTINUE%
+ItemDisplay[NMAG SKILL("Carrion Vine")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Carrion Vine%CONTINUE%
+ItemDisplay[NMAG SKILL("Oak Sage")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Oak Sage%CONTINUE%
+ItemDisplay[NMAG SKILL("Summon Dire Wolf")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Summon Dire Wolf%CONTINUE%
+ItemDisplay[NMAG SKILL("Solar Creeper")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Solar Creeper%CONTINUE%
+ItemDisplay[NMAG SKILL("Spirit of Barbs")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Spirit of Barbs%CONTINUE%
+ItemDisplay[NMAG SKILL("Summon Grizzly")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Summon Grizzly%CONTINUE%
+ItemDisplay[NMAG CL1 !SOCK=1 SKILL("Firestorm")>2 OR SKILL("Molten Boulder")>2 OR SKILL("Flame Dash")>2 OR SKILL("Arctic Blast")>2 OR SKILL("Fissure")>2 OR SKILL("Cyclone Armor")>2 OR SKILL("Twister")>2 OR SKILL("Volcano")>2 OR SKILL("Tornado")>2 OR SKILL("Armageddon")>2 OR SKILL("Hurricane")>2 OR SKILL("Werewolf")>2 OR SKILL("Lycanthropy")>2 OR SKILL("Werebear")>2 OR SKILL("Feral Rage")>2 OR SKILL("Maul")>2 OR SKILL("Rabies")>2 OR SKILL("Fire Claws")>2 OR SKILL("Hunger")>2 OR SKILL("Shock Wave")>2 OR SKILL("Fury")>2 OR SKILL("Raven")>2 OR SKILL("Poison Creeper")>2 OR SKILL("Heart of Wolverine")>2 OR SKILL("Summon Spirit Wolf")>2 OR SKILL("Carrion Vine")>2 OR SKILL("Oak Sage")>2 OR SKILL("Summon Dire Wolf")>2 OR SKILL("Solar Creeper")>2 OR SKILL("Spirit of Barbs")>2 OR SKILL("Summon Grizzly")>2]:%NAME% %GRAY%[%SOCKETS%]
+
 
 // Assassin start, removed !NORM and !INF entries until i can come up with a better way to sort and display them
-ItemDisplay[NMAG SKILL("Dragon Claw") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Dragon Claw%CONTINUE%
-ItemDisplay[NMAG SKILL("Tiger Strike") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Tiger Strike%CONTINUE%
-ItemDisplay[NMAG SKILL("Dragon Talon") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Dragon Talon%CONTINUE%
-ItemDisplay[NMAG SKILL("Fists of Fire") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Fists of Fire%CONTINUE%
-ItemDisplay[NMAG SKILL("Cobra Strike") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Cobra Strike%CONTINUE%
-ItemDisplay[NMAG SKILL("Claws of Thunder") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Claws of Thunder%CONTINUE%
-ItemDisplay[NMAG SKILL("Dragon Flight") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Dragon Flight%CONTINUE%
-ItemDisplay[NMAG SKILL("Blades if Ice") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blades if Ice%CONTINUE%
-ItemDisplay[NMAG SKILL("Claw Mastery") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Claw Mastery%CONTINUE%
-ItemDisplay[NMAG SKILL("Psychic Hammer") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Psychic Hammer%CONTINUE%
-ItemDisplay[NMAG SKILL("Burst of Speed") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Burst of Speed%CONTINUE%
-ItemDisplay[NMAG SKILL("Weapon Block") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Weapon Block%CONTINUE%
-ItemDisplay[NMAG SKILL("Cloak of Shadows") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Cloak of Shadows%CONTINUE%
-ItemDisplay[NMAG SKILL("Fade") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Fade%CONTINUE%
-ItemDisplay[NMAG SKILL("Shadow Warrior") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shadow Warri OR %CONTINUE%
-ItemDisplay[NMAG SKILL("Mind Blast") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Mind Blast%CONTINUE%
-ItemDisplay[NMAG SKILL("Venom") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Venom%CONTINUE%
-ItemDisplay[NMAG SKILL("Shadow Master") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shadow Master%CONTINUE%
-ItemDisplay[NMAG SKILL("Fire Blast") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Fire Blast%CONTINUE%
-ItemDisplay[NMAG SKILL("Shock Web") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shock Web%CONTINUE%
-ItemDisplay[NMAG SKILL("Blade Throw") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Throw%CONTINUE%
-ItemDisplay[NMAG SKILL("Charged Bolt Sentry") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Charged Bolt Sentry%CONTINUE%
-ItemDisplay[NMAG SKILL("Wake of Fire") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Wake of Fire%CONTINUE%
-ItemDisplay[NMAG SKILL("Blade Fury") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Fury%CONTINUE%
-ItemDisplay[NMAG SKILL("Lightning Sentry") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Lightning Sentry%CONTINUE%
-ItemDisplay[NMAG SKILL("Wake of Inferno") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Wake of Inferno%CONTINUE%
-ItemDisplay[NMAG SKILL("Death Sentry") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Death Sentry%CONTINUE%
-ItemDisplay[NMAG SKILL("Blade Shield") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Shield%CONTINUE%
-ItemDisplay[NMAG CL5 NMAG (SOCK=0 OR SOCK=3) SKILL("Dragon Claw") >2 OR SKILL("Tiger Strike") >2 OR SKILL("Dragon Talon") >2 OR SKILL("Fists of Fire") >2 OR SKILL("Cobra Strike") >2 OR SKILL("Claws of Thunder") >2 OR SKILL("Dragon Flight") >2 OR SKILL("Blades if Ice") >2 OR SKILL("Claw Mastery") >2 OR SKILL("Psychic Hammer") >2 OR SKILL("Burst of Speed") >2 OR SKILL("Weapon Block") >2 OR SKILL("Cloak of Shadows") >2 OR SKILL("Fade") >2 OR SKILL("Shadow Warri OR ") >2 OR SKILL("Mind Blast") >2 OR SKILL("Venom") >2 OR SKILL("Shadow Master") >2 OR SKILL("Fire Blast") >2 OR SKILL("Shock Web") >2 OR SKILL("Blade Throw") >2 OR SKILL("Charged Bolt Sentry") >2 OR SKILL("Wake of Fire") >2 OR SKILL("Blade Fury") >2 OR SKILL("Lightning Sentry") >2 OR SKILL("Wake of Inferno") >2 OR SKILL("Death Sentry") >2 OR SKILL("Blade Shield") >2]:%NAME% %GRAY%[%SOCKETS%]
+ItemDisplay[NMAG SKILL("Dragon Claw")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Dragon Claw%CONTINUE%
+ItemDisplay[NMAG SKILL("Tiger Strike")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Tiger Strike%CONTINUE%
+ItemDisplay[NMAG SKILL("Dragon Talon")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Dragon Talon%CONTINUE%
+ItemDisplay[NMAG SKILL("Fists of Fire")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Fists of Fire%CONTINUE%
+ItemDisplay[NMAG SKILL("Cobra Strike")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Cobra Strike%CONTINUE%
+ItemDisplay[NMAG SKILL("Claws of Thunder")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Claws of Thunder%CONTINUE%
+ItemDisplay[NMAG SKILL("Dragon Flight")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Dragon Flight%CONTINUE%
+ItemDisplay[NMAG SKILL("Blades of Ice")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blades if Ice%CONTINUE%
+ItemDisplay[NMAG SKILL("Claw Mastery")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Claw Mastery%CONTINUE%
+ItemDisplay[NMAG SKILL("Psychic Hammer")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Psychic Hammer%CONTINUE%
+ItemDisplay[NMAG SKILL("Burst of Speed")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Burst of Speed%CONTINUE%
+ItemDisplay[NMAG SKILL("Weapon Block")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Weapon Block%CONTINUE%
+ItemDisplay[NMAG SKILL("Cloak of Shadows")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Cloak of Shadows%CONTINUE%
+ItemDisplay[NMAG SKILL("Fade")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Fade%CONTINUE%
+ItemDisplay[NMAG SKILL("Shadow Warrior")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shadow Warri OR %CONTINUE%
+ItemDisplay[NMAG SKILL("Mind Blast")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Mind Blast%CONTINUE%
+ItemDisplay[NMAG SKILL("Venom")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Venom%CONTINUE%
+ItemDisplay[NMAG SKILL("Shadow Master")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shadow Master%CONTINUE%
+ItemDisplay[NMAG SKILL("Fire Blast")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Fire Blast%CONTINUE%
+ItemDisplay[NMAG SKILL("Shock Web")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shock Web%CONTINUE%
+ItemDisplay[NMAG SKILL("Blade Throw")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Throw%CONTINUE%
+ItemDisplay[NMAG SKILL("Charged Bolt Sentry")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Charged Bolt Sentry%CONTINUE%
+ItemDisplay[NMAG SKILL("Wake of Fire")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Wake of Fire%CONTINUE%
+ItemDisplay[NMAG SKILL("Blade Fury")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Fury%CONTINUE%
+ItemDisplay[NMAG SKILL("Lightning Sentry")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Lightning Sentry%CONTINUE%
+ItemDisplay[NMAG SKILL("Wake of Inferno")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Wake of Inferno%CONTINUE%
+ItemDisplay[NMAG SKILL("Death Sentry")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Death Sentry%CONTINUE%
+ItemDisplay[NMAG SKILL("Blade Shield")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Shield%CONTINUE%
+ItemDisplay[NMAG CL5 NMAG (SOCK=0 OR SOCK=3) SKILL("Dragon Claw")>2 OR SKILL("Tiger Strike")>2 OR SKILL("Dragon Talon")>2 OR SKILL("Fists of Fire")>2 
+OR SKILL("Cobra Strike")>2 OR SKILL("Claws of Thunder")>2 OR SKILL("Dragon Flight")>2 OR SKILL("Blades if Ice")>2 OR SKILL("Claw Mastery")>2 
+OR SKILL("Psychic Hammer")>2 OR SKILL("Burst of Speed")>2 OR SKILL("Weapon Block")>2 OR SKILL("Cloak of Shadows")>2 OR SKILL("Fade")>2 OR SKILL("Shadow Warri OR ")>2 
+OR SKILL("Mind Blast")>2 OR SKILL("Venom")>2 OR SKILL("Shadow Master")>2 OR SKILL("Fire Blast")>2 OR SKILL("Shock Web")>2 OR SKILL("Blade Throw")>2 
+OR SKILL("Charged Bolt Sentry")>2 OR SKILL("Wake of Fire")>2 OR SKILL("Blade Fury")>2 OR SKILL("Lightning Sentry")>2 OR SKILL("Wake of Inferno")>2 
+OR SKILL("Death Sentry")>2 OR SKILL("Blade Shield")>2]:%NAME% %GRAY%[%SOCKETS%]
 
 
 // Assassin start, need to rethink this because of !NORM and !INF entries
-ItemDisplay[NMAG SKILL("Dragon Claw") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Dragon Claw%CONTINUE%
-ItemDisplay[NMAG SKILL("Tiger Strike") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Tiger Strike%CONTINUE%
-ItemDisplay[NMAG SKILL("Dragon Talon") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Dragon Talon%CONTINUE%
-ItemDisplay[NMAG SKILL("Fists of Fire") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Fists of Fire%CONTINUE%
-ItemDisplay[NMAG SKILL("Cobra Strike") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Cobra Strike%CONTINUE%
-ItemDisplay[NMAG SKILL("Claws of Thunder") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Claws of Thunder%CONTINUE%
-ItemDisplay[NMAG SKILL("Dragon Flight") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Dragon Flight%CONTINUE%
-ItemDisplay[NMAG SKILL("Blades if Ice") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blades if Ice%CONTINUE%
-ItemDisplay[NMAG SKILL("Claw Mastery") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Claw Mastery%CONTINUE%
-ItemDisplay[NMAG SKILL("Psychic Hammer") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Psychic Hammer%CONTINUE%
-ItemDisplay[NMAG SKILL("Burst of Speed") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Burst of Speed%CONTINUE%
-ItemDisplay[NMAG SKILL("Weapon Block") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Weapon Block%CONTINUE%
-ItemDisplay[NMAG SKILL("Cloak of Shadows") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Cloak of Shadows%CONTINUE%
-ItemDisplay[NMAG SKILL("Fade") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Fade%CONTINUE%
-ItemDisplay[NMAG SKILL("Shadow Warrior") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shadow Warri OR %CONTINUE%
-ItemDisplay[NMAG SKILL("Mind Blast") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Mind Blast%CONTINUE%
-ItemDisplay[NMAG SKILL("Venom") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Venom%CONTINUE%
-ItemDisplay[NMAG SKILL("Shadow Master") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shadow Master%CONTINUE%
-ItemDisplay[NMAG SKILL("Fire Blast") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Fire Blast%CONTINUE%
-ItemDisplay[NMAG SKILL("Shock Web") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shock Web%CONTINUE%
-ItemDisplay[NMAG SKILL("Blade Throw") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Throw%CONTINUE%
-ItemDisplay[NMAG SKILL("Charged Bolt Sentry") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Charged Bolt Sentry%CONTINUE%
-ItemDisplay[NMAG SKILL("Wake of Fire") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Wake of Fire%CONTINUE%
-ItemDisplay[NMAG SKILL("Blade Fury") >2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Fury%CONTINUE%
-ItemDisplay[NMAG SKILL("Lightning Sentry") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Lightning Sentry%CONTINUE%
-ItemDisplay[NMAG SKILL("Wake of Inferno") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Wake of Inferno%CONTINUE%
-ItemDisplay[NMAG SKILL("Death Sentry") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Death Sentry%CONTINUE%
-ItemDisplay[NMAG SKILL("Blade Shield") >2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Shield%CONTINUE%
+ItemDisplay[NMAG SKILL("Dragon Claw")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Dragon Claw%CONTINUE%
+ItemDisplay[NMAG SKILL("Tiger Strike")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Tiger Strike%CONTINUE%
+ItemDisplay[NMAG SKILL("Dragon Talon")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Dragon Talon%CONTINUE%
+ItemDisplay[NMAG SKILL("Fists of Fire")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Fists of Fire%CONTINUE%
+ItemDisplay[NMAG SKILL("Cobra Strike")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Cobra Strike%CONTINUE%
+ItemDisplay[NMAG SKILL("Claws of Thunder")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Claws of Thunder%CONTINUE%
+ItemDisplay[NMAG SKILL("Dragon Flight")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Dragon Flight%CONTINUE%
+//ItemDisplay[NMAG SKILL("Blades of Ice")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blades if Ice%CONTINUE%
+ItemDisplay[NMAG SKILL("Claw Mastery")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Claw Mastery%CONTINUE%
+ItemDisplay[NMAG SKILL("Psychic Hammer")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Psychic Hammer%CONTINUE%
+ItemDisplay[NMAG SKILL("Burst of Speed")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Burst of Speed%CONTINUE%
+ItemDisplay[NMAG SKILL("Weapon Block")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Weapon Block%CONTINUE%
+ItemDisplay[NMAG SKILL("Cloak of Shadows")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Cloak of Shadows%CONTINUE%
+ItemDisplay[NMAG SKILL("Fade")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Fade%CONTINUE%
+ItemDisplay[NMAG SKILL("Shadow Warrior")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shadow Warri OR %CONTINUE%
+ItemDisplay[NMAG SKILL("Mind Blast")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Mind Blast%CONTINUE%
+ItemDisplay[NMAG SKILL("Venom")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Venom%CONTINUE%
+ItemDisplay[NMAG SKILL("Shadow Master")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shadow Master%CONTINUE%
+ItemDisplay[NMAG SKILL("Fire Blast")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Fire Blast%CONTINUE%
+ItemDisplay[NMAG SKILL("Shock Web")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Shock Web%CONTINUE%
+ItemDisplay[NMAG SKILL("Blade Throw")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Throw%CONTINUE%
+ItemDisplay[NMAG SKILL("Charged Bolt Sentry")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Charged Bolt Sentry%CONTINUE%
+ItemDisplay[NMAG SKILL("Wake of Fire")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Wake of Fire%CONTINUE%
+ItemDisplay[NMAG SKILL("Blade Fury")>2 CL5 NMAG !INF !NORM (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Fury%CONTINUE%
+ItemDisplay[NMAG SKILL("Lightning Sentry")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Lightning Sentry%CONTINUE%
+ItemDisplay[NMAG SKILL("Wake of Inferno")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Wake of Inferno%CONTINUE%
+ItemDisplay[NMAG SKILL("Death Sentry")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Death Sentry%CONTINUE%
+ItemDisplay[NMAG SKILL("Blade Shield")>2 CL5 NMAG (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3Blade Shield%CONTINUE%
+
