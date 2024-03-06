@@ -1,0 +1,85 @@
+//////////////////////////////////////////////////////////////////////
+// Test lines with skill names instead of skill numbers
+// Non-test lines with skill numbers follows
+// If skill names are gray, these lines work
+// If skill names are red, these lines did not work
+// Sorc bases, not memory, by skill name
+//ItemDisplay[NMAG SKILL("Ice Bolt")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Ice Bolt%CONTINUE%
+//ItemDisplay[NMAG SKILL("Frigerate")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Frigerate%CONTINUE%
+ItemDisplay[NMAG SKILL("Frost Nova")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Frost Nova%CONTINUE%
+//ItemDisplay[NMAG SKILL("Ice Blast")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Ice Blast%CONTINUE%
+ItemDisplay[NMAG SKILL("Shiver Armor")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Shiver Armor%CONTINUE%
+//ItemDisplay[NMAG SKILL("Glacial Spike")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Glacial Spike%CONTINUE%
+ItemDisplay[NMAG SKILL("Blizzard")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Blizzard%CONTINUE%
+ItemDisplay[NMAG SKILL("Freezing Pulse")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Freezing Pulse%CONTINUE%
+ItemDisplay[NMAG SKILL("Chilling Armor")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Chilling Armor%CONTINUE%
+ItemDisplay[NMAG SKILL("Frozen Orb")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Frozen Orb%CONTINUE%
+//ItemDisplay[NMAG SKILL("Cold Mastery")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Cold Mastery%CONTINUE%
+ItemDisplay[NMAG SKILL("Charged Bolt")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Charged Bolt%CONTINUE%
+//ItemDisplay[NMAG SKILL("Static Field")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Static Field%CONTINUE%
+//ItemDisplay[NMAG SKILL("Telekinesis")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Telekinesis%CONTINUE%
+ItemDisplay[NMAG SKILL("Nova")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Nova%CONTINUE%
+ItemDisplay[NMAG SKILL("Lightning Surge")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Lightning Surge%CONTINUE%
+ItemDisplay[NMAG SKILL("Chain Lightning")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Chain Lightning%CONTINUE%
+//ItemDisplay[NMAG SKILL("Teleport")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Teleport%CONTINUE%
+ItemDisplay[NMAG SKILL("Discharge")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Discharge%CONTINUE%
+//ItemDisplay[NMAG SKILL("Thunder storm")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Thunder Storm%CONTINUE%
+ItemDisplay[NMAG SKILL("Energy Shield")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Energy Shield%CONTINUE%
+//ItemDisplay[NMAG SKILL("Lightning Mastery")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Lightning Mastery%CONTINUE%
+//ItemDisplay[NMAG SKILL("Fire Bolt")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Fire Bolt%CONTINUE%
+//ItemDisplay[NMAG SKILL("Warmth")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Warmth%CONTINUE%
+ItemDisplay[NMAG SKILL("Inferno")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Inferno%CONTINUE%
+ItemDisplay[NMAG SKILL("Immolate")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Immolate%CONTINUE%
+//ItemDisplay[NMAG SKILL("Fire Ball")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Fire Ball%CONTINUE%
+ItemDisplay[NMAG SKILL("Fire Wall")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Fire Wall%CONTINUE%
+//ItemDisplay[NMAG SKILL("Enflame")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Enflame%CONTINUE%
+ItemDisplay[NMAG SKILL("Meteor")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Meteor%CONTINUE%
+ItemDisplay[NMAG SKILL("Hydra")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Hydra%CONTINUE%
+//ItemDisplay[NMAG SKILL("Fire Mastery")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %LIGHT_GRAY%+3 Fire Mastery%CONTINUE%
+//ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL("Frigerate") >2 OR SKILL("Frost Nova") >2 OR SKILL("Ice Blast") >2 OR SKILL("Shiver Armor") >2 OR SKILL("Glacial Spike") >2 OR SKILL("Blizzard") >2 OR SKILL("Freezing Pulse") >2 OR SKILL("Chilling Arm OR ") >2 OR SKILL("Frozen Orb") >2 OR SKILL("Cold Mastery") >2 OR SKILL("Charged Bolt") >2 OR SKILL("Static Field") >2 OR SKILL("Telekinesis") >2 OR SKILL("Nova") >2 OR SKILL("Lightning Surge") >2 OR SKILL("Chain Lightning") >2 OR SKILL("Teleport") >2 OR SKILL("Discharge") >2 OR SKILL("Thunder Storm") >2 OR SKILL("Energy Shield") >2 OR SKILL("Lightning Mastery") >2 OR SKILL("Fire Bolt") >2 OR SKILL("Warmth") >2 OR SKILL("Blaze") >2 OR SKILL("Immolate") >2 OR SKILL("Fire Ball") >2 OR SKILL("Fire Wall") >2 OR SKILL("Enflame") >2 OR SKILL("Meteor") >2 OR SKILL("Hydra") >2 OR SKILL("Fire Mastery") >2
+)]: %NAME% %GRAY%[%SOCKETS%]
+// Ok now show me all that on the 
+//Misc skills
+ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL("Ice Bolt")>2 OR SKILL("Frigerate")>2 OR SKILL("Ice Blast")>2 OR SKILL("Glacial Spike")>2 OR SKILL("Cold Mastery")>2 OR SKILL("Static Field")>2 OR SKILL("Telekinesis")>2 OR SKILL("Teleport")>2 OR SKILL("Lightning Mastery")>2 OR SKILL("Fire Bolt")>2 OR SKILL("Warmth")>2 OR SKILL("Fire Ball")>2 OR SKILL("Enflame")>2 OR SKILL("Fire Mastery")>2)]: %NAME% +3 misc %CONTINUE%
+// Thunderstorm doesn't seem to work, remove this from the above: OR SKILL("Thunder Storm")>2 
+//Skills I want
+ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL("Frost Nova")>2 OR SKILL("Shiver Armor")>2 OR SKILL("Blizzard")>2 OR SKILL("Freezing Pulse")>2 OR SKILL("Chilling Armor")>2 OR SKILL("Frozen Orb")>2 OR SKILL("Charged Bolt")>2 OR SKILL("Nova")>2 OR SKILL("Lightning Surge")>2 OR SKILL("Chain Lightning")>2 OR SKILL("Discharge")>2 OR SKILL("Energy Shield")>2 OR SKILL("Inferno")>2 OR SKILL("Immolate")>2 OR SKILL("Fire Wall")>2 OR SKILL("Meteor")>2 OR SKILL("Hydra")>2)]: %NAME% %!tansocks!%
+
+// Sorc bases, not memory, by skill code numbers
+//ItemDisplay[NMAG SKILL(39)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Ice Bolt%CONTINUE%
+//ItemDisplay[NMAG SKILL(40)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Frigerate%CONTINUE%
+ItemDisplay[NMAG SKILL(44)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Frost Nova%CONTINUE%
+//ItemDisplay[NMAG SKILL(45)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Ice Blast%CONTINUE%
+ItemDisplay[NMAG SKILL(50)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Shiver Armor%CONTINUE%
+//ItemDisplay[NMAG SKILL(55)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Glacial Spike%CONTINUE%
+ItemDisplay[NMAG SKILL(59)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Blizzard%CONTINUE%
+ItemDisplay[NMAG SKILL("Freezing Pulse")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Freezing Pulse%CONTINUE%
+ItemDisplay[NMAG SKILL(60)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Chilling Armor%CONTINUE%
+ItemDisplay[NMAG SKILL(64)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Frozen Orb%CONTINUE%
+ItemDisplay[NMAG SKILL(65)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Cold Mastery%CONTINUE%
+ItemDisplay[NMAG SKILL(38)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Charged Bolt%CONTINUE%
+//ItemDisplay[NMAG SKILL(42)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Static Field%CONTINUE%
+//ItemDisplay[NMAG SKILL(43)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Telekinesis%CONTINUE%
+ItemDisplay[NMAG SKILL(48)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Nova%CONTINUE%
+ItemDisplay[NMAG SKILL(49)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Lightning Surge%CONTINUE%
+ItemDisplay[NMAG SKILL(54)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Chain Lightning%CONTINUE%
+//ItemDisplay[NMAG SKILL(53)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Teleport%CONTINUE%
+ItemDisplay[NMAG SKILL(57)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Discharge%CONTINUE%
+//ItemDisplay[NMAG SKILL("Thunder Storm")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Thunder Storm%CONTINUE%
+ItemDisplay[NMAG SKILL(58)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Energy Shield%CONTINUE%
+//ItemDisplay[NMAG SKILL(63)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Lightning Mastery%CONTINUE%
+//ItemDisplay[NMAG SKILL(36)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Fire Bolt%CONTINUE%
+//ItemDisplay[NMAG SKILL(37)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Warmth%CONTINUE%
+ItemDisplay[NMAG SKILL(41)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Inferno%CONTINUE%
+ItemDisplay[NMAG SKILL(46)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Immolate<:orbs: BorderColor = 98> %CONTINUE%
+ItemDisplay[NMAG SKILL(47)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Fire Ball%CONTINUE%
+ItemDisplay[NMAG SKILL(51)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Fire Wall%CONTINUE%
+//ItemDisplay[NMAG SKILL(52)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Enflame%CONTINUE%
+ItemDisplay[NMAG SKILL(56)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Meteor<:orbs: BorderColor = 98> %CONTINUE%
+ItemDisplay[NMAG SKILL(62)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Hydra %CONTINUE%
+//ItemDisplay[NMAG SKILL(61)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Fire Mastery%CONTINUE%
+//Misc
+ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL(39)>2 OR SKILL(40)>2 OR SKILL(42)>2 OR SKILL(43)>2 OR SKILL(53)>2 OR SKILL(63)>2 OR SKILL(36)>2 OR SKILL(37)>2 OR SKILL(41)>2 OR SKILL(52)>2 OR SKILL(61)>2)]: %NAME%%RED% +3 misc %CONTINUE%
+//Things I actually want
+ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL(44)>2 OR SKILL(45)>2 OR SKILL(50)>2 OR SKILL(55)>2 OR SKILL(59)>2 OR SKILL("Freezing Pulse")>2 OR SKILL(60)>2 OR SKILL(64)>2 OR SKILL(65)>2 OR SKILL(38)>2 OR SKILL(48)>2 OR SKILL(49)>2 OR SKILL(54)>2 OR SKILL(57)>2 OR SKILL(58)>2 OR SKILL(46)>2 OR SKILL(47)>2 OR SKILL(51)>2 OR SKILL(56)>2 OR SKILL(62)>2)]: %NAME% %!tansocks!%
+//////////////////////////////////////////////////////////////////////
