@@ -1,0 +1,73 @@
+//////////////////////////////////////////////////////////////////////
+// Test lines with skill names instead of skill numbers
+// Non-test lines with skill numbers follows
+// If skill names are gray, these lines work
+// If skill names are red, these lines did not work
+// Druid pelts, by skill name
+ItemDisplay[NMAG SKILL("Firestorm")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Firestorm%CONTINUE%
+ItemDisplay[NMAG SKILL("Molten Boulder")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Molten Boulder%CONTINUE%
+ItemDisplay[NMAG SKILL("Flame Dash")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Flame Dash%CONTINUE%
+ItemDisplay[NMAG SKILL("Arctic Blast")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Arctic Blast%CONTINUE%
+ItemDisplay[NMAG SKILL("Fissure")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Fissure%CONTINUE%
+ItemDisplay[NMAG SKILL("Cyclone Armor")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Cyclone Armor%CONTINUE%
+ItemDisplay[NMAG SKILL("Twister")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Twister%CONTINUE%
+ItemDisplay[NMAG SKILL("Volcano")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Volcano%CONTINUE%
+ItemDisplay[NMAG SKILL("Tornado")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Tornado%CONTINUE%
+ItemDisplay[NMAG SKILL("Armageddon")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Armageddon%CONTINUE%
+ItemDisplay[NMAG SKILL("Hurricane")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Hurricane%CONTINUE%
+ItemDisplay[NMAG SKILL("Werewolf")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Werewolf%CONTINUE%
+ItemDisplay[NMAG SKILL("Lycanthropy")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Lycanthropy%CONTINUE%
+ItemDisplay[NMAG SKILL("Werebear")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Werebear%CONTINUE%
+ItemDisplay[NMAG SKILL("Feral Rage")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Feral Rage%CONTINUE%
+ItemDisplay[NMAG SKILL("Maul")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Maul%CONTINUE%
+ItemDisplay[NMAG SKILL("Rabies")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Rabies%CONTINUE%
+ItemDisplay[NMAG SKILL("Fire Claws")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Fire Claws%CONTINUE%
+ItemDisplay[NMAG SKILL("Hunger")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Hunger%CONTINUE%
+ItemDisplay[NMAG SKILL("Shock Wave")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Shock Wave%CONTINUE%
+ItemDisplay[NMAG SKILL("Fury")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Fury%CONTINUE%
+ItemDisplay[NMAG SKILL("Raven")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Raven%CONTINUE%
+ItemDisplay[NMAG SKILL("Poison Creeper")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Poison Creeper%CONTINUE%
+ItemDisplay[NMAG SKILL("Heart of Wolverine")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Heart of Wolverine%CONTINUE%
+ItemDisplay[NMAG SKILL("Summon Spirit Wolf")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Summon Spirit Wolf%CONTINUE%
+ItemDisplay[NMAG SKILL("Carrion Vine")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Carrion Vine%CONTINUE%
+ItemDisplay[NMAG SKILL("Oak Sage")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Oak Sage%CONTINUE%
+ItemDisplay[NMAG SKILL("Summon Dire Wolf")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Summon Dire Wolf%CONTINUE%
+ItemDisplay[NMAG SKILL("Solar Creeper")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Solar Creeper%CONTINUE%
+ItemDisplay[NMAG SKILL("Spirit of Barbs")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Spirit of Barbs%CONTINUE%
+ItemDisplay[NMAG SKILL("Summon Grizzly")>2 CL1 NMAG SK226>2 !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Summon Grizzly%CONTINUE%
+ItemDisplay[NMAG CL1 !SOCK=1 SKILL("Firestorm")>2 OR SKILL("Molten Boulder")>2 OR SKILL("Flame Dash")>2 OR SKILL("Arctic Blast")>2 OR SKILL("Fissure")>2 OR SKILL("Cyclone Armor")>2 OR SKILL("Twister")>2 OR SKILL("Volcano")>2 OR SKILL("Tornado")>2 OR SKILL("Armageddon")>2 OR SKILL("Hurricane")>2 OR SKILL("Werewolf")>2 OR SKILL("Lycanthropy")>2 OR SKILL("Werebear")>2 OR SKILL("Feral Rage")>2 OR SKILL("Maul")>2 OR SKILL("Rabies")>2 OR SKILL("Fire Claws")>2 OR SKILL("Hunger")>2 OR SKILL("Shock Wave")>2 OR SKILL("Fury")>2 OR SKILL("Raven")>2 OR SKILL("Poison Creeper")>2 OR SKILL("Heart of Wolverine")>2 OR SKILL("Summon Spirit Wolf")>2 OR SKILL("Carrion Vine")>2 OR SKILL("Oak Sage")>2 OR SKILL("Summon Dire Wolf")>2 OR SKILL("Solar Creeper")>2 OR SKILL("Spirit of Barbs")>2 OR SKILL("Summon Grizzly")>2]:%NAME% %GRAY%[%SOCKETS%]
+
+// Druid pelts, by skill code numbers
+ItemDisplay[NMAG SKILL(225)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 FireStorm%CONTINUE%
+ItemDisplay[NMAG SKILL(229)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Molten Boulder%CONTINUE%
+ItemDisplay[NMAG SKILL("Flame Dash")>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Flame Dash%CONTINUE%
+ItemDisplay[NMAG SKILL(230)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Artic Blast%CONTINUE%
+ItemDisplay[NMAG SKILL(234)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Fissure%CONTINUE%
+ItemDisplay[NMAG SKILL(235)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Cyclone Armor%CONTINUE%
+ItemDisplay[NMAG SKILL(240)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Twister%CONTINUE%
+ItemDisplay[NMAG SKILL(244)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Volcano%CONTINUE%
+ItemDisplay[NMAG SKILL(245)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Tornado%CONTINUE%
+ItemDisplay[NMAG SKILL(249)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Armageddon%CONTINUE%
+ItemDisplay[NMAG SKILL(250)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Hurricane%CONTINUE%
+ItemDisplay[NMAG SKILL(223)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Werewolf%CONTINUE%
+ItemDisplay[NMAG SKILL(224)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Lycanthropy%CONTINUE%
+ItemDisplay[NMAG SKILL(228)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Werbear%CONTINUE%
+ItemDisplay[NMAG SKILL(232)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Feral Rage%CONTINUE%
+ItemDisplay[NMAG SKILL(233)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Maul%CONTINUE%
+ItemDisplay[NMAG SKILL(238)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Rabies%CONTINUE%
+ItemDisplay[NMAG SKILL(239)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Fire Claws%CONTINUE%
+ItemDisplay[NMAG SKILL(242)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Hunger%CONTINUE%
+ItemDisplay[NMAG SKILL(243)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Shock Wave%CONTINUE%
+ItemDisplay[NMAG SKILL(248)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Fury%CONTINUE%
+ItemDisplay[NMAG SKILL(221)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Raven%CONTINUE%
+ItemDisplay[NMAG SKILL(222)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Poison Creeper%CONTINUE%
+ItemDisplay[NMAG SKILL(236)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Heart of Wolverine%CONTINUE%
+ItemDisplay[NMAG SKILL(227)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Summon Sprit Wolf%CONTINUE%
+ItemDisplay[NMAG SKILL(231)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Carrion Vine%CONTINUE%
+ItemDisplay[NMAG SKILL(226)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Oak Sage%CONTINUE%
+ItemDisplay[NMAG SKILL(237)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Summon Dire Wolf%CONTINUE%
+ItemDisplay[NMAG SKILL(241)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Solar Creeper%CONTINUE%
+ItemDisplay[NMAG SKILL(246)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Spirit of Barbs%CONTINUE%
+ItemDisplay[NMAG SKILL(247)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Summon Grizzly%CONTINUE%
+ItemDisplay[NMAG CL1 !SOCK=1 SKILL(225)>2 OR SKILL(229)>2 OR SKILL("Flame Dash")>2 OR SKILL(230)>2 OR SKILL(234)>2 OR SKILL(234)>2 OR SKILL(240)>2 OR SKILL(244)>2 OR SKILL(245)>2 OR SKILL(249)>2 OR SKILL(250)>2 OR SKILL(223)>2 OR SKILL(224)>2 OR SKILL(228)>2 OR SKILL(232)>2 OR SKILL(233)>2 OR SKILL(238)>2 OR SKILL(239)>2 OR SKILL(242)>2 OR SKILL(243)>2 OR SKILL(248)>2 OR SKILL(221)>2 OR SKILL(222)>2 OR SKILL(236)>2 OR SKILL(227)>2 OR SKILL(231)>2 OR SKILL(226)>2 OR SKILL(237)>2 OR SKILL(241)>2 OR SKILL(246)>2 OR SKILL(247)>2]:%NAME% %GRAY%[%SOCKETS%]
+//////////////////////////////////////////////////////////////////////
