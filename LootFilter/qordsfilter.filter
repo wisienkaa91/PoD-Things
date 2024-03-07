@@ -228,6 +228,9 @@ ItemDisplay[(sml OR xml OR uml) MAG]: %NAME% %PURPLE%[eth] %GRAY%[%ILVL%]{%GRAY%
 //Craft catch-all, always show crafterd items
 ItemDisplay[CRAFT !SOCK=0]: %NAME% %!tansocks!%
 ItemDisplay[CRAFT]: %NAME% 
+//Rings and amulets
+ItemDisplay[(rin OR amu) MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
+ItemDisplay[(rin OR amu) MAG FILTERLVL=1]: %NAME% %GRAY%[%ILVL%]
 
 //Rares
 //Rare military picks
