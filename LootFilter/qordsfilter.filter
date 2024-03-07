@@ -244,6 +244,10 @@ ItemDisplay[EQ7 RARE !ETH !ID]:%NL% %TAN%»» %YELLOW%%NAME%%TAN% ««%NL%
 ItemDisplay[EQ7 (MAG OR RARE)]:%NL% %NAME%%NL%
 ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 
+//Arrows Bolts
+ItemDisplay[RARE (cq2 OR aq2) ILVL>60]: %NL%%NAME%%NL%
+ItemDisplay[RARE (cq2 OR aq2) FILTERLVL<5:]: %NAME%
+
 //All Charms
 ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»%BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]
 ItemDisplay[cm1 MAG !ID]:%BLUE%  %NAME%  %GRAY%[%ILVL%]
@@ -251,6 +255,7 @@ ItemDisplay[cm2 MAG !ID FILTERLVL<4]: %BLUE%%NAME%
 ItemDisplay[cm3 MAG !ID]: %BLUE%  %NAME%  %GRAY%[%ILVL%]
 ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»  »»» %BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]%PURPLE%  «««  «««
 ItemDisplay[(cm1 OR cm2 OR cm3) !UNI]: %NAME% %GRAY%[%ILVL%]
+ItemDisplay[(cm1 OR cm2 OR cm3) UNI]: %NAME% <<gguniqs>>
 
 //Uniques
 // Looking for right now...used for special cases/temporary searching/one-off where you want extra visibility 
