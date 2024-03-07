@@ -1,0 +1,26 @@
+Qords filter
+#####################################
+Update 3-7
+Fixes:
+Necro wands and heads were visible but missing the skill names from display, skills should show properly now (the same poor copy paste that broke druid pelts)
+
+Additions:
+Changes:
+
+#####################################
+Update 3-6
+Fixes:
+Sorc skill Thunder storm wasn't working as a named skill so that line has been removed from the orb and staff lines, just commented out it's own line and removed it from the display line
+Sorc skills that fall under "+3 Misc" were causing ALL skills to be listed in the item name, this was fixed (needed an extra set of () to make them properly display)
+Druid pelts were visible but missing the skill names from display, skills should show properly now (poor copy paste on my part)
+
+Additions:
+Added duplicate lines for Necro wands and heads, white/gray runeword bases; known good code using SKILL(##) has been preceeded by code using SKILL(NAME) instead. Lines using NAME should be gray in color, is they fail the ## lines should work fine but display in red indicating that the NAME lines didn't work right.
+#####################################
+Update 3-5
+Fixes:
+Additions:
+Added duplicate code for sorc, druid, white/gray runeword bases; known good code using SKILL(##) has been preceeded by code using SKILL(NAME) instead. Lines using NAME should be gray in color, is they fail the ## lines should work fine but display in red indicating that the NAME lines didn't work right.
+Changes: reordered a few things in the "other runeword bases" section
+
+
