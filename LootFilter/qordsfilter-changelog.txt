@@ -6,6 +6,8 @@ Necro wands and heads were visible but missing the skill names from display, ski
 Added rare bolts and arrows back in, they were lost a few versions ago
 
 Additions:
+Added magic rings and amulets, ilvl under 90 only shows in filter level 1
+
 Changes:
 
 #####################################
