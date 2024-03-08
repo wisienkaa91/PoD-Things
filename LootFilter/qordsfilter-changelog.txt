@@ -1,6 +1,15 @@
 Qords filter
 #####################################
-Update 3-7
+Update 3-8
+Fixes:
+Additions:
+
+Changes:
+Edited for new corruptions for quiver and belts
+Modified a few comments
+Change to display of rare arrows/bolts
+
+#####################################Update 3-7
 Fixes:
 Necro wands and heads were visible but missing the skill names from display, skills should show properly now (the same poor copy paste that broke druid pelts)
 Added rare bolts and arrows back in, they were lost a few versions ago
