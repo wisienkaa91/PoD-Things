@@ -7,12 +7,11 @@
 // Trying to keep filterlevel dscriptions up to date, but some highlights include
 // I like crafts and Sorc/Necro/Assassin RW bases
 // Shows ort even when other low runes are hdden
-// Shows no large charms except torch
 // Hides no uniques or set items until filterlevel 5, but does append the item code of less desirable ones
 //      in case user wants to add it to a higher visibility list
 // Shows a lot rares
 // Hides a lot of blues, hides gems under flawless; testing alternate config to show regular gems under certain conditions
-// Hides ID scrolls outside of filterlevel 1, only see TP and ID scrolls if you have less than 15 in tome
+// Hides ID scrolls outside of filterlevel 1, only see TP and ID scrolls if you have less than 25 in tome
 // 
 // To-do - check redundant
 // Done except for sin-> Add more +skill lines for sorc, necro, assasin bases; overhaul this completely
@@ -38,7 +37,7 @@ FilterLevel[1]: Loosey goosey
 FilterLevel[2]: Utility
 // Filterlevel 3 hides the above, as well as low runes, large charms, hides some bases (spirit, hoto, cta)
 FilterLevel[3]: No low runes
-// Filterlevel 4 hides the above, health/mana pots, "probly garbage" labeled items
+// Filterlevel 4 hides the above, health/mana pots, "probly garbage" labeled items, large charms
 FilterLevel[4]: No hp/mp pots
 // Filterlevel 5 hides the above, as well as lower set and unique items
 FilterLevel[5]: No extra floor junk
@@ -238,7 +237,7 @@ ItemDisplay[mpi RARE ILVL>60]: %NL%%NAME%%NL% <<rare>>
 ItemDisplay[cq2 RARE ILVL>60]: %NL%%NAME%%NL% <<rare>>
 //Rare Gloves, Belts and Boots
 ItemDisplay[(EQ4 OR EQ5 OR EQ6 OR mpi) ETH RARE]: %GRAY%ETH %YELLOW%%NAME% <<rare>>
-ItemDisplay[(EQ4 OR EQ5 OR EQ6 OR mpi) RARE]: %NL%%NAME%%NL% <<rare>>
+ItemDisplay[(EQ4 OR EQ5 OR EQ6 OR mpi) RARE]: %NL%%NAME%%NL% %NL%<<rare>>
 
 //Circlets
 ItemDisplay[EQ7 MAG ETH]: %GRAY%ETH %BLUE%%NAME%
@@ -248,8 +247,8 @@ ItemDisplay[EQ7 (MAG OR RARE)]:%NL% %NAME%%NL%
 ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 
 //Arrows Bolts
-ItemDisplay[RARE (cq2 OR aq2) ILVL>60]: %NL%%NAME%%NL%
-ItemDisplay[RARE (cq2 OR aq2) FILTERLVL<5]: %NAME%
+ItemDisplay[RARE (cq2 OR aq2) ILVL>60]: %NL%%NAME%%NL%<<rare>> %CONTINUE%
+ItemDisplay[RARE (cq2 OR aq2) FILTERLVL<5]:%NAME% %CONTINUE%
 
 //All Charms
 ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»%BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]
@@ -753,13 +752,15 @@ ItemDisplay[EQ5 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Fire Res 10-20% | All Res
 //gloves
 ItemDisplay[EQ4 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% IAS 10% | Cold Res 10-20% | All Res 5-10% | LGOH M5-10, R5-10 | Psn Res 10-20% %NL% %!pcm!%}
 //belt
-ItemDisplay[EQ6 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Pierce 8% | Max Fire 2% | Max Cold 2% | Max Light 2% | Max Poison 2% %NL% %!pcm!%}
+//ItemDisplay[EQ6 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% Pierce 8% | Max Fire 2% | Max Cold 2% | Max Light 2% | Max Poison 2% %NL% %!pcm!%}
+ItemDisplay[EQ6 (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% +10% Faster Casting | +10% Faster Attacks | +75% Attack Rating Bonus | Attack Rating Per Level (2 per) | Piercing Attack 8% %NL% %!pcm!%}
 //amulet
 ItemDisplay[amu (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | +1 All Skills | Regen Mana 15% | MF 10% | Life 12-18 %NL% %!pcm!%}
 //ring
 ItemDisplay[rin (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% FCR 10% | Faster RW 10% | Life 15 | PDR 5-6% | MF 10% %NL% %!pcm!%}
 //bolt-arrow
-ItemDisplay[(aq2 OR cq2) (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | LGOH 4-6 | MGOH 2-4 | IAS 10% | Vita 5-15% %NL% %!pcm!%}
+//ItemDisplay[(aq2 OR cq2) (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | LGOH 4-6 | MGOH 2-4 | IAS 10% | Vita 5-15% %NL% %!pcm!%}
+ItemDisplay[(aq2 OR cq2) (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | LGOH 4-6 | MGOH 2-4 | IAS 10% | +1 to All Skills %NL% %!pcm!%}
 // catch all
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME% [%CODE%]
 ItemDisplay[(UNI OR SET)]: %NAME% [%CODE%]
@@ -778,7 +779,7 @@ ItemDisplay[tbk]: %NAME%
 ItemDisplay[ibk]: %NAME%
 ItemDisplay[tsc TPSCROLLS>15]:
 ItemDisplay[tsc]: %WHITE% Tp
-ItemDisplay[isc IDSCROLLS>15]:
+ItemDisplay[isc IDSCROLLS>25]:
 ItemDisplay[isc FILTERLVL=1]: %WHITE% ID
 
 //EVERYTHING ELSE
