@@ -2,7 +2,12 @@ Qords filter
 #####################################
 Update 3-8
 Fixes:
+Some necro items were showing as +3 Misc instead of the named skill
+Some barb items were showing as +3 Misc instead of the named skill
+
 Additions:
+Added missing skill lines for necro's summon mastery and bone offring
+Added comments to the "everything else" at the bottom of the filter
 
 Changes:
 Edited for new corruptions for quiver and belts
