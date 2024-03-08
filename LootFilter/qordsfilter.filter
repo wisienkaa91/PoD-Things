@@ -79,10 +79,10 @@ ItemStyle[rune]: MapIcon = 75, MapIconColor = 5, BorderColor = 111, BorderSize =
 //ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH
 ItemStyle[qspecials]: MapIcon = 4, MapIconColor = 5, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationPriority = HIGH, NotificationSound = "@global\sfx\Common\Cain\Cain_hello", NotificationSoundPriority = HIGH //<<qspecials>>
 ItemStyle[pelt]: MapIcon = 4, MapIconColor = 5, BorderColor = 4, BorderSize = 1, BackgroundColor = 15 //<<pelt>>
-ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
-//ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@global\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
-ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
-//ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@global\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
+//ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
+ItemStyle[qnique]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@global\sfx\Act5\Soldier\sol_overhere", NotificationPriority = HIGH //<<qnique>>
+//ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@local\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
+ItemStyle[gguniqs]: MapIcon = 4, BorderColor = 111, BorderSize = 2, BackgroundColor = 197, NotificationColor = PURPLE, NotificationSound = "@global\sfx\Common\Cain\Cain_hello", NotificationPriority = HIGH  //<<gguniqs>>
 ItemStyle[okuniqs]: BorderColor = 111, BorderSize = 2, BackgroundColor = 203, NotificationColor = ORANGE //<<okuniqs>>
 ItemStyle[ggsets]: BorderColor = 111, BorderSize = 2, NotificationColor = GREEN //<<ggsets>>
 ItemStyle[orbs]: BorderColor = 111, BorderSize = 2 //<<orbs>>  //not in use, to be deleted?
@@ -236,8 +236,8 @@ ItemDisplay[(rin OR amu) MAG FILTERLVL=1]: %NAME% %GRAY%[%ILVL%]
 ItemDisplay[mpi RARE ILVL>60]: %NL%%NAME%%NL% <<rare>>
 ItemDisplay[cq2 RARE ILVL>60]: %NL%%NAME%%NL% <<rare>>
 //Rare Gloves, Belts and Boots
-ItemDisplay[(EQ4 OR EQ5 OR EQ6 OR mpi) ETH RARE]: %GRAY%ETH %YELLOW%%NAME% <<rare>>
-ItemDisplay[(EQ4 OR EQ5 OR EQ6 OR mpi) RARE]: %NL%%NAME%%NL% %NL%<<rare>>
+ItemDisplay[(EQ4 OR EQ5 OR EQ6 OR mpi) ETH RARE]: %GRAY%ETH %YELLOW%%NAME% <<rare>> 
+ItemDisplay[(EQ4 OR EQ5 OR EQ6 OR mpi) RARE]: %NL%%NAME%%NL% %NL%<<rare>> 
 
 //Circlets
 ItemDisplay[EQ7 MAG ETH]: %GRAY%ETH %BLUE%%NAME%
@@ -247,8 +247,8 @@ ItemDisplay[EQ7 (MAG OR RARE)]:%NL% %NAME%%NL%
 ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 
 //Arrows Bolts
-ItemDisplay[RARE (cq2 OR aq2) ILVL>60]: %NL%%NAME%%NL%<<rare>> %CONTINUE%
-ItemDisplay[RARE (cq2 OR aq2) FILTERLVL<5]:%NAME% %CONTINUE%
+ItemDisplay[RARE (aq2 OR cq2) ILVL>60]: %NL% %NAME% %NL% <<rare>> %CONTINUE%
+ItemDisplay[RARE (aq2 OR cq2) FILTERLVL<5]: %NAME% %CONTINUE%
 
 //All Charms
 ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»%BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]
@@ -478,6 +478,8 @@ ItemDisplay[NMAG CL1 !SOCK=1 SKILL(225)>2 OR SKILL(229)>2 OR SKILL("Flame Dash")
 // Necro bases, wands and shrunken heads, by skill name
 ItemDisplay[NMAG SKILL("Flesh Offering")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Flesh Offering%CONTINUE%
 ItemDisplay[NMAG SKILL("Raise Skeletal Mage")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Raise Skeletal Mage%CONTINUE%
+ItemDisplay[NMAG SKILL("Bone Offering")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Offering%CONTINUE%
+ItemDisplay[NMAG SKILL("Summon Mastery")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Summon Mastery%CONTINUE%
 ItemDisplay[NMAG SKILL("Blood Golem")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Blood Golem%CONTINUE%
 ItemDisplay[NMAG SKILL("Convocation")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Convocation%CONTINUE%
 ItemDisplay[NMAG SKILL("Iron Golem")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Iron Golem%CONTINUE%
@@ -573,7 +575,7 @@ ItemDisplay[NMAG SKILL(155)>2 CL2 NMAG !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Battle Co
 //ItemDisplay[NMAG SKILL("Double Swing")>2 CL2 NMAG !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Double Swing %CONTINUE%
 //ItemDisplay[NMAG SKILL("2-Handed Mastery")>2 CL2 NMAG !SOCK=1]: %NAME% %LIGHT_GRAY%+3 2-Handed Mastery %CONTINUE%
 //ItemDisplay[NMAG SKILL("1-Handed Mastery")>2 CL2 NMAG !SOCK=1]: %NAME% %LIGHT_GRAY%+3 1-Handed Mastery %CONTINUE%
-ItemDisplay[NMAG CL2 NMAG !SOCK=1 (SKILL(126)>2 OR SKILL(127)>2 OR SKILL(128)>2 OR SKILL(129)>2 OR SKILL(130)>2 OR SKILL(131)>2 OR SKILL(132)>2 OR SKILL(133)>2 OR SKILL(135)>2 OR SKILL(137)>2 OR SKILL(138)>2 OR SKILL(139)>2 OR SKILL(140)>2 OR SKILL(141)>2 OR SKILL(142)>2 OR SKILL(143)>2 OR SKILL(144)>2 OR SKILL(145)>2 OR SKILL(146)>2 OR SKILL(147)>2 OR SKILL(148)>2 OR SKILL(149)>2 OR SKILL(150)>2 OR SKILL(151)>2 OR SKILL(152)>2 OR SKILL(153)>2 OR SKILL(154)>2 OR SKILL(155)>2)]: %NAME% %SOCKETS% 
+ItemDisplay[NMAG CL2 NMAG !SOCK=1 (SKILL(126)>2 OR SKILL(127)>2 OR SKILL(128)>2 OR SKILL(129)>2 OR SKILL(130)>2 OR SKILL(131)>2 OR SKILL(132)>2 OR SKILL(133)>2 OR SKILL(135)>2 OR SKILL(137)>2 OR SKILL(138)>2 OR SKILL(139)>2 OR SKILL(140)>2 OR SKILL(141)>2 OR SKILL(142)>2 OR SKILL(143)>2 OR SKILL(144)>2 OR SKILL(145)>2 OR SKILL(146)>2 OR SKILL(147)>2 OR SKILL(148)>2 OR SKILL(149)>2 OR SKILL(150)>2 OR SKILL(151)>2 OR SKILL(152)>2 OR SKILL(153)>2 OR SKILL(154)>2 OR SKILL(155)>2)]: %NAME% %!graysocks!% 
 
 
 
@@ -593,8 +595,8 @@ ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK280>2]:  %NAME% %LIGHT_GRA
 ItemDisplay[CL5  NMAG !INF !NORM (SOCK=0 OR SOCK=3) SK254>2 OR SK280>2 OR SK255>2 OR SK259>2 OR SK260>2 OR SK265>2 OR SK269>2 OR SK270>2 OR SK274>2 OR SK255>2]:  %NAME% %!tansocks!%
 //More Plague claw
 ItemDisplay[CL5 !INF NMAG (SK262>2 AND SK272>0) (SOCK=0 OR SOCK=3)]: %NAME% %PURPLE%+3 Wake of Fire w/ Wake of Inferno %!tansocks!%
-ItemDisplay[CL5 !INF NMAG (SK277>2 AND SK278>0) (SOCK=0 OR SOCK=3)]: %NAME% %PURPLE%+3 Blade Shield +3 Venom %!tansocks!%
-ItemDisplay[CL5 !INF NMAG SK278>2 SK267>0 (SOCK=0 OR SOCK=3)]: %NAME% %PURPLE%+3 Venom +3 Fade %!tansocks!%
+ItemDisplay[CL5 !INF NMAG (SK277>2 AND SK278>0) (SOCK=0 OR SOCK=3)]: %NAME% %PURPLE%+3 Blade Shield +X Venom %!tansocks!%
+ItemDisplay[CL5 !INF NMAG (SK278>2 AND SK267>0) (SOCK=0 OR SOCK=3)]: %NAME% %PURPLE%+3 Venom +X Fade %!tansocks!%
 ItemDisplay[CL5 !INF NMAG (SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK278>2 OR SK279>2 OR SK280>2) SK277>2 (SOCK=0 OR SOCK=3)]: %NAME% %WHITE%+3 Blade Shield Plus++ %!tansocks!%
 ItemDisplay[CL5 !INF NMAG SK277>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Blade Shield %CONTINUE%
 ItemDisplay[CL5 !INF NMAG SK278>2 (SOCK=0 OR SOCK=3)]: %NAME% %LIGHT_GRAY%+3 Venom %CONTINUE%
@@ -783,18 +785,26 @@ ItemDisplay[isc IDSCROLLS>25]:
 ItemDisplay[isc FILTERLVL=1]: %WHITE% ID
 
 //EVERYTHING ELSE
+// If you're under level 31, show all pelts, barb helms, necro shields & wands, sorc orbs, staves, and scepters with more than 1 socket
 ItemDisplay[(CL1 OR CL2 OR CL4 OR CL6 OR WP11 OR WP12 OR WP13) NMAG ETH CLVL<31 SOCK>0]: %GRAY%ETH %NAME% %!tansocks!%
 ItemDisplay[(CL1 OR CL2 OR CL4 OR CL6 OR WP11 OR WP12 OR WP13) NMAG ETH CLVL<31]: %GRAY%ETH %NAME%
 ItemDisplay[(CL1 OR CL2 OR CL4 OR CL6 OR WP11 OR WP12 OR WP13) NMAG CLVL<31 SOCK>0]: %NAME% %!tansocks!%
 ItemDisplay[(CL1 OR CL2 OR CL4 OR CL6 OR WP11 OR WP12 OR WP13) NMAG CLVL<31]: %NAME% 
-ItemDisplay[(ARMOR OR WEAPON) MAG ETH CLVL<60]: %GRAY%ETH %BLUE%%NAME%
-ItemDisplay[(ARMOR OR WEAPON) RARE ETH CLVL<60]: %GRAY%ETH %YELLOW%%NAME%
+// If you're under level 60 and filterlevel is less than 4, show all magic and rare aweapons and armor 
+ItemDisplay[(ARMOR OR WEAPON) MAG ETH FILTERLVL<4 CLVL<60]: %GRAY%ETH %BLUE%%NAME%
+ItemDisplay[(ARMOR OR WEAPON) RARE ETH FILTERLVL<4 CLVL<60]: %GRAY%ETH %YELLOW%%NAME%
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) FILTERLVL<4 CLVL<60]: %NAME%
+// If you're under level 40, show all non-etheral and non-inferior weapons and armor that have more than one socket 
 ItemDisplay[(ARMOR OR WEAPON) NMAG AND (!ETH AND !INF) SOCK>1 CLVL<40]: %GRAY%%NAME% %!tansocks!%
+// If you're under level 60, show all 4 socket weapons that are eth and not inferior 
 ItemDisplay[WEAPON NMAG AND (ETH AND !INF) SOCK=4 CLVL<60]: %GRAY%ETH %NAME% %!tansocks!%
+// If you're between levels 40 and 80, show all exceptional and elite weapons and armor that are not eth and not inferior and have more than 1 socket 
 ItemDisplay[(ARMOR OR WEAPON) (EXC OR ELT) NMAG AND (!ETH AND !INF) SOCK>1 CLVL>39 AND CLVL<81]: %NAME% %!tansocks!%
+// Hide all inferior weapons and armor 
 ItemDisplay[(ARMOR OR WEAPON) INF]:
+// If you're under level 19, show eth and non eth weapons and armor, and tell us if they have sockets 
 ItemDisplay[(ARMOR OR WEAPON) ETH SOCK>0 CLVL<19]: %GRAY%ETH %NAME% %!tansocks!%
 ItemDisplay[(ARMOR OR WEAPON) ETH CLVL<19]: %GRAY%ETH %NAME%
 ItemDisplay[(ARMOR OR WEAPON) SOCK>0 CLVL<19]: %NAME% %!tansocks!%
+// If you're above level 18, hide all other weapons and armor 
 ItemDisplay[(ARMOR OR WEAPON) CLVL>18]:
