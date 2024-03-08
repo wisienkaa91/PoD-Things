@@ -249,7 +249,7 @@ ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 
 //Arrows Bolts
 ItemDisplay[RARE (cq2 OR aq2) ILVL>60]: %NL%%NAME%%NL%
-ItemDisplay[RARE (cq2 OR aq2) FILTERLVL<5:]: %NAME%
+ItemDisplay[RARE (cq2 OR aq2) FILTERLVL<5]: %NAME%
 
 //All Charms
 ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»%BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]
