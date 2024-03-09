@@ -12,7 +12,7 @@ Added low tier gems
 
 Changes:
 Reduced visibility of blue (magic) military pick drops
-Edited display line for GEMLEVEL=3
+Edited then removed display line for GEMLEVEL=3, this line broke some things
 Removed item code from set and unique catch all lines
 
 #####################################
