@@ -4,6 +4,7 @@ Update 3-9
 Fixes:
 Additions:
 Added a link in the filter to this change log
+Added extra visibility for sets and uniques that have been changed in patch 21
 
 Changes:
 Reduced visibility of blue (magic) military pick drops
