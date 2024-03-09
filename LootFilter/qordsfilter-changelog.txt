@@ -6,6 +6,7 @@ Additions:
 
 Changes:
 Reduced visibility of blue (magic) military pick drops
+Edited display line for GEMLEVEL=3
 
 #####################################
 Update 3-8
