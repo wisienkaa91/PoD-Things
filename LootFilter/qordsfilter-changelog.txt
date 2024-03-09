@@ -1,5 +1,13 @@
 Qords filter
 #####################################
+Update 3-9
+Fixes:
+Additions:
+
+Changes:
+Reduced visibility of blue (magic) military pick drops
+
+#####################################
 Update 3-8
 Fixes:
 Some necro items were showing as +3 Misc instead of the named skill
