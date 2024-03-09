@@ -38,7 +38,7 @@ FilterLevel[1]: Loosey goosey
 FilterLevel[2]: Utility
 // Filterlevel 3 hides the above, as well as low runes, large charms, hides some bases (spirit, hoto, cta)
 FilterLevel[3]: No low runes
-// Filterlevel 4 hides the above, health/mana pots, "probly garbage" labeled items, large charms
+// Filterlevel 4 hides the above, health/mana pots, "probly garbage" labeled items, large charms, hides the "changed in newest patch" lines
 FilterLevel[4]: No hp/mp pots
 // Filterlevel 5 hides the above, as well as lower set and unique items
 FilterLevel[5]: No extra floor junk
@@ -260,6 +260,10 @@ ItemDisplay[cm3 MAG !ID]: %BLUE%  %NAME%  %GRAY%[%ILVL%]
 ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»  »»» %BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]%PURPLE%  «««  «««
 ItemDisplay[(cm1 OR cm2 OR cm3) !UNI]: %NAME% %GRAY%[%ILVL%]
 ItemDisplay[(cm1 OR cm2 OR cm3) UNI]: %NAME% <<gguniqs>>
+
+//Changed in the latest patch, add extra visibility for sets and uniques that have been changed in patch 21
+ItemDisplay[(pae OR 9fb OR 9bl OR wsd OR 7bw OR uhg OR 6hx OR uul OR usk OR 7wc OR 9la) UNI !ID FILTERLVL<4]: %NAME%%SAGE% <-Changed by Shugnite
+ItemDisplay[(uh9 OR amc OR lbb OR tbl OR wsd OR xap OR stu OR vbt) SET !ID FILTERLVL<4]: %NAME%%SAGE% <-Changed by Shugnite
 
 //Uniques
 // Looking for right now...used for special cases/temporary searching/one-off where you want extra visibility 
