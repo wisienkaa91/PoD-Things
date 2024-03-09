@@ -285,14 +285,14 @@ ItemDisplay[(6hx OR uow OR pa9 OR nea OR 7cr OR 7fl OR 7kr OR oba OR ama OR lbt 
 ItemDisplay[UNI]: %NAME% [%CODE%]
 //Uinque catch all 
 ItemDisplay[UNI !ID ETH FILTERLVL<5]: %!ethuniq!%
-//ItemDisplay[UNI !ID]: %!uniq!% [%CODE%]//<<unique>>
-ItemDisplay[UNI !ID FILTERLVL<5]: %NAME% [%CODE%]
+//ItemDisplay[UNI !ID]: %!uniq!% //[%CODE%]//<<unique>>
+ItemDisplay[UNI !ID FILTERLVL<5]: %NAME% // [%CODE%]
 
 //Sets
 //Good set parts
 ItemDisplay[(7ma OR amu OR uar OR ci3 OR 7qr OR uth OR ulg OR xtb OR xhm OR xmg OR ult OR xhl OR 7ls OR upl) SET]: %!setmacro!% <<ggsets>>
 //Set catch all
-ItemDisplay[SET FILTERLVL<5]: %NAME% [%CODE%]
+ItemDisplay[SET FILTERLVL<5]: %NAME% // [%CODE%]
 
 //Sorceress Orbs, plague base....needs work
 //trim old lines, no need enflame-frig since pre-buff is no more
