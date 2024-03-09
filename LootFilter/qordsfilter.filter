@@ -283,7 +283,7 @@ ItemDisplay[(6hx OR uow OR pa9 OR nea OR 7cr OR 7fl OR 7kr OR oba OR ama OR lbt 
 //OK UNIQUE Items NONETH ID'd
 ItemDisplay[(6hx OR uow OR pa9 OR nea OR 7cr OR 7fl OR 7kr OR oba OR ama OR lbt OR xhb OR uhb OR xvb OR xhn OR uhm OR xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR xhn OR xtp OR xlt OR upl OR uld OR uvg OR uhg OR utu OR zlb OR zvb OR zhb OR umc OR 6cs OR xmb OR amf OR umg OR 7s8 OR xhm OR rxb OR 8rx OR 6sw OR 9mp) UNI !ETH]: %!okuniqid!% <<okuniqs>>
 //Show me all ID'd uniques
-ItemDisplay[UNI]: %NAME% [%CODE%]
+ItemDisplay[UNI]: %NAME% //[%CODE%]
 //Uinque catch all 
 ItemDisplay[UNI !ID ETH FILTERLVL<5]: %!ethuniq!%
 //ItemDisplay[UNI !ID]: %!uniq!% //[%CODE%]//<<unique>>
