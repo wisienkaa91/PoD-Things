@@ -213,7 +213,8 @@ ItemDisplay[jew (RARE OR MAG) ID]: %NAME%
 
 //Craftables
 ItemDisplay[(7wa) MAG]: %NL% %NAME% %RED%[ort] %GRAY%[%ILVL%]%NL% <:notify: MapIcon = 66, NotificationColor = RED> {%GRAY%Ort Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Zerker Axe%NL%%GRAY%Horadric Cube Craft Recipe}
-ItemDisplay[(mpi) MAG]: %NL% %NAME% %RED%[ort] %GRAY%[%ILVL%]%NL% <:notify: MapIcon = 66, NotificationColor = RED> {%GRAY%Ort Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Pickaxe%NL%%GRAY%Horadric Cube Craft Recipe}
+//ItemDisplay[(mpi) MAG]: %NL% %NAME% %RED%[ort] %GRAY%[%ILVL%]%NL% <:notify: MapIcon = 66, NotificationColor = RED> {%GRAY%Ort Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Pickaxe%NL%%GRAY%Horadric Cube Craft Recipe}
+ItemDisplay[(mpi) MAG]: %NL% %NAME% %RED%[ort] %GRAY%[%ILVL%] {%GRAY%Ort Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Pickaxe%NL%%GRAY%Horadric Cube Craft Recipe}
 ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) !(NMAG OR MAG OR RARE OR SET OR UNI)]: %NAME%
 ItemDisplay[(uvg OR xvg) MAG]: %NAME% %RED%[nef] %GRAY%[%ILVL%]{%GRAY%Nef Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Gloves%NL%%GRAY%Horadric Cube Craft Recipe}
 ItemDisplay[xtb MAG]: %NAME% %RED%[eth] %GRAY%[%ILVL%]{%GRAY%Eth Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Boots%NL%%GRAY%Horadric Cube Craft Recipe}
