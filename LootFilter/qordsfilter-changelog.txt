@@ -3,6 +3,7 @@ Qords filter
 Update 3-9
 Fixes:
 Additions:
+Added a link in the filter to this change log
 
 Changes:
 Reduced visibility of blue (magic) military pick drops
