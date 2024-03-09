@@ -25,8 +25,8 @@
 //
 Attribute[Author]: Qord 
 Attribute[Name]: QordsFilter
-Attribute[Version]: 3.7
-Attribute[Date]: 7 March
+Attribute[Version]: 3.9
+Attribute[Date]: 9 March
 
 Option[IgnoreMissingSounds]: True
 
