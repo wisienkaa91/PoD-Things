@@ -3,7 +3,7 @@ Qords filter
 Update 3-9
 Fixes:
 Fixed missing colon in gem lines
-Fixed the fix above
+Fixed the fix above, it didn't fix
 
 Additions:
 Added a link in the filter to this change log
