@@ -5,6 +5,7 @@ Fixes:
 Additions:
 Added a link in the filter to this change log
 Added extra visibility for sets and uniques that have been changed in patch 21
+Added low tier gems
 
 Changes:
 Reduced visibility of blue (magic) military pick drops
