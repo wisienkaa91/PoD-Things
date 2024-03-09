@@ -186,8 +186,8 @@ ItemDisplay[(ARMOR OR WEAPON) ((MAG OR RARE OR SET OR UNI) AND ETH) SOCK>0]: %NA
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) SOCK>0]: %NAME% %!tansocks!%
 
 //Gems
-//ItemDisplay[GEMLEVEL=3 AND FILERTLVL=1 AND (DIFFICULTY=0 or CLVL<40)] %NAME%
-ItemDisplay[GEMLEVEL<4 AND FILERTLVL=1 AND (DIFFICULTY=0 or CLVL<40)] %NAME%
+//ItemDisplay[GEMLEVEL=3 AND FILERTLVL=1 AND (DIFFICULTY=0 or CLVL<40)]: %NAME%
+ItemDisplay[GEMLEVEL<4 AND FILERTLVL=1 AND (DIFFICULTY=0 or CLVL<40)]: %NAME%
 ItemDisplay[gzv]: %PURPLE%Amethyst //Flawless Amethyst
 ItemDisplay[glw]: %WHITE%Diamond //Flawless Diamond
 ItemDisplay[glg]: %GREEN%Emerald //Flawless Emerald = SoundFile
