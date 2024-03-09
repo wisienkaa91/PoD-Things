@@ -2,6 +2,7 @@ Qords filter
 #####################################
 Update 3-9
 Fixes:
+Fixed missing colon in gem lines
 Additions:
 Added a link in the filter to this change log
 Added extra visibility for sets and uniques that have been changed in patch 21
