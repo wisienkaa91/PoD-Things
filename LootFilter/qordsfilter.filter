@@ -214,6 +214,38 @@ ItemDisplay[jew MAG !ID]: %BLUE%%NAME%
 ItemDisplay[jew RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
 ItemDisplay[jew (RARE OR MAG) ID]: %NAME%
 
+//Wand shopping
+ItemDisplay[MAG SKILL("Flesh Offering")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Flesh Offering%CONTINUE%
+ItemDisplay[MAG SKILL("Raise Skeletal Mage")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Raise Skeletal Mage%CONTINUE%
+ItemDisplay[MAG SKILL("Bone Offering")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Offering%CONTINUE%
+ItemDisplay[MAG SKILL("Summon Mastery")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Summon Mastery%CONTINUE%
+ItemDisplay[MAG SKILL("Blood Golem")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Blood Golem%CONTINUE%
+ItemDisplay[MAG SKILL("Convocation")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Convocation%CONTINUE%
+ItemDisplay[MAG SKILL("Iron Golem")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Iron Golem%CONTINUE%
+ItemDisplay[MAG SKILL("Fire Golem")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Fire Golem%CONTINUE%
+ItemDisplay[MAG SKILL("Revive")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Revive%CONTINUE%
+ItemDisplay[MAG SKILL("Deadly Poison")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Deadly Poison%CONTINUE%
+ItemDisplay[MAG SKILL("Teeth")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Teeth%CONTINUE%
+ItemDisplay[MAG SKILL("Bone Armor")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Armor%CONTINUE%
+ItemDisplay[MAG SKILL("Corpse Explosion")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Corpse Explosion%CONTINUE%
+ItemDisplay[MAG SKILL("Desecrate")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Desecrate%CONTINUE%
+ItemDisplay[MAG SKILL("Bone Spear")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Spear%CONTINUE%
+ItemDisplay[MAG SKILL("Bone Wall")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Wall%CONTINUE%
+ItemDisplay[MAG SKILL("Bone Spirit")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Spirit%CONTINUE%
+ItemDisplay[MAG SKILL("Poison Nova")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Poison Nova%CONTINUE%
+ItemDisplay[MAG SKILL("Amplify Damage")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Amplify Damage%CONTINUE%
+ItemDisplay[MAG SKILL("Dim Vision")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Dim Vision%CONTINUE%
+ItemDisplay[MAG SKILL("Hemorrhage")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Hemorrhage%CONTINUE%
+ItemDisplay[MAG SKILL("Weaken")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Weaken%CONTINUE%
+ItemDisplay[MAG SKILL("Iron Maiden")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Iron Maiden%CONTINUE%
+ItemDisplay[MAG SKILL("Terror")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Terror%CONTINUE%
+ItemDisplay[MAG SKILL("Confuse")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Confuse%CONTINUE%
+ItemDisplay[MAG SKILL("Life Tap")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Life Tap%CONTINUE%
+ItemDisplay[MAG SKILL("Attract")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Attract%CONTINUE%
+ItemDisplay[MAG SKILL("Decrepify")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Decrepify%CONTINUE%
+ItemDisplay[MAG SKILL("Lower Resist")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Lower Resist%CONTINUE%
+ItemDisplay[MAG (CL4 OR WP12) SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2]: %NAME% <:notify: NotificationPriority = HIGH>
+
 //Craftables
 ItemDisplay[(7wa) MAG]: %NL% %NAME% %RED%[ort] %GRAY%[%ILVL%]%NL% <:notify: MapIcon = 66, NotificationColor = RED> {%GRAY%Ort Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Zerker Axe%NL%%GRAY%Horadric Cube Craft Recipe}
 //ItemDisplay[(mpi) MAG]: %NL% %NAME% %RED%[ort] %GRAY%[%ILVL%]%NL% <:notify: MapIcon = 66, NotificationColor = RED> {%GRAY%Ort Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Pickaxe%NL%%GRAY%Horadric Cube Craft Recipe}
@@ -772,8 +804,8 @@ ItemDisplay[rin (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% FCR 10% | Faster RW 10% |
 //ItemDisplay[(aq2 OR cq2) (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | LGOH 4-6 | MGOH 2-4 | IAS 10% | Vita 5-15% %NL% %!pcm!%}
 ItemDisplay[(aq2 OR cq2) (RARE OR SET OR UNI) ID]:%NAME%{%GRAY% All Res 5% | LGOH 4-6 | MGOH 2-4 | IAS 10% | +1 to All Skills %NL% %!pcm!%}
 // catch all
-ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME% [%CODE%]
-ItemDisplay[(UNI OR SET)]: %NAME% [%CODE%]
+ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME% //[%CODE%]
+ItemDisplay[(UNI OR SET)]: %NAME% //[%CODE%]
 
 //Class items  cl1 Druid pelts, cl2 barb helms, cl5 assassin weapons, cl6 sorc orbs, cl7 zon weapons, wp6 javelins, wp12 wands, wsp war scepters, 9ws divine scepter, 7ws caduceus
 ItemDisplay[(CL1 OR CL2 OR CL5 OR CL6 OR WP12 OR WP6 OR CL7) (FILTERLVL=1) MAG ETH]: %GRAY%ETH %BLUE%%NAME%
