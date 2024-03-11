@@ -6,6 +6,7 @@ Fixed alt text on safety boot craft recipe, thanks Ika!
 Additions:
 Added notifications (low priority) for charms and jewels
 Changes:
+Changed style of OOC line to use RGB instead of pallette colors, first try with RGB's!
 
 #####################################
 Update 3-9
