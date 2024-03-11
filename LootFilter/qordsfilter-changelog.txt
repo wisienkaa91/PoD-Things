@@ -1,5 +1,12 @@
 Qords filter
 #####################################
+Update 3-11
+Fixes:
+Additions:
+Added notifications (low priority) for charms and jewels
+Changes:
+
+#####################################
 Update 3-9
 Fixes:
 Fixed missing colon in gem lines
