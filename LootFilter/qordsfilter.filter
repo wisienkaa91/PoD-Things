@@ -90,6 +90,7 @@ ItemStyle[orbs]: BorderColor = 111, BorderSize = 2 //<<orbs>>  //not in use, to 
 ItemStyle[stack]: NotificationColor = PURPLE //<<stack>>
 ItemStyle[notify]: NotificationColor = WHITE //<<notify>>
 ItemStyle[craygray]: BorderColor = 27, BorderSize = 1, BackgroundColor = 31, NotificationColor = WHITE //<<craygray>>
+ItemStyle[lowprionotify]: NotificationColor = ITEM, NotificationPriority = LOW, MapIcon = 6 // <<lowprionotify>>
 
 //<NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\rune"><NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\rune">
 //"@local\sfx\Common\Cain\Cain_hello.wav"
@@ -210,8 +211,8 @@ ItemDisplay[(rin OR amu) RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
 ItemDisplay[(rin OR amu) MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
 
 //Jewels, magic and rare
-ItemDisplay[jew MAG !ID]: %BLUE%%NAME%
-ItemDisplay[jew RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
+ItemDisplay[jew MAG !ID]: %BLUE%%NAME% <<lowprionotify>>
+ItemDisplay[jew RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% «« <<lowprionotify>>
 ItemDisplay[jew (RARE OR MAG) ID]: %NAME%
 
 //Wand shoppingItemDisplay[(MAG OR NMAG) SKILL("Flesh Offering")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Flesh Offering%CONTINUE%
@@ -287,11 +288,11 @@ ItemDisplay[RARE (aq2 OR cq2) ILVL>60]: %NL% %NAME% %NL% <<rare>> %CONTINUE%
 ItemDisplay[RARE (aq2 OR cq2) FILTERLVL<5]: %NAME% %CONTINUE%
 
 //All Charms
-ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»%BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]
-ItemDisplay[cm1 MAG !ID]:%BLUE%  %NAME%  %GRAY%[%ILVL%]
+ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»%BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%] <<lowprionotify>>
+ItemDisplay[cm1 MAG !ID]:%BLUE%  %NAME%  %GRAY%[%ILVL%] <<lowprionotify>>
 ItemDisplay[cm2 MAG !ID FILTERLVL<4]: %BLUE%%NAME%
-ItemDisplay[cm3 MAG !ID]: %BLUE%  %NAME%  %GRAY%[%ILVL%]
-ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»  »»» %BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]%PURPLE%  «««  «««
+ItemDisplay[cm3 MAG !ID]: %BLUE%  %NAME%  %GRAY%[%ILVL%] <<lowprionotify>>
+ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»  »»» %BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]%PURPLE%  «««  ««« <<lowprionotify>>
 ItemDisplay[(cm1 OR cm2 OR cm3) !UNI]: %NAME% %GRAY%[%ILVL%]
 ItemDisplay[(cm1 OR cm2 OR cm3) UNI]: %NAME% <<gguniqs>>
 
