@@ -1,5 +1,12 @@
 Qords filter
 #####################################
+Update 3-12
+Fixes:
+Additions:
+Added fallback/failsafe line for synth items, commented out until I can test it adequately
+Changes:
+
+#####################################
 Update 3-11
 Fixes:
 Fixed alt text on safety boot craft recipe, thanks Ika!
