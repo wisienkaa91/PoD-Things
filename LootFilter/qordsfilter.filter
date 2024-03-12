@@ -155,6 +155,7 @@ ItemDisplay[mbr]: %GRAY%Mephisto's Brain <<notify>>
 
 //PoD Items
 ItemDisplay[SPECIAL]: %GOLD%%NAME% <<qspecials>>
+//ItemDisplay[SYNTH]: %GOLD%%NAME% <<qspecials>> //failsafe forsynthesized items, the above *should* catch them though
 ItemDisplay[std]: %NAME%
 ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NL% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = RGB(138/43/226), BorderSize = 4, BackgroundColor = RGB(128/0/128), MapIcon = 70, MapIconColor = 75, NotificationSound = corb2, NotificationColor = PURPLE>
 //ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NL% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 155, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotificationSound = corb2, NotificationColor = PURPLE>
