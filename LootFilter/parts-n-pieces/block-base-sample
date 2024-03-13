@@ -79,3 +79,39 @@ EnableIf[NMAG CL2]
         ItemDisplay[NMAG SKILL("Whirlwind")>2 CL2 NMAG !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Whirlwind%CONTINUE%
         ItemDisplay[(CL2 NMAG) SKILL("Howl") OR SKILL("Find Potion") OR SKILL("Taunt") OR SKILL("Shout") OR SKILL("Find Item") OR SKILL("Battle Cry") OR SKILL("Battle Orders") OR SKILL("GrimWard") OR SKILL("War Cry") OR SKILL("Battle Command") OR SKILL("Edged Weapon Mastery") OR SKILL("Pole Weapon Mastery") OR SKILL("Blunt Weapon Mastery") OR SKILL("Throwing Mastery") OR SKILL("Increased Stamiona") OR SKILL("Counter Attack") OR SKILL("Iron Skin") OR SKILL("Increased Speed") OR SKILL("Puncture") OR SKILL("Natural Resistance") OR SKILL("Whirling Axes") OR SKILL("Double Swing") OR SKILL("Concentrate") OR SKILL("Cleave") OR SKILL("Frenzy") OR SKILL("Stun") OR SKILL("Leap") OR SKILL("Power Throw") OR SKILL("Bash") OR SKILL("Ethereal Throw") OR SKILL("Whirlwind")]:  %NAME%
 EndIf[]
+
+
+// Paladin test
+EnableIf[(NMAG OR MAG) (WP2 OR WP13)]
+ItemDisplay[(NMAG OR MAG) SKILL("Prayer")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Prayer
+ItemDisplay[(NMAG OR MAG) SKILL("Resist Fire")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Resist Fire
+ItemDisplay[(NMAG OR MAG) SKILL("Defiance")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Defiance
+ItemDisplay[(NMAG OR MAG) SKILL("Resist Cold")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Resist Cold
+ItemDisplay[(NMAG OR MAG) SKILL("Cleansing")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Cleansing
+ItemDisplay[(NMAG OR MAG) SKILL("Resist Lightning")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Resist Lightning
+ItemDisplay[(NMAG OR MAG) SKILL("Vigor")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Vigor
+ItemDisplay[(NMAG OR MAG) SKILL("Redemption")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Redemption
+ItemDisplay[(NMAG OR MAG) SKILL("Salvation")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Salvation
+ItemDisplay[(NMAG OR MAG) SKILL("Might")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Might
+ItemDisplay[(NMAG OR MAG) SKILL("Holy Fire")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Holy Fire
+ItemDisplay[(NMAG OR MAG) SKILL("Precision")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Precision
+ItemDisplay[(NMAG OR MAG) SKILL("Blessed Aim")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Blessed Aim
+ItemDisplay[(NMAG OR MAG) SKILL("Concentrate")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Concentrate
+ItemDisplay[(NMAG OR MAG) SKILL("Holy Freeze")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Holy Freeze
+ItemDisplay[(NMAG OR MAG) SKILL("Holy Shock")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Holy Shock
+ItemDisplay[(NMAG OR MAG) SKILL("Sanctuary")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Sanctuary
+ItemDisplay[(NMAG OR MAG) SKILL("Fanaticism")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Fanaticism
+ItemDisplay[(NMAG OR MAG) SKILL("Conviction")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Conviction
+ItemDisplay[(NMAG OR MAG) SKILL("Sacrifice")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Sacrifice
+ItemDisplay[(NMAG OR MAG) SKILL("Smite")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Smite
+ItemDisplay[(NMAG OR MAG) SKILL("Holy Bolt")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Holy Bolt
+ItemDisplay[(NMAG OR MAG) SKILL("Zeal")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Zeal
+ItemDisplay[(NMAG OR MAG) SKILL("Vengeance")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Vengeance
+ItemDisplay[(NMAG OR MAG) SKILL("Blessed Hammer")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Blessed Hammer
+ItemDisplay[(NMAG OR MAG) SKILL("Conversion")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Conversion
+ItemDisplay[(NMAG OR MAG) SKILL("Holy Shield")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Holy Shield
+ItemDisplay[(NMAG OR MAG) SKILL("Fist of the Heavens")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Fist of the Heavens
+ItemDisplay[(NMAG OR MAG) SKILL("Dashing Strike")>2 (WP2 OR WP13) (SOCK=0 OR SOCK>2)]: %NAME% %LIGHT_GRAY%+3 Dashing Strike
+ItemDisplay[MAG (WP2 OR WP13) (SOCK=0 OR SOCK>2) ((SKILL("Prayer")>2 OR SKILL("Resist Fire")>2 OR SKILL("Defiance")>2 OR SKILL("Resist Cold")>2 OR SKILL("Cleansing")>2 OR SKILL("Resist Lightning")>2 OR SKILL("Vigor")>2 OR SKILL("Redemption")>2 OR SKILL("Salvation")>2 OR SKILL("Might")>2 OR SKILL("Holy Fire")>2 OR SKILL("Precision")>2 OR SKILL("Blessed Aim")>2 OR SKILL("Concentrate")>2 OR SKILL("Holy Freeze")>2 OR SKILL("Holy Shock")>2 OR SKILL("Sanctuary")>2 OR SKILL("Fanaticism")>2 OR SKILL("Conviction")>2 OR SKILL("Sacrifice")>2 OR SKILL("Smite")>2 OR SKILL("Holy Bolt")>2 OR SKILL("Zeal")>2 OR SKILL("Vengeance")>2 OR SKILL("Blessed Hammer")>2 OR SKILL("Conversion")>2 OR SKILL("Holy Shield")>2 OR SKILL("Fist of the Heavens")>2 OR SKILL("Dashing Strike")>2)]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
+ItemDisplay[NMAG (WP2 OR WP13) (SOCK=0 OR SOCK>2) ((SKILL("Prayer")>2 OR SKILL("Resist Fire")>2 OR SKILL("Defiance")>2 OR SKILL("Resist Cold")>2 OR SKILL("Cleansing")>2 OR SKILL("Resist Lightning")>2 OR SKILL("Vigor")>2 OR SKILL("Redemption")>2 OR SKILL("Salvation")>2 OR SKILL("Might")>2 OR SKILL("Holy Fire")>2 OR SKILL("Precision")>2 OR SKILL("Blessed Aim")>2 OR SKILL("Concentrate")>2 OR SKILL("Holy Freeze")>2 OR SKILL("Holy Shock")>2 OR SKILL("Sanctuary")>2 OR SKILL("Fanaticism")>2 OR SKILL("Conviction")>2 OR SKILL("Sacrifice")>2 OR SKILL("Smite")>2 OR SKILL("Holy Bolt")>2 OR SKILL("Zeal")>2 OR SKILL("Vengeance")>2 OR SKILL("Blessed Hammer")>2 OR SKILL("Conversion")>2 OR SKILL("Holy Shield")>2 OR SKILL("Fist of the Heavens")>2 OR SKILL("Dashing Strike")>2)]: %NAME%
+EndIf[]
