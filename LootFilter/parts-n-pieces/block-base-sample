@@ -7,3 +7,37 @@
         EndIf[]
         ItemDisplay[]: %NAME%
       EndIf[]
+//Wand shopping
+EnableIf[(CL4 OR WP12)]
+      ItemDisplay[(MAG OR NMAG) SKILL("Flesh Offering")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Flesh Offering%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Raise Skeletal Mage")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Raise Skeletal Mage%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Bone Offering")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Offering%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Summon Mastery")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Summon Mastery%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Blood Golem")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Blood Golem%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Convocation")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Convocation%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Iron Golem")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Iron Golem%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Clay Golem")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Clay Golem%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Fire Golem")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Fire Golem%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Revive")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Revive%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Deadly Poison")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Deadly Poison%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Teeth")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Teeth%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Bone Armor")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Armor%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Corpse Explosion")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Corpse Explosion%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Desecrate")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Desecrate%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Bone Spear")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Spear%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Bone Wall")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Wall%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Bone Spirit")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Spirit%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Poison Nova")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Poison Nova%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Amplify Damage")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Amplify Damage%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Dim Vision")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Dim Vision%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Hemorrhage")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Hemorrhage%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Weaken")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Weaken%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Iron Maiden")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Iron Maiden%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Terror")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Terror%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Confuse")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Confuse%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Life Tap")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Life Tap%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Attract")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Attract%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Decrepify")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Decrepify%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Lower Resist")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Lower Resist%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) (CL4 OR WP12) SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
+EndIf[]
