@@ -1,0 +1,9 @@
+      EnableIf[RUNE]
+        ItemDisplay[]: %ORANGE%%RUNENAME% %TAN%[%RUNETIER%]%CONTINUE%
+        EnableIf[RUNETIER>16]
+          ItemDisplay[r32]: %NAME%%GOLD%!!Scam!!
+          ItemDisplay[r32]: %NAME%%GOLD%!!Sadge!!
+          ItemDisplay[]: %NAME%%GOLD%!!HR!!
+        EndIf[]
+        ItemDisplay[]: %NAME%
+      EndIf[]
