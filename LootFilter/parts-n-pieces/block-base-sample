@@ -1,4 +1,5 @@
-      EnableIf[RUNE]
+No idea if this will work, if you're going to try it please test accordingly
+EnableIf[RUNE]
         ItemDisplay[]: %ORANGE%%RUNENAME% %TAN%[%RUNETIER%]%CONTINUE%
         EnableIf[RUNETIER>16]
           ItemDisplay[r32]: %NAME%%GOLD%!!Scam!!
