@@ -6,6 +6,7 @@ Update 3-15
 Fixes:
 Additions:
 Added 2 enableIf blocks (even more redundant now, plan to purge extra this weekend) for pally and necro items, these blocks cover vendor sales of magic and drops of grey/white
+Added macros for the add-sockets cube recipes, not assigned yet
 Changes:
 
 #####################################
