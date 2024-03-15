@@ -71,6 +71,10 @@ TextMacro[okuniq]: %YELLOW%»%TAN%»%GRAY%»     %RED%%NAME%%GRAY%     «%TAN%«
 TextMacro[okuniqid]: %GOLD%%NAME%%NL%  // %!okuniqid!% "Ok Uniques, ID'd'"
 TextMacro[okuniqeth]: %YELLOW%»%TAN%»%GRAY%ETH»     %GOLD%%NAME%%GRAY%     «%TAN%«%YELLOW%« // %!okuniqeth!% "Ok Uniques, ethereal"
 TextMacro[setmacro]: %GREEN%    %NAME%     %GREEN% // %!setmacro!%
+TextMacro[cubesoxwep]: %NL% { Ral + Amn + P Amethyst %NL% Cube reciper for adding sockets to non-superior weapons %NL% }
+TextMacro[cubesoxarm]: %NL% { Tal + Thul + P Topaz %NL% Cube reciper for adding sockets to non-superior armor %NL% }
+TextMacro[cubesoxhat]: %NL% { Ral + Thul + P Sapphire %NL% Cube reciper for adding sockets to non-superior helmets %NL% }
+TextMacro[cubesoxshld]: %NL% { Tal + Amn + P Ruby %NL% Cube reciper for adding sockets to non-superior shields %NL% }
 
 //Custom display styles
 //inline example: <:pelt: BorderColor = 99, BorderSize = 4, NotificationSound = SoundFile>
