@@ -70,3 +70,40 @@ EnableIf[(MAG OR NMAG) (CL4 OR WP12)]
       ItemDisplay[(NMAG) (SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2)]: %NAME% //<:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
 EndIf[]
 
+// Assassin start, need to rethink this because of !NORM and !INF entries
+EnableIf[CL5 ((NMAG (SOCK=0 OR SOCK>2)) OR (MAG ID))]
+	ItemDisplay[CLSK6>0 CL5]: %NAME% %RED%@@@@@ +Sin Skills %CONTINUE%
+	ItemDisplay[TABSK48>0 CL5]: %NAME% %RED%@@@@@ +Trap Skills %CONTINUE%
+	ItemDisplay[TABSK49>0 CL5]: %NAME% %RED%@@ +Shadow Skills %CONTINUE%
+	ItemDisplay[TABSK50>0 CL5]: %NAME% %RED%@@ +MA Skills %CONTINUE%
+	ItemDisplay[SKILL("Dragon Claw")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Dragon Claw%CONTINUE%
+	ItemDisplay[SKILL("Tiger Strike")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Tiger Strike%CONTINUE%
+	ItemDisplay[SKILL("Dragon Talon")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Dragon Talon%CONTINUE%
+	ItemDisplay[SKILL("Fists of Fire")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Fists of Fire%CONTINUE%
+	ItemDisplay[SKILL("Cobra Strike")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Cobra Strike%CONTINUE%
+	ItemDisplay[SKILL("Claws of Thunder")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Claws of Thunder%CONTINUE%
+	ItemDisplay[SKILL("Dragon Flight")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Dragon Flight%CONTINUE%
+	ItemDisplay[SKILL("Blades of Ice")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Blades of Ice%CONTINUE%
+	ItemDisplay[SKILL("Claw Mastery")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Claw Mastery%CONTINUE%
+	ItemDisplay[SKILL("Psychic Hammer")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Psychic Hammer%CONTINUE%
+	ItemDisplay[SKILL("Burst of Speed")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Burst of Speed%CONTINUE%
+	ItemDisplay[SKILL("Weapon Block")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Weapon Block%CONTINUE%
+	ItemDisplay[SKILL("Cloak of Shadows")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Cloak of Shadows%CONTINUE%
+	ItemDisplay[SKILL("Fade")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Fade%CONTINUE%
+	ItemDisplay[SKILL("Shadow Warrior")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Shadow Warri OR %CONTINUE%
+	ItemDisplay[SKILL("Mind Blast")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Mind Blast%CONTINUE%
+	ItemDisplay[SKILL("Venom")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Venom%CONTINUE%
+	ItemDisplay[SKILL("Shadow Master")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Shadow Master%CONTINUE%
+	ItemDisplay[SKILL("Fire Blast")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Fire Blast%CONTINUE%
+	ItemDisplay[SKILL("Shock Web")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Shock Web%CONTINUE%
+	ItemDisplay[SKILL("Blade Throw")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Blade Throw%CONTINUE%
+	ItemDisplay[SKILL("Charged Bolt Sentry")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Charged Bolt Sentry%CONTINUE%
+	ItemDisplay[SKILL("Wake of Fire")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Wake of Fire%CONTINUE%
+	ItemDisplay[SKILL("Blade Fury")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Blade Fury%CONTINUE%
+	ItemDisplay[SKILL("Lightning Sentry")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Lightning Sentry%CONTINUE%
+	ItemDisplay[SKILL("Wake of Inferno")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Wake of Inferno%CONTINUE%
+	ItemDisplay[SKILL("Death Sentry")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Death Sentry%CONTINUE%
+	ItemDisplay[SKILL("Blade Shield")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Blade Shield%CONTINUE%
+	ItemDisplay[MAG CL5 CLSK6>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR SKILL("Dragon Claw")>2 OR SKILL("Tiger Strike")>2 OR SKILL("Dragon Talon")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Cobra Strike")>2 OR SKILL("Claws of Thunder")>2 OR SKILL("Dragon Flight")>2 OR SKILL("Blades of Ice")>2 OR SKILL("Claw Mastery")>2 OR SKILL("Psychic Hammer")>2 OR SKILL("Burst of Speed")>2 OR SKILL("Weapon Block")>2 CL5 OR SKILL("Cloak of Shadows")>2 OR SKILL("Fade")>2 OR SKILL("Shadow Warrior")>2 OR SKILL("Mind Blast")>2 OR SKILL("Venom")>2 OR SKILL("Shadow Master")>2 OR SKILL("Fire Blast")>2 OR SKILL("Shock Web")>2 OR SKILL("Blade Throw")>2 OR SKILL("Charged Bolt Sentry")>2 OR SKILL("Wake of Fire")>2 OR SKILL("Blade Fury")>2 OR SKILL("Lightning Sentry")>2 OR SKILL("Wake of Inferno")>2 OR SKILL("Death Sentry")>2 OR SKILL("Blade Shield")>2]: %NAME%
+	ItemDisplay[NMAG CL5 !INF !NORM SKILL("Dragon Claw")>2 OR SKILL("Tiger Strike")>2 OR SKILL("Dragon Talon")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Cobra Strike")>2 OR SKILL("Claws of Thunder")>2 OR SKILL("Dragon Flight")>2 OR SKILL("Blades of Ice")>2 OR SKILL("Claw Mastery")>2 OR SKILL("Psychic Hammer")>2 OR SKILL("Burst of Speed")>2 OR SKILL("Weapon Block")>2 CL5 OR SKILL("Cloak of Shadows")>2 OR SKILL("Fade")>2 OR SKILL("Shadow Warrior")>2 OR SKILL("Mind Blast")>2 OR SKILL("Venom")>2 OR SKILL("Shadow Master")>2 OR SKILL("Fire Blast")>2 OR SKILL("Shock Web")>2 OR SKILL("Blade Throw")>2 OR SKILL("Charged Bolt Sentry")>2 OR SKILL("Wake of Fire")>2 OR SKILL("Blade Fury")>2 OR SKILL("Lightning Sentry")>2 OR SKILL("Wake of Inferno")>2 OR SKILL("Death Sentry")>2 OR SKILL("Blade Shield")>2]: %NAME% %SOCKETS%
+EndIf[]
