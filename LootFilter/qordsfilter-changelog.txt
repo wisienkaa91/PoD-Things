@@ -1,4 +1,6 @@
 Qords filter
+All changes to Qords filter will be tracked here
+Check out the filter file itself for more verbose FilterLevel descriptions
 #####################################
 Update 3-15
 Fixes:
