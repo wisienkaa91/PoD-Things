@@ -38,7 +38,7 @@ FilterLevel[1]: Loosey goosey
 FilterLevel[2]: Utility
 // Filterlevel 3 hides the above, as well as low runes, large charms, hides some bases (spirit, hoto, cta)
 FilterLevel[3]: No low runes
-// Filterlevel 4 hides the above, health/mana pots, "probly garbage" labeled items, large charms, hides the "changed in newest patch" lines
+// Filterlevel 4 hides the above, health/mana pots, "probly garbage" labeled items, large charms, hides the "changed in newest patch" lines, more runeword bases
 FilterLevel[4]: No hp/mp pots
 // Filterlevel 5 hides the above, as well as lower set and unique items
 FilterLevel[5]: No extra floor junk
