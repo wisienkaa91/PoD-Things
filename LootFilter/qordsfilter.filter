@@ -325,6 +325,50 @@ ItemDisplay[NMAG (SK49>1 AND SK63>1) (SOCK=0 OR SOCK=3) CL6]:%ORANGE%Surge Light
 ItemDisplay[NMAG (SK54>1 AND SK63>1) (SOCK=0 OR SOCK=3) CL6]:%ORANGE%Chain Light Mastery Orb %!stripedsocks!% <:orbs: BorderColor = 31>
 ItemDisplay[NMAG (SK57>1 AND SK63>1) (SOCK=0 OR SOCK=3) CL6]:%ORANGE%Discharge Light Mastery Orb %!stripedsocks!% <:orbs: BorderColor = 31>
 
+EnableIf[(NMAG OR (MAG ID)) (CL6 OR WP11)]
+	ItemDisplay[SKILL("Ice Bolt")>2]: %NAME% %LIGHT_GRAY%+3 Ice Bolt%CONTINUE%
+	ItemDisplay[SKILL("Frigerate")>2]: %NAME% %LIGHT_GRAY%+3 Frigerate%CONTINUE%
+	ItemDisplay[SKILL("Frost Nova")>2]: %NAME% %LIGHT_GRAY%+3 Frost Nova%CONTINUE%
+	ItemDisplay[SKILL("Ice Blast")>2]: %NAME% %LIGHT_GRAY%+3 Ice Blast%CONTINUE%
+	ItemDisplay[SKILL("Shiver Armor")>2]: %NAME% %LIGHT_GRAY%+3 Shiver Armor%CONTINUE%
+	ItemDisplay[SKILL("Glacial Spike")>2]: %NAME% %LIGHT_GRAY%+3 Glacial Spike%CONTINUE%
+	ItemDisplay[SKILL("Blizzard")>2]: %NAME% %LIGHT_GRAY%+3 Blizzard%CONTINUE%
+	ItemDisplay[SKILL("Freezing Pulse")>2]: %NAME% %LIGHT_GRAY%+3 Freezing Pulse%CONTINUE%
+	ItemDisplay[SKILL("Chilling Armor")>2]: %NAME% %LIGHT_GRAY%+3 Chilling Armor%CONTINUE%
+	ItemDisplay[SKILL("Frozen Orb")>2]: %NAME% %LIGHT_GRAY%+3 Frozen Orb%CONTINUE%
+	ItemDisplay[SKILL("Cold Mastery")>2]: %NAME% %LIGHT_GRAY%+3 Cold Mastery%CONTINUE%
+	ItemDisplay[SKILL("Charged Bolt")>2]: %NAME% %LIGHT_GRAY%+3 Charged Bolt%CONTINUE%
+	ItemDisplay[SKILL("Static Field")>2]: %NAME% %LIGHT_GRAY%+3 Static Field%CONTINUE%
+	ItemDisplay[SKILL("Telekinesis")>2]: %NAME% %LIGHT_GRAY%+3 Telekinesis%CONTINUE%
+	ItemDisplay[SKILL("Nova")>2]: %NAME% %LIGHT_GRAY%+3 Nova%CONTINUE%
+	ItemDisplay[SKILL("Lightning Surge")>2]: %NAME% %LIGHT_GRAY%+3 Lightning Surge%CONTINUE%
+	ItemDisplay[SKILL("Chain Lightning")>2]: %NAME% %LIGHT_GRAY%+3 Chain Lightning%CONTINUE%
+	ItemDisplay[SKILL("Teleport")>2]: %NAME% %LIGHT_GRAY%+3 Teleport%CONTINUE%
+	ItemDisplay[SKILL("Discharge")>2]: %NAME% %LIGHT_GRAY%+3 Discharge%CONTINUE%
+	//ItemDisplay[SKILL("Thunder storm")>2]: %NAME% %LIGHT_GRAY%+3 Thunder Storm%CONTINUE%
+	ItemDisplay[SKILL("Energy Shield")>2]: %NAME% %LIGHT_GRAY%+3 Energy Shield%CONTINUE%
+	ItemDisplay[SKILL("Lightning Mastery")>2]: %NAME% %LIGHT_GRAY%+3 Lightning Mastery%CONTINUE%
+	ItemDisplay[SKILL("Fire Bolt")>2]: %NAME% %LIGHT_GRAY%+3 Fire Bolt%CONTINUE%
+	ItemDisplay[SKILL("Warmth")>2]: %NAME% %LIGHT_GRAY%+3 Warmth%CONTINUE%
+	ItemDisplay[SKILL("Inferno")>2]: %NAME% %LIGHT_GRAY%+3 Inferno%CONTINUE%
+	ItemDisplay[SKILL("Immolate")>2]: %NAME% %LIGHT_GRAY%+3 Immolate%CONTINUE%
+	ItemDisplay[SKILL("Fire Ball")>2]: %NAME% %LIGHT_GRAY%+3 Fire Ball%CONTINUE%
+	ItemDisplay[SKILL("Fire Wall")>2]: %NAME% %LIGHT_GRAY%+3 Fire Wall%CONTINUE%
+	ItemDisplay[SKILL("Enflame")>2]: %NAME% %LIGHT_GRAY%+3 Enflame%CONTINUE%
+	ItemDisplay[SKILL("Meteor")>2]: %NAME% %LIGHT_GRAY%+3 Meteor%CONTINUE%
+	ItemDisplay[SKILL("Hydra")>2]: %NAME% %LIGHT_GRAY%+3 Hydra%CONTINUE%
+	ItemDisplay[SKILL("Fire Mastery")>2]: %NAME% %LIGHT_GRAY%+3 Fire Mastery%CONTINUE%
+	//Skills I want
+	ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL("Frost Nova")>2 OR SKILL("Shiver Armor")>2 OR SKILL("Blizzard")>2 OR SKILL("Freezing Pulse")>2 OR SKILL("Chilling Armor")>2 OR SKILL("Frozen Orb")>2 OR SKILL("Charged Bolt")>2 OR SKILL("Nova")>2 OR SKILL("Lightning Surge")>2 OR SKILL("Chain Lightning")>2 OR SKILL("Discharge")>2 OR SKILL("Energy Shield")>2 OR SKILL("Inferno")>2 OR SKILL("Immolate")>2 OR SKILL("Fire Wall")>2 OR SKILL("Meteor")>2 OR SKILL("Hydra")>2)]: %NAME% %!tansocks!%
+	//Misc skills
+	ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL("Ice Bolt")>2 OR SKILL("Frigerate")>2 OR SKILL("Ice Blast")>2 OR SKILL("Glacial Spike")>2 OR SKILL("Cold Mastery")>2 OR SKILL("Static Field")>2 OR SKILL("Telekinesis")>2 OR SKILL("Teleport")>2 OR SKILL("Lightning Mastery")>2 OR SKILL("Fire Bolt")>2 OR SKILL("Warmth")>2 OR SKILL("Fire Ball")>2 OR SKILL("Enflame")>2 OR SKILL("Fire Mastery")>2)]: %NAME% +3 misc 
+	//Shopping
+	//Skills I want
+	ItemDisplay[MAG (SKILL("Frost Nova")>2 OR SKILL("Shiver Armor")>2 OR SKILL("Blizzard")>2 OR SKILL("Freezing Pulse")>2 OR SKILL("Chilling Armor")>2 OR SKILL("Frozen Orb")>2 OR SKILL("Charged Bolt")>2 OR SKILL("Nova")>2 OR SKILL("Lightning Surge")>2 OR SKILL("Chain Lightning")>2 OR SKILL("Discharge")>2 OR SKILL("Energy Shield")>2 OR SKILL("Inferno")>2 OR SKILL("Immolate")>2 OR SKILL("Fire Wall")>2 OR SKILL("Meteor")>2 OR SKILL("Hydra")>2)]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
+	//Misc skills
+	ItemDisplay[MAG (SKILL("Ice Bolt")>2 OR SKILL("Frigerate")>2 OR SKILL("Ice Blast")>2 OR SKILL("Glacial Spike")>2 OR SKILL("Cold Mastery")>2 OR SKILL("Static Field")>2 OR SKILL("Telekinesis")>2 OR SKILL("Teleport")>2 OR SKILL("Lightning Mastery")>2 OR SKILL("Fire Bolt")>2 OR SKILL("Warmth")>2 OR SKILL("Fire Ball")>2 OR SKILL("Enflame")>2 OR SKILL("Fire Mastery")>2)]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
+EndIf[]
+
 // Other orbs
 //////////////////////////////////////////////////////////////////////
 // Test lines with skill names instead of skill numbers
