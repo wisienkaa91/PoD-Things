@@ -8,6 +8,7 @@ Additions:
 Added map notifications
 Added (well, tried to add) visibility to dropped charms and jewels with a small border, not sure how I feel about it though
 Added 0 & 4 os archon staff and Shillelah per request
+Added if block for staves
 Changes:
 
 #####################################
