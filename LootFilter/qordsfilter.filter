@@ -26,8 +26,8 @@
 //
 Attribute[Author]: Qord 
 Attribute[Name]: QordsFilter
-Attribute[Version]: 3.16
-Attribute[Date]: 16 March
+Attribute[Version]: 3.15
+Attribute[Date]: 15 March
 
 Option[IgnoreMissingSounds]: True
 
@@ -96,6 +96,7 @@ ItemStyle[notify]: NotificationColor = WHITE //<<notify>>
 ItemStyle[craygray]: BorderColor = 27, BorderSize = 1, BackgroundColor = 31, NotificationColor = WHITE //<<craygray>>
 ItemStyle[lowprionotify]: NotificationColor = ITEM, NotificationPriority = LOW, MapIcon = 6 // <<lowprionotify>>
 ItemStyle[highprionotify]: NotificationColor = ITEM, NotificationPriority = HIGH, MapIcon = 11 // <<highprionotify>>
+
 
 //<NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\rune"><NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\rune">
 //"@local\sfx\Common\Cain\Cain_hello.wav"
@@ -189,9 +190,9 @@ ItemDisplay[r28 OR r29 OR r33]: %NL%%GOLD%	 	 %!runename!% 	 	%NL%%NL% <<rune>>
 ItemDisplay[r30 OR r31]: %NL%%GOLD% 	  	  %!runename!%  	  	%NL%%NL% <<rune>>
 
 //Show me number of sockets on ETH AND ID items (known to be ID'd from sockets>0)
-ItemDisplay[(ARMOR OR WEAPON) ((MAG OR RARE OR SET OR UNI) AND ETH) SOCK>0]: %NAME% %GRAY%ETH %!tansocks!%
+ItemDisplay[(ARMOR OR WEAPON) ((MAG OR RARE OR SET OR UNI) AND ETH) SOCK>0]: %NAME% %GRAY%ETH %!tansocks!% %CONTINUE%
 //Show me number of sockets on ID items
-ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) SOCK>0]: %NAME% %!tansocks!%
+ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) SOCK>0]: %NAME% %!tansocks!% %CONTINUE%
 
 //Gems
 //ItemDisplay[GEMLEVEL=3 AND FILERTLVL=1 AND (DIFFICULTY=0 or CLVL<40)]: %NAME%
@@ -221,114 +222,6 @@ ItemDisplay[(rin OR amu) MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
 ItemDisplay[jew MAG !ID]: %BLUE%%NAME% <<lowprionotify>>
 ItemDisplay[jew RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% «« <<lowprionotify>>
 ItemDisplay[jew (RARE OR MAG) ID]: %NAME%
-
-// Necro magic shopping and grey/white drops
-EnableIf[(MAG OR NMAG) (CL4 OR WP12)]
-      ItemDisplay[(MAG OR NMAG) SKILL("Flesh Offering")>2]:%NAME% %LIGHT_GRAY%+3 Flesh Offering%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Raise Skeletal Mage")>2]:%NAME% %LIGHT_GRAY%+3 Raise Skeletal Mage%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Bone Offering")>2]:%NAME% %LIGHT_GRAY%+3 Bone Offering%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Summon Mastery")>2]:%NAME% %LIGHT_GRAY%+3 Summon Mastery%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Blood Golem")>2]:%NAME% %LIGHT_GRAY%+3 Blood Golem%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Convocation")>2]:%NAME% %LIGHT_GRAY%+3 Convocation%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Iron Golem")>2]:%NAME% %LIGHT_GRAY%+3 Iron Golem%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Clay Golem")>2]:%NAME% %LIGHT_GRAY%+3 Clay Golem%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Fire Golem")>2]:%NAME% %LIGHT_GRAY%+3 Fire Golem%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Revive")>2]:%NAME% %LIGHT_GRAY%+3 Revive%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Deadly Poison")>2]:%NAME% %LIGHT_GRAY%+3 Deadly Poison%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Teeth")>2]:%NAME% %LIGHT_GRAY%+3 Teeth%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Bone Armor")>2]:%NAME% %LIGHT_GRAY%+3 Bone Armor%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Corpse Explosion")>2]:%NAME% %LIGHT_GRAY%+3 Corpse Explosion%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Desecrate")>2]:%NAME% %LIGHT_GRAY%+3 Desecrate%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Bone Spear")>2]:%NAME% %LIGHT_GRAY%+3 Bone Spear%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Bone Wall")>2]:%NAME% %LIGHT_GRAY%+3 Bone Wall%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Bone Spirit")>2]:%NAME% %LIGHT_GRAY%+3 Bone Spirit%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Poison Nova")>2]:%NAME% %LIGHT_GRAY%+3 Poison Nova%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Amplify Damage")>2]:%NAME% %LIGHT_GRAY%+3 Amplify Damage%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Dim Vision")>2]:%NAME% %LIGHT_GRAY%+3 Dim Vision%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Hemorrhage")>2]:%NAME% %LIGHT_GRAY%+3 Hemorrhage%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Weaken")>2]:%NAME% %LIGHT_GRAY%+3 Weaken%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Iron Maiden")>2]:%NAME% %LIGHT_GRAY%+3 Iron Maiden%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Terror")>2]:%NAME% %LIGHT_GRAY%+3 Terror%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Confuse")>2]:%NAME% %LIGHT_GRAY%+3 Confuse%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Life Tap")>2]:%NAME% %LIGHT_GRAY%+3 Life Tap%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Attract")>2]:%NAME% %LIGHT_GRAY%+3 Attract%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Decrepify")>2]:%NAME% %LIGHT_GRAY%+3 Decrepify%CONTINUE%
-      ItemDisplay[(MAG OR NMAG) SKILL("Lower Resist")>2]:%NAME% %LIGHT_GRAY%+3 Lower Resist%CONTINUE%
-      // Notify me if the vendor has something magic for sale that matches
-      ItemDisplay[MAG (SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2)]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
-      // Show me +skills on grey/white drops
-      ItemDisplay[(NMAG) (SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2)]: %NAME% //<:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
-EndIf[]
-
-//More shopping AND class-specific runeword bases
-// Paladin magic shopping and grey/white drops
-EnableIf[(NMAG OR (MAG ID)) (WP2 OR WP13) (SOCK=0 OR SOCK>2)]
-    ItemDisplay[(NMAG OR MAG) SKILL("Prayer")>2]: %NAME% %LIGHT_GRAY%+3 Prayer %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Resist Fire")>2]: %NAME% %LIGHT_GRAY%+3 Resist Fire %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Defiance")>2]: %NAME% %LIGHT_GRAY%+3 Defiance %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Resist Cold")>2]: %NAME% %LIGHT_GRAY%+3 Resist Cold %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Cleansing")>2]: %NAME% %LIGHT_GRAY%+3 Cleansing %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Resist Lightning")>2]: %NAME% %LIGHT_GRAY%+3 Resist Lightning %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Vigor")>2]: %NAME% %LIGHT_GRAY%+3 Vigor %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Redemption")>2]: %NAME% %LIGHT_GRAY%+3 Redemption %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Salvation")>2]: %NAME% %LIGHT_GRAY%+3 Salvation %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Might")>2]: %NAME% %LIGHT_GRAY%+3 Might %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Holy Fire")>2]: %NAME% %LIGHT_GRAY%+3 Holy Fire %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Precision")>2]: %NAME% %LIGHT_GRAY%+3 Precision %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Blessed Aim")>2]: %NAME% %LIGHT_GRAY%+3 Blessed Aim %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Concentrate")>2]: %NAME% %LIGHT_GRAY%+3 Concentrate %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Holy Freeze")>2]: %NAME% %LIGHT_GRAY%+3 Holy Freeze %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Holy Shock")>2]: %NAME% %LIGHT_GRAY%+3 Holy Shock %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Sanctuary")>2]: %NAME% %LIGHT_GRAY%+3 Sanctuary %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Fanaticism")>2]: %NAME% %LIGHT_GRAY%+3 Fanaticism %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Conviction")>2]: %NAME% %LIGHT_GRAY%+3 Conviction %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Sacrifice")>2]: %NAME% %LIGHT_GRAY%+3 Sacrifice %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Smite")>2]: %NAME% %LIGHT_GRAY%+3 Smite %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Holy Bolt")>2]: %NAME% %LIGHT_GRAY%+3 Holy Bolt %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Zeal")>2]: %NAME% %LIGHT_GRAY%+3 Zeal %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Vengeance")>2]: %NAME% %LIGHT_GRAY%+3 Vengeance %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Blessed Hammer")>2]: %NAME% %LIGHT_GRAY%+3 Blessed Hammer %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Conversion")>2]: %NAME% %LIGHT_GRAY%+3 Conversion %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Holy Shield")>2]: %NAME% %LIGHT_GRAY%+3 Holy Shield %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Fist of the Heavens")>2]: %NAME% %LIGHT_GRAY%+3 Fist of the Heavens %CONTINUE%
-    ItemDisplay[(NMAG OR MAG) SKILL("Dashing Strike")>2]: %NAME% %LIGHT_GRAY%+3 Dashing Strike %CONTINUE%
-    // Notify me if the vendor has something magic for sale that matches
-    ItemDisplay[MAG (SKILL("Prayer")>2 OR SKILL("Resist Fire")>2 OR SKILL("Defiance")>2 OR SKILL("Resist Cold")>2 OR  SKILL("Cleansing")>2 OR SKILL("Resist Lightning")>2 OR SKILL("Vigor")>2 OR SKILL("Redemption")>2 OR SKILL("Salvation")>2 OR SKILL("Might")>2 OR SKILL("Holy Fire")>2 OR SKILL("Precision")>2 OR SKILL("Blessed Aim")>2 OR SKILL("Concentrate")>2 OR SKILL("Holy Freeze")>2 OR SKILL("Holy Shock")>2 OR SKILL("Sanctuary")>2 OR SKILL("Fanaticism")>2 OR SKILL("Conviction")>2 OR SKILL("Sacrifice")>2 OR SKILL("Smite")>2 OR SKILL("Holy Bolt")>2 OR SKILL("Zeal")>2 OR SKILL("Vengeance")>2 OR SKILL("Blessed Hammer")>2 OR SKILL("Conversion")>2 OR SKILL("Holy Shield")>2 OR SKILL("Fist of the Heavens")>2 OR SKILL("Dashing Strike")>2)]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
-    // Show me +skills on grey/white drops
-    ItemDisplay[NMAG (SKILL("Prayer")>2 OR SKILL("Resist Fire")>2 OR SKILL("Defiance")>2 OR SKILL("Resist Cold")>2 OR SKILL("Cleansing")>2 OR SKILL("Resist Lightning")>2 OR SKILL("Vigor")>2 OR SKILL("Redemption")>2 OR SKILL("Salvation")>2 OR SKILL("Might")>2 OR SKILL("Holy Fire")>2 OR SKILL("Precision")>2 OR SKILL("Blessed Aim")>2 OR SKILL("Concentrate")>2 OR SKILL("Holy Freeze")>2 OR SKILL("Holy Shock")>2 OR SKILL("Sanctuary")>2 OR SKILL("Fanaticism")>2 OR SKILL("Conviction")>2 OR SKILL("Sacrifice")>2 OR SKILL("Smite")>2 OR SKILL("Holy Bolt")>2 OR SKILL("Zeal")>2 OR SKILL("Vengeance")>2 OR SKILL("Blessed Hammer")>2 OR SKILL("Conversion")>2 OR SKILL("Holy Shield")>2 OR SKILL("Fist of the Heavens")>2 OR SKILL("Dashing Strike")>2)]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
-EndIf[]
-
-//Wand shoppingItemDisplay[(MAG OR NMAG) SKILL("Flesh Offering")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Flesh Offering%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Raise Skeletal Mage")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Raise Skeletal Mage%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Bone Offering")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Offering%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Summon Mastery")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Summon Mastery%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Blood Golem")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Blood Golem%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Convocation")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Convocation%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Iron Golem")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Iron Golem%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Clay Golem")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Clay Golem%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Fire Golem")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Fire Golem%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Revive")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Revive%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Deadly Poison")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Deadly Poison%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Teeth")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Teeth%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Bone Armor")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Armor%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Corpse Explosion")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Corpse Explosion%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Desecrate")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Desecrate%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Bone Spear")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Spear%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Bone Wall")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Wall%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Bone Spirit")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Spirit%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Poison Nova")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Poison Nova%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Amplify Damage")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Amplify Damage%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Dim Vision")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Dim Vision%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Hemorrhage")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Hemorrhage%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Weaken")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Weaken%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Iron Maiden")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Iron Maiden%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Terror")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Terror%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Confuse")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Confuse%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Life Tap")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Life Tap%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Attract")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Attract%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Decrepify")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Decrepify%CONTINUE%
-ItemDisplay[(MAG OR NMAG) SKILL("Lower Resist")>2 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Lower Resist%CONTINUE%
-ItemDisplay[(MAG OR NMAG) (CL4 OR WP12) SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
 
 //Craftables
 ItemDisplay[(7wa) MAG]: %NL% %NAME% %RED%[ort] %GRAY%[%ILVL%]%NL% <:notify: MapIcon = 66, NotificationColor = RED> {%GRAY%Ort Rune + Perfect Ruby + This Magical Item + Jewel = Crafted Blood Zerker Axe%NL%%GRAY%Horadric Cube Craft Recipe}
@@ -372,16 +265,16 @@ ItemDisplay[RARE (aq2 OR cq2) FILTERLVL<5]: %NAME% %CONTINUE%
 
 //All Charms
 ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»%BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%] <<lowprionotify>>
-ItemDisplay[cm1 MAG !ID]:%BLUE%  %NAME%  %GRAY%[%ILVL%] <<lowprionotify>>
+ItemDisplay[cm1 MAG !ID]:%BLUE%  %NAME%  %GRAY%[%ILVL%]  <:lowprionotify: BorderColor = RGB(128/0/128), BorderSize = 2>
 ItemDisplay[cm2 MAG !ID FILTERLVL<4]: %BLUE%%NAME%
-ItemDisplay[cm3 MAG !ID]: %BLUE%  %NAME%  %GRAY%[%ILVL%] <<lowprionotify>>
+ItemDisplay[cm3 MAG !ID]: %BLUE%  %NAME%  %GRAY%[%ILVL%] <:lowprionotify: BorderColor = RGB(128/0/128), BorderSize = 1>
 ItemDisplay[cm3 MAG !ID ILVL>90]: %PURPLE%»»»  »»» %BLUE%  %NAME%  %ORANGE%[%WHITE%%ILVL%%ORANGE%]%PURPLE%  «««  ««« <<lowprionotify>>
 ItemDisplay[(cm1 OR cm2 OR cm3) !UNI]: %NAME% %GRAY%[%ILVL%]
 ItemDisplay[(cm1 OR cm2 OR cm3) UNI]: %NAME% <<gguniqs>>
 
 //Changed in the latest patch, add extra visibility for sets and uniques that have been changed in patch 21
-ItemDisplay[(pae OR 9fb OR 9bl OR wsd OR 7bw OR uhg OR 6hx OR uul OR usk OR 7wc OR 9la) UNI !ID FILTERLVL<4]: %NAME%%SAGE% <-Changed by Shugnite
-ItemDisplay[(uh9 OR amc OR lbb OR tbl OR wsd OR xap OR stu OR vbt) SET !ID FILTERLVL<4]: %NAME%%SAGE% <-Changed by Shugnite
+ItemDisplay[(pae OR 9fb OR 9bl OR wsd OR 7bw OR uhg OR 6hx OR uul OR usk OR 7wc OR 9la) UNI FILTERLVL<4]: %NAME%%SAGE% <-Changed by Shugnite
+ItemDisplay[(uh9 OR amc OR lbb OR tbl OR wsd OR xap OR stu OR vbt) SET FILTERLVL<4]: %NAME%%CORAL% <-Changed by Shugnite
 
 //Uniques
 // Looking for right now...used for special cases/temporary searching/one-off where you want extra visibility 
@@ -481,45 +374,6 @@ ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR
 //Misc skills
 ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL("Ice Bolt")>2 OR SKILL("Frigerate")>2 OR SKILL("Ice Blast")>2 OR SKILL("Glacial Spike")>2 OR SKILL("Cold Mastery")>2 OR SKILL("Static Field")>2 OR SKILL("Telekinesis")>2 OR SKILL("Teleport")>2 OR SKILL("Lightning Mastery")>2 OR SKILL("Fire Bolt")>2 OR SKILL("Warmth")>2 OR SKILL("Fire Ball")>2 OR SKILL("Enflame")>2 OR SKILL("Fire Mastery")>2)]: %NAME% +3 misc //%CONTINUE%
 
-// Sorc bases, not memory, by skill code numbers
-//ItemDisplay[NMAG SKILL(39)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Ice Bolt%CONTINUE%
-//ItemDisplay[NMAG SKILL(40)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Frigerate%CONTINUE%
-ItemDisplay[NMAG SKILL(44)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Frost Nova%CONTINUE%
-//ItemDisplay[NMAG SKILL(45)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Ice Blast%CONTINUE%
-ItemDisplay[NMAG SKILL(50)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Shiver Armor%CONTINUE%
-//ItemDisplay[NMAG SKILL(55)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Glacial Spike%CONTINUE%
-ItemDisplay[NMAG SKILL(59)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Blizzard%CONTINUE%
-ItemDisplay[NMAG SKILL("Freezing Pulse")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Freezing Pulse%CONTINUE%
-ItemDisplay[NMAG SKILL(60)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Chilling Armor%CONTINUE%
-ItemDisplay[NMAG SKILL(64)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Frozen Orb%CONTINUE%
-ItemDisplay[NMAG SKILL(65)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Cold Mastery%CONTINUE%
-ItemDisplay[NMAG SKILL(38)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Charged Bolt%CONTINUE%
-//ItemDisplay[NMAG SKILL(42)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Static Field%CONTINUE%
-//ItemDisplay[NMAG SKILL(43)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Telekinesis%CONTINUE%
-ItemDisplay[NMAG SKILL(48)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Nova%CONTINUE%
-ItemDisplay[NMAG SKILL(49)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Lightning Surge%CONTINUE%
-ItemDisplay[NMAG SKILL(54)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Chain Lightning%CONTINUE%
-//ItemDisplay[NMAG SKILL(53)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Teleport%CONTINUE%
-ItemDisplay[NMAG SKILL(57)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Discharge%CONTINUE%
-//ItemDisplay[NMAG SKILL("Thunder Storm")>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Thunder Storm%CONTINUE%
-ItemDisplay[NMAG SKILL(58)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Energy Shield%CONTINUE%
-//ItemDisplay[NMAG SKILL(63)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Lightning Mastery%CONTINUE%
-//ItemDisplay[NMAG SKILL(36)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Fire Bolt%CONTINUE%
-//ItemDisplay[NMAG SKILL(37)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Warmth%CONTINUE%
-ItemDisplay[NMAG SKILL(41)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Inferno%CONTINUE%
-ItemDisplay[NMAG SKILL(46)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Immolate<:orbs: BorderColor = 98> %CONTINUE%
-ItemDisplay[NMAG SKILL(47)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Fire Ball%CONTINUE%
-ItemDisplay[NMAG SKILL(51)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Fire Wall%CONTINUE%
-//ItemDisplay[NMAG SKILL(52)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Enflame%CONTINUE%
-ItemDisplay[NMAG SKILL(56)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Meteor<:orbs: BorderColor = 98> %CONTINUE%
-ItemDisplay[NMAG SKILL(62)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Hydra %CONTINUE%
-//ItemDisplay[NMAG SKILL(61)>2 (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws)))]: %NAME% %RED%+3 Fire Mastery%CONTINUE%
-//Misc
-ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL(39)>2 OR SKILL(40)>2 OR SKILL(42)>2 OR SKILL(43)>2 OR SKILL(53)>2 OR SKILL(63)>2 OR SKILL(36)>2 OR SKILL(37)>2 OR SKILL(41)>2 OR SKILL(52)>2 OR SKILL(61)>2)]: %NAME%%RED% +3 misc %CONTINUE%
-//Things I actually want
-ItemDisplay[NMAG (((SOCK=0 OR SOCK=3) CL6) OR ((SOCK=0 OR SOCK>3) (wst OR 8ws OR 6ws))) (SKILL(44)>2 OR SKILL(45)>2 OR SKILL(50)>2 OR SKILL(55)>2 OR SKILL(59)>2 OR SKILL("Freezing Pulse")>2 OR SKILL(60)>2 OR SKILL(64)>2 OR SKILL(65)>2 OR SKILL(38)>2 OR SKILL(48)>2 OR SKILL(49)>2 OR SKILL(54)>2 OR SKILL(57)>2 OR SKILL(58)>2 OR SKILL(46)>2 OR SKILL(47)>2 OR SKILL(51)>2 OR SKILL(56)>2 OR SKILL(62)>2)]: %NAME% %!tansocks!%
-//////////////////////////////////////////////////////////////////////
-
 //////////////////////////////////////////////////////////////////////
 // Test lines with skill names instead of skill numbers
 // Non-test lines with skill numbers follows
@@ -559,113 +413,6 @@ ItemDisplay[NMAG SKILL("Spirit of Barbs")>2 CL1 NMAG !SOCK=1]: %NAME% %LIGHT_GRA
 ItemDisplay[NMAG SKILL("Summon Grizzly")>2 CL1 NMAG !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Summon Grizzly%CONTINUE%
 ItemDisplay[NMAG !SOCK=1 CL1 (SKILL("Firestorm")>2 OR SKILL("Molten Boulder")>2 OR SKILL("Flame Dash")>2 OR SKILL("Arctic Blast")>2 OR SKILL("Fissure")>2 OR SKILL("Cyclone Armor")>2 OR SKILL("Twister")>2 OR SKILL("Volcano")>2 OR SKILL("Tornado")>2 OR SKILL("Armageddon")>2 OR SKILL("Hurricane")>2 OR SKILL("Werewolf")>2 OR SKILL("Lycanthropy")>2 OR SKILL("Werebear")>2 OR SKILL("Feral Rage")>2 OR SKILL("Maul")>2 OR SKILL("Rabies")>2 OR SKILL("Fire Claws")>2 OR SKILL("Hunger")>2 OR SKILL("Shock Wave")>2 OR SKILL("Fury")>2 OR SKILL("Raven")>2 OR SKILL("Poison Creeper")>2 OR SKILL("Heart of Wolverine")>2 OR SKILL("Summon Spirit Wolf")>2 OR SKILL("Carrion Vine")>2 OR SKILL("Oak Sage")>2 OR SKILL("Summon Dire Wolf")>2 OR SKILL("Solar Creeper")>2 OR SKILL("Spirit of Barbs")>2 OR SKILL("Summon Grizzly")>2)]:%NAME% %GRAY%[%SOCKETS%]
 
-// Druid pelts, by skill code numbers
-ItemDisplay[NMAG SKILL(225)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 FireStorm%CONTINUE%
-ItemDisplay[NMAG SKILL(229)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Molten Boulder%CONTINUE%
-ItemDisplay[NMAG SKILL("Flame Dash")>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Flame Dash%CONTINUE%
-ItemDisplay[NMAG SKILL(230)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Artic Blast%CONTINUE%
-ItemDisplay[NMAG SKILL(234)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Fissure%CONTINUE%
-ItemDisplay[NMAG SKILL(235)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Cyclone Armor%CONTINUE%
-ItemDisplay[NMAG SKILL(240)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Twister%CONTINUE%
-ItemDisplay[NMAG SKILL(244)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Volcano%CONTINUE%
-ItemDisplay[NMAG SKILL(245)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Tornado%CONTINUE%
-ItemDisplay[NMAG SKILL(249)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Armageddon%CONTINUE%
-ItemDisplay[NMAG SKILL(250)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Hurricane%CONTINUE%
-ItemDisplay[NMAG SKILL(223)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Werewolf%CONTINUE%
-ItemDisplay[NMAG SKILL(224)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Lycanthropy%CONTINUE%
-ItemDisplay[NMAG SKILL(228)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Werbear%CONTINUE%
-ItemDisplay[NMAG SKILL(232)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Feral Rage%CONTINUE%
-ItemDisplay[NMAG SKILL(233)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Maul%CONTINUE%
-ItemDisplay[NMAG SKILL(238)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Rabies%CONTINUE%
-ItemDisplay[NMAG SKILL(239)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Fire Claws%CONTINUE%
-ItemDisplay[NMAG SKILL(242)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Hunger%CONTINUE%
-ItemDisplay[NMAG SKILL(243)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Shock Wave%CONTINUE%
-ItemDisplay[NMAG SKILL(248)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Fury%CONTINUE%
-ItemDisplay[NMAG SKILL(221)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Raven%CONTINUE%
-ItemDisplay[NMAG SKILL(222)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Poison Creeper%CONTINUE%
-ItemDisplay[NMAG SKILL(236)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Heart of Wolverine%CONTINUE%
-ItemDisplay[NMAG SKILL(227)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Summon Sprit Wolf%CONTINUE%
-ItemDisplay[NMAG SKILL(231)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Carrion Vine%CONTINUE%
-ItemDisplay[NMAG SKILL(226)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Oak Sage%CONTINUE%
-ItemDisplay[NMAG SKILL(237)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Summon Dire Wolf%CONTINUE%
-ItemDisplay[NMAG SKILL(241)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Solar Creeper%CONTINUE%
-ItemDisplay[NMAG SKILL(246)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Spirit of Barbs%CONTINUE%
-ItemDisplay[NMAG SKILL(247)>2 CL1 NMAG !SOCK=1]: %NAME% %RED%+3 Summon Grizzly%CONTINUE%
-ItemDisplay[NMAG CL1 !SOCK=1 SKILL(225)>2 OR SKILL(229)>2 OR SKILL("Flame Dash")>2 OR SKILL(230)>2 OR SKILL(234)>2 OR SKILL(234)>2 OR SKILL(240)>2 OR SKILL(244)>2 OR SKILL(245)>2 OR SKILL(249)>2 OR SKILL(250)>2 OR SKILL(223)>2 OR SKILL(224)>2 OR SKILL(228)>2 OR SKILL(232)>2 OR SKILL(233)>2 OR SKILL(238)>2 OR SKILL(239)>2 OR SKILL(242)>2 OR SKILL(243)>2 OR SKILL(248)>2 OR SKILL(221)>2 OR SKILL(222)>2 OR SKILL(236)>2 OR SKILL(227)>2 OR SKILL(231)>2 OR SKILL(226)>2 OR SKILL(237)>2 OR SKILL(241)>2 OR SKILL(246)>2 OR SKILL(247)>2]:%NAME% %GRAY%[%SOCKETS%]
-//////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////////
-// Test lines with skill names instead of skill numbers
-// Non-test lines with skill numbers follows
-// If skill names are gray, these lines work
-// If skill names are red, these lines did not work
-// Necro bases, wands and shrunken heads, by skill name
-ItemDisplay[NMAG SKILL("Flesh Offering")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Flesh Offering%CONTINUE%
-ItemDisplay[NMAG SKILL("Raise Skeletal Mage")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Raise Skeletal Mage%CONTINUE%
-ItemDisplay[NMAG SKILL("Bone Offering")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Offering%CONTINUE%
-ItemDisplay[NMAG SKILL("Summon Mastery")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Summon Mastery%CONTINUE%
-ItemDisplay[NMAG SKILL("Blood Golem")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Blood Golem%CONTINUE%
-ItemDisplay[NMAG SKILL("Convocation")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Convocation%CONTINUE%
-ItemDisplay[NMAG SKILL("Iron Golem")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Iron Golem%CONTINUE%
-ItemDisplay[NMAG SKILL("Fire Golem")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Fire Golem%CONTINUE%
-ItemDisplay[NMAG SKILL("Revive")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Revive%CONTINUE%
-ItemDisplay[NMAG SKILL("Deadly Poison")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Deadly Poison%CONTINUE%
-ItemDisplay[NMAG SKILL("Teeth")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Teeth%CONTINUE%
-ItemDisplay[NMAG SKILL("Bone Armor")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Armor%CONTINUE%
-ItemDisplay[NMAG SKILL("Corpse Explosion")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Corpse Explosion%CONTINUE%
-ItemDisplay[NMAG SKILL("Desecrate")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Desecrate%CONTINUE%
-ItemDisplay[NMAG SKILL("Bone Spear")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Spear%CONTINUE%
-ItemDisplay[NMAG SKILL("Bone Wall")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Wall%CONTINUE%
-ItemDisplay[NMAG SKILL("Bone Spirit")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Bone Spirit%CONTINUE%
-ItemDisplay[NMAG SKILL("Poison Nova")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Poison Nova%CONTINUE%
-ItemDisplay[NMAG SKILL("Amplify Damage")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Amplify Damage%CONTINUE%
-ItemDisplay[NMAG SKILL("Dim Vision")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Dim Vision%CONTINUE%
-ItemDisplay[NMAG SKILL("Hemorrhage")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Hemorrhage%CONTINUE%
-ItemDisplay[NMAG SKILL("Weaken")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Weaken%CONTINUE%
-ItemDisplay[NMAG SKILL("Iron Maiden")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Iron Maiden%CONTINUE%
-ItemDisplay[NMAG SKILL("Terror")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Terror%CONTINUE%
-ItemDisplay[NMAG SKILL("Confuse")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Confuse%CONTINUE%
-ItemDisplay[NMAG SKILL("Life Tap")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Life Tap%CONTINUE%
-ItemDisplay[NMAG SKILL("Attract")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Attract%CONTINUE%
-ItemDisplay[NMAG SKILL("Decrepify")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Decrepify%CONTINUE%
-ItemDisplay[NMAG SKILL("Lower Resist")>2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %LIGHT_GRAY%+3 Lower Resist%CONTINUE%
-ItemDisplay[NMAG !SOCK=1 (CL4 OR WP12) SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2]: %NAME% %GRAY%[%SOCKETS%]
-
-// Necro bases, wands and shrunken heads, by skill code numbers
-ItemDisplay[NMAG SKILL(69) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Summon Mastery%CONTINUE%
-ItemDisplay[NMAG SKILL(70) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Raise Skeleton Warrior%CONTINUE%
-ItemDisplay[NMAG SKILL(89) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Bone Offering%CONTINUE%
-ItemDisplay[NMAG SKILL(75) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Clay Golem%CONTINUE%
-ItemDisplay[NMAG SKILL(88) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Flesh Offering%CONTINUE%
-ItemDisplay[NMAG SKILL(80) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Raise Sekeltal Mage%CONTINUE%
-ItemDisplay[NMAG SKILL(85) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Blood Golem%CONTINUE%
-ItemDisplay[NMAG SKILL(79) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Convocation%CONTINUE%
-ItemDisplay[NMAG SKILL(90) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Iron Golem%CONTINUE%
-ItemDisplay[NMAG SKILL(94) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Fire Golem%CONTINUE%
-ItemDisplay[NMAG SKILL(95) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Revive%CONTINUE%
-ItemDisplay[NMAG SKILL(73) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Deadly Poison%CONTINUE%
-ItemDisplay[NMAG SKILL(67) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Teeth%CONTINUE%
-ItemDisplay[NMAG SKILL(68) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Bone Armor%CONTINUE%
-ItemDisplay[NMAG SKILL(74) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Corpse Explosion%CONTINUE%
-ItemDisplay[NMAG SKILL(83) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Desecrate%CONTINUE%
-ItemDisplay[NMAG SKILL(84) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Bone Spear%CONTINUE%
-ItemDisplay[NMAG SKILL(78) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Bone Wall%CONTINUE%
-ItemDisplay[NMAG SKILL(93) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Bone Spirit%CONTINUE%
-ItemDisplay[NMAG SKILL(92) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Poison Nova%CONTINUE%
-ItemDisplay[NMAG SKILL(66) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Amplify Damage%CONTINUE%
-ItemDisplay[NMAG SKILL(71) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Dim Vision%CONTINUE%
-ItemDisplay[NMAG SKILL("Hemorrhage") >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Hemorrhage%CONTINUE%
-ItemDisplay[NMAG SKILL(72) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Weaken%CONTINUE%
-ItemDisplay[NMAG SKILL(76) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Iron Maiden%CONTINUE%
-ItemDisplay[NMAG SKILL(77) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Terror%CONTINUE%
-ItemDisplay[NMAG SKILL(81) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Confuse%CONTINUE%
-ItemDisplay[NMAG SKILL(82) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Life Tap%CONTINUE%
-ItemDisplay[NMAG SKILL(86) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Attract%CONTINUE%
-ItemDisplay[NMAG SKILL(87) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Decrepify%CONTINUE%
-ItemDisplay[NMAG SKILL(91) >2 NMAG !SOCK=1 (CL4 OR WP12)]:%NAME% %RED%+3 Lower Resist%CONTINUE%
-ItemDisplay[NMAG !SOCK=1 (CL4 OR WP12) SKILL(69) >2 OR SKILL(70) >2 OR SKILL(89) >2 OR SKILL(75) >2 OR SKILL(88) >2 OR SKILL(80) >2 OR SKILL(85) >2 OR SKILL(79) >2 OR SKILL(90) >2 OR SKILL(94) >2 OR SKILL(95) >2 OR SKILL(73) >2 OR SKILL(67) >2 OR SKILL(68) >2 OR SKILL(74) >2 OR SKILL(83) >2 OR SKILL(84) >2 OR SKILL(78) >2 OR SKILL(93) >2 OR SKILL(92) >2 OR SKILL(66) >2 OR SKILL(71) >2 OR SKILL("Hemorrhage") >2 OR SKILL(72) >2 OR SKILL(76) >2 OR SKILL(77) >2 OR SKILL(81) >2 OR SKILL(82) >2 OR SKILL(86) >2 OR SKILL(87) >2 OR SKILL(91) >2]: %NAME% %GRAY%[%SOCKETS%]
-//////////////////////////////////////////////////////////////////////
-
 
 // Barb
 ItemDisplay[NMAG SKILL(126)>2 CL2 NMAG !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Bash %CONTINUE%
@@ -701,7 +448,115 @@ ItemDisplay[NMAG SKILL(155)>2 CL2 NMAG !SOCK=1]: %NAME% %LIGHT_GRAY%+3 Battle Co
 //ItemDisplay[NMAG SKILL("1-Handed Mastery")>2 CL2 NMAG !SOCK=1]: %NAME% %LIGHT_GRAY%+3 1-Handed Mastery %CONTINUE%
 ItemDisplay[NMAG CL2 NMAG !SOCK=1 (SKILL(126)>2 OR SKILL(127)>2 OR SKILL(128)>2 OR SKILL(129)>2 OR SKILL(130)>2 OR SKILL(131)>2 OR SKILL(132)>2 OR SKILL(133)>2 OR SKILL(135)>2 OR SKILL(137)>2 OR SKILL(138)>2 OR SKILL(139)>2 OR SKILL(140)>2 OR SKILL(141)>2 OR SKILL(142)>2 OR SKILL(143)>2 OR SKILL(144)>2 OR SKILL(145)>2 OR SKILL(146)>2 OR SKILL(147)>2 OR SKILL(148)>2 OR SKILL(149)>2 OR SKILL(150)>2 OR SKILL(151)>2 OR SKILL(152)>2 OR SKILL(153)>2 OR SKILL(154)>2 OR SKILL(155)>2)]: %NAME% %!graysocks!% 
 
+// Paladin test
+EnableIf[(NMAG OR (MAG ID)) (WP2 OR WP13) (SOCK=0 OR SOCK>2)]
+    ItemDisplay[(NMAG OR MAG) SKILL("Prayer")>2]: %NAME% %LIGHT_GRAY%+3 Prayer %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Resist Fire")>2]: %NAME% %LIGHT_GRAY%+3 Resist Fire %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Defiance")>2]: %NAME% %LIGHT_GRAY%+3 Defiance %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Resist Cold")>2]: %NAME% %LIGHT_GRAY%+3 Resist Cold %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Cleansing")>2]: %NAME% %LIGHT_GRAY%+3 Cleansing %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Resist Lightning")>2]: %NAME% %LIGHT_GRAY%+3 Resist Lightning %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Vigor")>2]: %NAME% %LIGHT_GRAY%+3 Vigor %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Redemption")>2]: %NAME% %LIGHT_GRAY%+3 Redemption %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Salvation")>2]: %NAME% %LIGHT_GRAY%+3 Salvation %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Might")>2]: %NAME% %LIGHT_GRAY%+3 Might %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Holy Fire")>2]: %NAME% %LIGHT_GRAY%+3 Holy Fire %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Precision")>2]: %NAME% %LIGHT_GRAY%+3 Precision %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Blessed Aim")>2]: %NAME% %LIGHT_GRAY%+3 Blessed Aim %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Concentrate")>2]: %NAME% %LIGHT_GRAY%+3 Concentrate %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Holy Freeze")>2]: %NAME% %LIGHT_GRAY%+3 Holy Freeze %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Holy Shock")>2]: %NAME% %LIGHT_GRAY%+3 Holy Shock %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Sanctuary")>2]: %NAME% %LIGHT_GRAY%+3 Sanctuary %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Fanaticism")>2]: %NAME% %LIGHT_GRAY%+3 Fanaticism %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Conviction")>2]: %NAME% %LIGHT_GRAY%+3 Conviction %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Sacrifice")>2]: %NAME% %LIGHT_GRAY%+3 Sacrifice %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Smite")>2]: %NAME% %LIGHT_GRAY%+3 Smite %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Holy Bolt")>2]: %NAME% %LIGHT_GRAY%+3 Holy Bolt %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Zeal")>2]: %NAME% %LIGHT_GRAY%+3 Zeal %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Vengeance")>2]: %NAME% %LIGHT_GRAY%+3 Vengeance %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Blessed Hammer")>2]: %NAME% %LIGHT_GRAY%+3 Blessed Hammer %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Conversion")>2]: %NAME% %LIGHT_GRAY%+3 Conversion %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Holy Shield")>2]: %NAME% %LIGHT_GRAY%+3 Holy Shield %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Fist of the Heavens")>2]: %NAME% %LIGHT_GRAY%+3 Fist of the Heavens %CONTINUE%
+    ItemDisplay[(NMAG OR MAG) SKILL("Dashing Strike")>2]: %NAME% %LIGHT_GRAY%+3 Dashing Strike %CONTINUE%
+    ItemDisplay[MAG (SKILL("Prayer")>2 OR SKILL("Resist Fire")>2 OR SKILL("Defiance")>2 OR SKILL("Resist Cold")>2 OR  SKILL("Cleansing")>2 OR SKILL("Resist Lightning")>2 OR SKILL("Vigor")>2 OR SKILL("Redemption")>2 OR SKILL("Salvation")>2 OR SKILL("Might")>2 OR SKILL("Holy Fire")>2 OR SKILL("Precision")>2 OR SKILL("Blessed Aim")>2 OR SKILL("Concentrate")>2 OR SKILL("Holy Freeze")>2 OR SKILL("Holy Shock")>2 OR SKILL("Sanctuary")>2 OR SKILL("Fanaticism")>2 OR SKILL("Conviction")>2 OR SKILL("Sacrifice")>2 OR SKILL("Smite")>2 OR SKILL("Holy Bolt")>2 OR SKILL("Zeal")>2 OR SKILL("Vengeance")>2 OR SKILL("Blessed Hammer")>2 OR SKILL("Conversion")>2 OR SKILL("Holy Shield")>2 OR SKILL("Fist of the Heavens")>2 OR SKILL("Dashing Strike")>2)]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
+    ItemDisplay[NMAG (SKILL("Prayer")>2 OR SKILL("Resist Fire")>2 OR SKILL("Defiance")>2 OR SKILL("Resist Cold")>2 OR SKILL("Cleansing")>2 OR SKILL("Resist Lightning")>2 OR SKILL("Vigor")>2 OR SKILL("Redemption")>2 OR SKILL("Salvation")>2 OR SKILL("Might")>2 OR SKILL("Holy Fire")>2 OR SKILL("Precision")>2 OR SKILL("Blessed Aim")>2 OR SKILL("Concentrate")>2 OR SKILL("Holy Freeze")>2 OR SKILL("Holy Shock")>2 OR SKILL("Sanctuary")>2 OR SKILL("Fanaticism")>2 OR SKILL("Conviction")>2 OR SKILL("Sacrifice")>2 OR SKILL("Smite")>2 OR SKILL("Holy Bolt")>2 OR SKILL("Zeal")>2 OR SKILL("Vengeance")>2 OR SKILL("Blessed Hammer")>2 OR SKILL("Conversion")>2 OR SKILL("Holy Shield")>2 OR SKILL("Fist of the Heavens")>2 OR SKILL("Dashing Strike")>2)]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
+EndIf[]
 
+// Necro
+EnableIf[(MAG OR NMAG) (CL4 OR WP12)]
+      ItemDisplay[(MAG OR NMAG) SKILL("Flesh Offering")>2]:%NAME% %LIGHT_GRAY%+3 Flesh Offering%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Raise Skeletal Mage")>2]:%NAME% %LIGHT_GRAY%+3 Raise Skeletal Mage%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Bone Offering")>2]:%NAME% %LIGHT_GRAY%+3 Bone Offering%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Summon Mastery")>2]:%NAME% %LIGHT_GRAY%+3 Summon Mastery%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Blood Golem")>2]:%NAME% %LIGHT_GRAY%+3 Blood Golem%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Convocation")>2]:%NAME% %LIGHT_GRAY%+3 Convocation%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Iron Golem")>2]:%NAME% %LIGHT_GRAY%+3 Iron Golem%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Clay Golem")>2]:%NAME% %LIGHT_GRAY%+3 Clay Golem%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Fire Golem")>2]:%NAME% %LIGHT_GRAY%+3 Fire Golem%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Revive")>2]:%NAME% %LIGHT_GRAY%+3 Revive%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Deadly Poison")>2]:%NAME% %LIGHT_GRAY%+3 Deadly Poison%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Teeth")>2]:%NAME% %LIGHT_GRAY%+3 Teeth%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Bone Armor")>2]:%NAME% %LIGHT_GRAY%+3 Bone Armor%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Corpse Explosion")>2]:%NAME% %LIGHT_GRAY%+3 Corpse Explosion%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Desecrate")>2]:%NAME% %LIGHT_GRAY%+3 Desecrate%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Bone Spear")>2]:%NAME% %LIGHT_GRAY%+3 Bone Spear%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Bone Wall")>2]:%NAME% %LIGHT_GRAY%+3 Bone Wall%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Bone Spirit")>2]:%NAME% %LIGHT_GRAY%+3 Bone Spirit%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Poison Nova")>2]:%NAME% %LIGHT_GRAY%+3 Poison Nova%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Amplify Damage")>2]:%NAME% %LIGHT_GRAY%+3 Amplify Damage%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Dim Vision")>2]:%NAME% %LIGHT_GRAY%+3 Dim Vision%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Hemorrhage")>2]:%NAME% %LIGHT_GRAY%+3 Hemorrhage%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Weaken")>2]:%NAME% %LIGHT_GRAY%+3 Weaken%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Iron Maiden")>2]:%NAME% %LIGHT_GRAY%+3 Iron Maiden%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Terror")>2]:%NAME% %LIGHT_GRAY%+3 Terror%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Confuse")>2]:%NAME% %LIGHT_GRAY%+3 Confuse%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Life Tap")>2]:%NAME% %LIGHT_GRAY%+3 Life Tap%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Attract")>2]:%NAME% %LIGHT_GRAY%+3 Attract%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Decrepify")>2]:%NAME% %LIGHT_GRAY%+3 Decrepify%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Lower Resist")>2]:%NAME% %LIGHT_GRAY%+3 Lower Resist%CONTINUE%
+      ItemDisplay[MAG (SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2)]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
+      ItemDisplay[(NMAG) (SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2)]: %NAME% //<:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
+EndIf[]
+
+// Assassin start, need to rethink this because of !NORM and !INF entries
+EnableIf[CL5 ((NMAG (SOCK=0 OR SOCK>2)) OR (MAG ID))]
+	ItemDisplay[CLSK6>0 CL5]: %NAME% %RED%@@@@@ +Sin Skills %CONTINUE%
+	ItemDisplay[TABSK48>0 CL5]: %NAME% %RED%@@@@@ +Trap Skills %CONTINUE%
+	ItemDisplay[TABSK49>0 CL5]: %NAME% %RED%@@ +Shadow Skills %CONTINUE%
+	ItemDisplay[TABSK50>0 CL5]: %NAME% %RED%@@ +MA Skills %CONTINUE%
+	ItemDisplay[SKILL("Dragon Claw")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Dragon Claw%CONTINUE%
+	ItemDisplay[SKILL("Tiger Strike")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Tiger Strike%CONTINUE%
+	ItemDisplay[SKILL("Dragon Talon")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Dragon Talon%CONTINUE%
+	ItemDisplay[SKILL("Fists of Fire")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Fists of Fire%CONTINUE%
+	ItemDisplay[SKILL("Cobra Strike")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Cobra Strike%CONTINUE%
+	ItemDisplay[SKILL("Claws of Thunder")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Claws of Thunder%CONTINUE%
+	ItemDisplay[SKILL("Dragon Flight")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Dragon Flight%CONTINUE%
+	ItemDisplay[SKILL("Blades of Ice")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Blades of Ice%CONTINUE%
+	ItemDisplay[SKILL("Claw Mastery")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Claw Mastery%CONTINUE%
+	ItemDisplay[SKILL("Psychic Hammer")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Psychic Hammer%CONTINUE%
+	ItemDisplay[SKILL("Burst of Speed")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Burst of Speed%CONTINUE%
+	ItemDisplay[SKILL("Weapon Block")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Weapon Block%CONTINUE%
+	ItemDisplay[SKILL("Cloak of Shadows")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Cloak of Shadows%CONTINUE%
+	ItemDisplay[SKILL("Fade")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Fade%CONTINUE%
+	ItemDisplay[SKILL("Shadow Warrior")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Shadow Warri OR %CONTINUE%
+	ItemDisplay[SKILL("Mind Blast")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Mind Blast%CONTINUE%
+	ItemDisplay[SKILL("Venom")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Venom%CONTINUE%
+	ItemDisplay[SKILL("Shadow Master")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Shadow Master%CONTINUE%
+	ItemDisplay[SKILL("Fire Blast")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Fire Blast%CONTINUE%
+	ItemDisplay[SKILL("Shock Web")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Shock Web%CONTINUE%
+	ItemDisplay[SKILL("Blade Throw")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Blade Throw%CONTINUE%
+	ItemDisplay[SKILL("Charged Bolt Sentry")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Charged Bolt Sentry%CONTINUE%
+	ItemDisplay[SKILL("Wake of Fire")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Wake of Fire%CONTINUE%
+	ItemDisplay[SKILL("Blade Fury")>2 CL5 !INF !NORM]: %NAME% %LIGHT_GRAY%+3 Blade Fury%CONTINUE%
+	ItemDisplay[SKILL("Lightning Sentry")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Lightning Sentry%CONTINUE%
+	ItemDisplay[SKILL("Wake of Inferno")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Wake of Inferno%CONTINUE%
+	ItemDisplay[SKILL("Death Sentry")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Death Sentry%CONTINUE%
+	ItemDisplay[SKILL("Blade Shield")>2 CL5]: %NAME% %LIGHT_GRAY%+3 Blade Shield%CONTINUE%
+	ItemDisplay[MAG CL5 CLSK6>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR SKILL("Dragon Claw")>2 OR SKILL("Tiger Strike")>2 OR SKILL("Dragon Talon")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Cobra Strike")>2 OR SKILL("Claws of Thunder")>2 OR SKILL("Dragon Flight")>2 OR SKILL("Blades of Ice")>2 OR SKILL("Claw Mastery")>2 OR SKILL("Psychic Hammer")>2 OR SKILL("Burst of Speed")>2 OR SKILL("Weapon Block")>2 CL5 OR SKILL("Cloak of Shadows")>2 OR SKILL("Fade")>2 OR SKILL("Shadow Warrior")>2 OR SKILL("Mind Blast")>2 OR SKILL("Venom")>2 OR SKILL("Shadow Master")>2 OR SKILL("Fire Blast")>2 OR SKILL("Shock Web")>2 OR SKILL("Blade Throw")>2 OR SKILL("Charged Bolt Sentry")>2 OR SKILL("Wake of Fire")>2 OR SKILL("Blade Fury")>2 OR SKILL("Lightning Sentry")>2 OR SKILL("Wake of Inferno")>2 OR SKILL("Death Sentry")>2 OR SKILL("Blade Shield")>2]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
+	ItemDisplay[NMAG CL5 !INF !NORM SKILL("Dragon Claw")>2 OR SKILL("Tiger Strike")>2 OR SKILL("Dragon Talon")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Cobra Strike")>2 OR SKILL("Claws of Thunder")>2 OR SKILL("Dragon Flight")>2 OR SKILL("Blades of Ice")>2 OR SKILL("Claw Mastery")>2 OR SKILL("Psychic Hammer")>2 OR SKILL("Burst of Speed")>2 OR SKILL("Weapon Block")>2 CL5 OR SKILL("Cloak of Shadows")>2 OR SKILL("Fade")>2 OR SKILL("Shadow Warrior")>2 OR SKILL("Mind Blast")>2 OR SKILL("Venom")>2 OR SKILL("Shadow Master")>2 OR SKILL("Fire Blast")>2 OR SKILL("Shock Web")>2 OR SKILL("Blade Throw")>2 OR SKILL("Charged Bolt Sentry")>2 OR SKILL("Wake of Fire")>2 OR SKILL("Blade Fury")>2 OR SKILL("Lightning Sentry")>2 OR SKILL("Wake of Inferno")>2 OR SKILL("Death Sentry")>2 OR SKILL("Blade Shield")>2]: %NAME% %SOCKETS%
+	ItemDisplay[NMAG CL5 SKILL("Dragon Claw")>2 OR SKILL("Tiger Strike")>2 OR SKILL("Dragon Talon")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Cobra Strike")>2 OR SKILL("Claws of Thunder")>2 OR SKILL("Dragon Flight")>2 OR SKILL("Blades of Ice")>2 OR SKILL("Claw Mastery")>2 OR SKILL("Psychic Hammer")>2 OR SKILL("Burst of Speed")>2 OR SKILL("Weapon Block")>2 CL5 OR SKILL("Cloak of Shadows")>2 OR SKILL("Fade")>2 OR SKILL("Shadow Warrior")>2 OR SKILL("Mind Blast")>2 OR SKILL("Venom")>2 OR SKILL("Shadow Master")>2 OR SKILL("Fire Blast")>2 OR SKILL("Shock Web")>2 OR SKILL("Blade Throw")>2 OR SKILL("Charged Bolt Sentry")>2 OR SKILL("Wake of Fire")>2 OR SKILL("Blade Fury")>2 OR SKILL("Lightning Sentry")>2 OR SKILL("Wake of Inferno")>2 OR SKILL("Death Sentry")>2 OR SKILL("Blade Shield")>2]: Low end %NAME% %SOCKETS%
+EndIf[]
 
 
 //Assassin
@@ -735,30 +590,11 @@ ItemDisplay[CL5 !INF NMAG (SOCK=0 OR SOCK=3) SK277>2 OR SK278>2 OR SK262>2 OR SK
 // Any nonmagical 3 skill claw with 0 or 3 sockets catch all
 ItemDisplay[CL5 !INF !NORM NMAG (SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK279>2 OR SK280>2) (SOCK=0 OR SOCK=3)]: %GRAY%[%WHITE%+3 Misc%GRAY%] %NAME% %!tansocks!%
 
-//Necro things
-// Wands and Heads
-ItemDisplay[(CL4 OR WP12) NMAG (SK67>2 AND SK84>2) !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Teeth +3 Bone Spear %!tansocks!%<<craygray>>
-ItemDisplay[(CL4 OR WP12) NMAG (SK92>2 AND SK83>2) !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Poison Nova +3 Desecrate %!tansocks!%<<craygray>>
-ItemDisplay[(CL4 OR WP12) NMAG (SK67>2 AND SK79>2) !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Teeth +3 Convo %!tansocks!%<<craygray>>
-ItemDisplay[(CL4 OR WP12) NMAG (SK84>2 AND SK79>2) !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Bone Spear +3 Convo %!tansocks!%<<craygray>>
-ItemDisplay[(CL4 OR WP12) NMAG (SK92>2 AND SK79>2) !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Poison Nova +3 Convo %!tansocks!%<<craygray>>
-ItemDisplay[(CL4 OR WP12) NMAG (SK83>2 AND SK79>2) !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Desecrate +3 Convo %!tansocks!%<<craygray>>
-ItemDisplay[(CL4 OR WP12) NMAG SK67>2 !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Teeth %CONTINUE%
-ItemDisplay[(CL4 OR WP12) NMAG SK73>2 !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Deadly Poison %CONTINUE%
-ItemDisplay[(CL4 OR WP12) NMAG SK84>2 !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Bone Spear %CONTINUE%
-ItemDisplay[(CL4 OR WP12) NMAG SK92>2 !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Poison Nova %CONTINUE%
-ItemDisplay[(CL4 OR WP12) NMAG SK83>2 !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Desecrate %CONTINUE%
-ItemDisplay[(CL4 OR WP12) NMAG SK74>2 !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Corpse Explosion %CONTINUE%
-ItemDisplay[(CL4 OR WP12) NMAG SK94>2 !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Fire Golem %CONTINUE%
-ItemDisplay[(CL4 OR WP12) NMAG SK477>2 !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Hemo %CONTINUE%
-ItemDisplay[(CL4 OR WP12) NMAG SK93>2 !SOCK=1]: %NAME%%LIGHT_GRAY%+3 Bone Spirit %CONTINUE%
-ItemDisplay[(CL4 OR WP12) NMAG !SOCK=1 SK67>2 OR SK73>2 OR SK84>2 OR SK92>2 OR SK83>2 OR SK74>2 OR SK94>2 OR SK477>2 OR SK93>2]: %NAME% %RED%Qord needs to fix necro wands %!tansocks!%
-//Misc Need to finish adding misc skills
-//ItemDisplay[(CL4 OR WP12) NMAG !SOCK=1 SK67>2 OR SK73>2 OR SK84>2 OR SK92>2 OR SK83>2 OR SK74>2 OR SK94>2]: %NAME% %!tansocks!%
 
 //Other RuneWord Bases
 //Aramex special, legendary  mallet and boneweave
 ItemDisplay[(uhn OR 7wh) (NMAG OR RW) (SOCK=0 OR SOCK>2) FILTERLVL<3]: %NAME% %!graysocks!%
+ItemDisplay[(6cs OR 6ws) NMAG ETH (SOCK=0 OR SOCK=4) FILTERLVL<3]: %NAME% %!graysocks!%
 //Spirit Swords
 ItemDisplay[(crs OR bsd OR lsd OR 9cr) (ETH AND (NMAG OR RW)) SOCK=4 FILTERLVL<3]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %!graysocks!%
 ItemDisplay[(crs OR bsd OR lsd OR 9cr) (NMAG OR RW) SOCK=4 FILTERLVL<3]: %NAME% %!graysocks!%
@@ -932,3 +768,4 @@ ItemDisplay[(ARMOR OR WEAPON) ETH CLVL<19]: %GRAY%ETH %NAME%
 ItemDisplay[(ARMOR OR WEAPON) SOCK>0 CLVL<19]: %NAME% %!tansocks!%
 // If you're above level 18, hide all other weapons and armor 
 ItemDisplay[(ARMOR OR WEAPON) CLVL>18]:
+
