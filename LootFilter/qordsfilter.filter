@@ -95,6 +95,7 @@ ItemStyle[stack]: NotificationColor = PURPLE //<<stack>>
 ItemStyle[notify]: NotificationColor = WHITE //<<notify>>
 ItemStyle[craygray]: BorderColor = 27, BorderSize = 1, BackgroundColor = 31, NotificationColor = WHITE //<<craygray>>
 ItemStyle[lowprionotify]: NotificationColor = ITEM, NotificationPriority = LOW, MapIcon = 6 // <<lowprionotify>>
+ItemStyle[highprionotify]: NotificationColor = ITEM, NotificationPriority = HIGH, MapIcon = 11 // <<highprionotify>>
 
 //<NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\rune"><NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\rune">
 //"@local\sfx\Common\Cain\Cain_hello.wav"
@@ -165,9 +166,9 @@ ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NL% {  - C
 //ItemDisplay[cx5]: %NL%%GRAY%»     %PURPLE% %NAME% %GRAY%      «%NL%%NL% {  - Charms and Jewels%NL%  - Ethereal Items%NL%  - Socketed Items%NL%  - Non-magical Items%NL%%WHITE%Any item can be corrupted except:%NL%with another item and press the Transmute button twice.%NL%Place the Orb of Corruption%WHITE% into the Horadric Cube%WHITE%%NL%} <:notify: BorderColor = 155, BorderSize = 4, BackgroundColor = 75, MapIcon = 70, MapIconColor = 75, NotificationSound = corb2, NotificationColor = PURPLE>
 ItemDisplay[cx6]: %PURPLE%Diablo's Soulstone
 ItemDisplay[cx7]: %RED%»»»» %NAME%%RED% ««««
-ItemDisplay[ma1 OR ma2 OR ma3 OR ma5 OR ma6 OR ma7 OR ma9 OR ma10 OR maz OR ma11]: %NAME% %!mapmacro!%
-ItemDisplay[ma4 OR ma8]: %NAME% %RED%No Boss %!mapmacro!%
-ItemDisplay[MAP]: %GOLD%%NAME% %WHITE%[T%MAPTIER%] %BLUE%(%ILVL%) [%CODE%] <:notify: BorderColor = 122, BorderSize = 2>
+ItemDisplay[ma1 OR ma2 OR ma3 OR ma5 OR ma6 OR ma7 OR ma9 OR ma10 OR maz OR ma11]: %NAME% %!mapmacro!% <<highprionotify>>
+ItemDisplay[ma4 OR ma8]: %NAME% %RED%No Boss %!mapmacro!% <<highprionotify>>
+ItemDisplay[MAP]: %GOLD%%NAME% %WHITE%[T%MAPTIER%] %BLUE%(%ILVL%) [%CODE%] <<highprionotify>>
 
 //Wirt Leg
 ItemDisplay[leg SOCK>0]: %NAME% %!stripedsocks!% <<notify>>
