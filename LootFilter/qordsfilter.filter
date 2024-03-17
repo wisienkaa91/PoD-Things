@@ -450,10 +450,11 @@ ItemDisplay[NMAG CL2 NMAG !SOCK=1 (SKILL(126)>2 OR SKILL(127)>2 OR SKILL(128)>2 
 
 // Necro
 EnableIf[(MAG OR NMAG) (CL4 OR WP12)]
-      ItemDisplay[(MAG OR NMAG) SKILL("Hemorrhage")>1]:%NAME% %LIGHT_GRAY%+3 Hemorrhage%CONTINUE%
+      ItemDisplay[(MAG OR NMAG) SKILL("Hemorrhage")>1]:%NAME% %LIGHT_GRAY%+2 Hemorrhage%CONTINUE%
       ItemDisplay[(MAG OR NMAG) TABSK16>1]:%NAME% %LIGHT_GRAY%+2 Curses%CONTINUE%
-      ItemDisplay[MAG (SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2)]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
-      ItemDisplay[(NMAG) (SKILL("Summon Mastery")>2 OR SKILL("Raise Skeleton Warrior")>2 OR SKILL("Bone Offering")>2 OR SKILL("Clay Golem")>2 OR SKILL("Flesh Offering")>2 OR SKILL("Raise Skeletal Mage")>2 OR SKILL("Blood Golem")>2 OR SKILL("Convocation")>2 OR SKILL("Iron Golem")>2 OR SKILL("Fire Golem")>2 OR SKILL("Revive")>2 OR SKILL("Deadly Poison")>2 OR SKILL("Teeth")>2 OR SKILL("Bone Armor")>2 OR SKILL("Corpse Explosion")>2 OR SKILL("Desecrate")>2 OR SKILL("Bone Spear")>2 OR SKILL("Bone Wall")>2 OR SKILL("Bone Spirit")>2 OR SKILL("Poison Nova")>2 OR SKILL("Amplify Damage")>2 OR SKILL("Dim Vision")>2 OR SKILL("Hemorrhage")>2 OR SKILL("Weaken")>2 OR SKILL("Iron Maiden")>2 OR SKILL("Terror")>2 OR SKILL("Confuse")>2 OR SKILL("Life Tap")>2 OR SKILL("Attract")>2 OR SKILL("Decrepify")>2 OR SKILL("Lower Resist")>2)]: %NAME% //<:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
+      ItemDisplay[(MAG OR NMAG) CLSK2>1]:%NAME% %LIGHT_GRAY%+2 Necro sk%CONTINUE%
+      ItemDisplay[MAG (SKILL("Hemorrhage")>2 OR TABSK16>1 OR CLSK2>1)]: %NAME% <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
+ItemDisplay[MAG (SKILL("Hemorrhage")>2 AND (TABSK16>1 OR CLSK2>1))]: !!!!%NAME%!!!! <:notify: NotificationPriority = HIGH, NotificationColor = ITEM>
 EndIf[]
 
 // Assassin start, need to rethink this because of !NORM and !INF entries
