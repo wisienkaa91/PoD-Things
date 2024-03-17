@@ -601,8 +601,8 @@ ItemDisplay[WEAPON TABSK34>2]: %!shopping!% %GREEN%3bo Stick %!shopping!% <<noti
 ItemDisplay[EQ4 (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19]: %!shopping!% %GREEN%3sk-20ias Gloves %!shopping!% <<notify>>
 ItemDisplay[WP13 (TABSK24>2 AND SK119>2)]: %!shopping!% %GREEN%FoH Scepter %!shopping!% <<notify>>
 //ItemDisplay[WP12 MAG CHSK91>0]: %!shopping!% %GREEN%Lower Resist Wand %!shopping!% <<notify>>
-ItemDisplay[WP12 MAG (SKILL("Hemorrhage")>2)]: %!shopping!% %GREEN%Hemo +2%!shopping!% <<notify>>
-ItemDisplay[WP12 MAG (SKILL("Hemorrhage")>2 AND (TABSK16>1 OR CLSK2>1))]: %!shopping!% %GREEN%Ale urwal wand2 %!shopping!% <<notify>>
+ItemDisplay[WP12 MAG (SKILL("Hemorrhage")>1)]: %!shopping!% %GREEN%Hemo +2%!shopping!% <<notify>>
+ItemDisplay[WP12 MAG (SKILL("Hemorrhage")>1 AND (TABSK16>1 OR CLSK2>1))]: %!shopping!% %GREEN%Ale urwal wand2 %!shopping!% <<notify>>
 //LivEisJeebus shop lines big thanks to him for these lines
 ItemDisplay[CL5 (CLSK6>0 AND SK271>2)]: %!shopping!% %PURPLE%Light Claw %!shopping!% <<notify>>
 ItemDisplay[CL5 (CLSK6>1 AND SK271>1)]: %!shopping!% %PURPLE%Light Claw %!shopping!% <<notify>>
